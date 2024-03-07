@@ -1,0 +1,1080 @@
+system:
+  name: leap_hand
+  root_link: palm_lower
+joints:
+  joint_3:
+    type: revolute
+    name: joint_3
+    parent_link: dip
+    child_link: fingertip
+    transform:
+      translation:
+        x: -4.0880582495572693e-09
+        y: -0.036100004210367367
+        z: 0.00020000000000007859
+      rotation:
+        w: 1
+        x: 2.2967514712556843e-17
+        y: -1.4365035957231897e-16
+        z: 2.5497032273903122e-32
+    axis:
+      x: 0
+      y: 0
+      z: -1
+    limits:
+      lower: -0.36599999999999999
+      upper: 2.0419999999999998
+      velocity: 8.4800000000000004
+      effort: 0.94999999999999996
+  joint_7:
+    type: revolute
+    name: joint_7
+    parent_link: dip_2
+    child_link: fingertip_2
+    transform:
+      translation:
+        x: 1.0061396160665481e-16
+        y: -0.036099999999999854
+        z: 0.00020000000000007859
+      rotation:
+        w: 1
+        x: 2.2967514712556827e-17
+        y: -1.4365035957231897e-16
+        z: 7.5340207829500661e-32
+    axis:
+      x: 0
+      y: 0
+      z: -1
+    limits:
+      lower: -0.36599999999999999
+      upper: 2.0419999999999998
+      velocity: 8.4800000000000004
+      effort: 0.94999999999999996
+  joint_11:
+    type: revolute
+    name: joint_11
+    parent_link: dip_3
+    child_link: fingertip_3
+    transform:
+      translation:
+        x: 9.7144514654701197e-17
+        y: -0.036099999999999868
+        z: 0.00020000000000007512
+      rotation:
+        w: 1
+        x: 2.2967514712556843e-17
+        y: -1.43650359572319e-16
+        z: 1.1081997550748835e-32
+    axis:
+      x: 0
+      y: 0
+      z: -1
+    limits:
+      lower: -0.36599999999999999
+      upper: 2.0419999999999998
+      velocity: 8.4800000000000004
+      effort: 0.94999999999999996
+  joint_0:
+    type: revolute
+    name: joint_0
+    parent_link: mcp_joint
+    child_link: pip
+    transform:
+      translation:
+        x: -0.012200000000000008
+        y: 0.038099999999999995
+        z: 0.014500000000000001
+      rotation:
+        w: 0.50000000000000089
+        x: -0.50000000000000033
+        y: -0.49999999999999967
+        z: 0.49999999999999917
+    axis:
+      x: 0
+      y: 0
+      z: -1
+    limits:
+      lower: -1.0469999999999999
+      upper: 1.0469999999999999
+      velocity: 8.4800000000000004
+      effort: 0.94999999999999996
+  joint_4:
+    type: revolute
+    name: joint_4
+    parent_link: mcp_joint_2
+    child_link: pip_2
+    transform:
+      translation:
+        x: -0.01220000000000002
+        y: 0.038099999999999981
+        z: 0.014500000000000006
+      rotation:
+        w: 0.50000000000000089
+        x: -0.50000000000000033
+        y: -0.49999999999999967
+        z: 0.49999999999999917
+    axis:
+      x: 0
+      y: 0
+      z: -1
+    limits:
+      lower: -1.0469999999999999
+      upper: 1.0469999999999999
+      velocity: 8.4800000000000004
+      effort: 0.94999999999999996
+  joint_8:
+    type: revolute
+    name: joint_8
+    parent_link: mcp_joint_3
+    child_link: pip_3
+    transform:
+      translation:
+        x: -0.012200000000000004
+        y: 0.038100000000000002
+        z: 0.014499999999999999
+      rotation:
+        w: 0.50000000000000089
+        x: -0.50000000000000033
+        y: -0.49999999999999967
+        z: 0.49999999999999917
+    axis:
+      x: 0
+      y: 0
+      z: -1
+    limits:
+      lower: -1.0469999999999999
+      upper: 1.0469999999999999
+      velocity: 8.4800000000000004
+      effort: 0.94999999999999996
+  joint_1:
+    type: revolute
+    name: joint_1
+    parent_link: palm_lower
+    child_link: mcp_joint
+    transform:
+      translation:
+        x: -0.0070952496528625458
+        y: 0.023057756134899472
+        z: -0.018722403578460219
+      rotation:
+        w: 0.50000000000000089
+        x: 0.50000000000000011
+        y: 0.49999999999999989
+        z: -0.49999999999999906
+    axis:
+      x: 0
+      y: 0
+      z: -1
+    limits:
+      lower: -0.314
+      upper: 2.23
+      velocity: 8.4800000000000004
+      effort: 0.94999999999999996
+  joint_12:
+    type: revolute
+    name: joint_12
+    parent_link: palm_lower
+    child_link: pip_4
+    transform:
+      translation:
+        x: -0.069395249652862534
+        y: -0.0012422438651005258
+        z: -0.021622403578460216
+      rotation:
+        w: 0.70710678118654791
+        x: -2.9126352856742606e-17
+        y: 0.70710678118654724
+        z: 2.9126352856742575e-17
+    axis:
+      x: 0
+      y: 0
+      z: -1
+    limits:
+      lower: -0.34899999999999998
+      upper: 2.0939999999999999
+      velocity: 8.4800000000000004
+      effort: 0.94999999999999996
+  joint_5:
+    type: revolute
+    name: joint_5
+    parent_link: palm_lower
+    child_link: mcp_joint_2
+    transform:
+      translation:
+        x: -0.0070952496528625389
+        y: -0.022392243865100525
+        z: -0.01872240357846023
+      rotation:
+        w: 0.50000000000000011
+        x: 0.5
+        y: 0.5
+        z: -0.49999999999999989
+    axis:
+      x: 0
+      y: 0
+      z: -1
+    limits:
+      lower: -0.314
+      upper: 2.23
+      velocity: 8.4800000000000004
+      effort: 0.94999999999999996
+  joint_9:
+    type: revolute
+    name: joint_9
+    parent_link: palm_lower
+    child_link: mcp_joint_3
+    transform:
+      translation:
+        x: -0.0070952454426398371
+        y: -0.067842243865100516
+        z: -0.018722407666402933
+      rotation:
+        w: 0.50000000000000089
+        x: 0.50000000000000011
+        y: 0.49999999999999989
+        z: -0.49999999999999906
+    axis:
+      x: 0
+      y: 0
+      z: -1
+    limits:
+      lower: -0.314
+      upper: 2.23
+      velocity: 8.4800000000000004
+      effort: 0.94999999999999996
+  joint_2:
+    type: revolute
+    name: joint_2
+    parent_link: pip
+    child_link: dip
+    transform:
+      translation:
+        x: 0.014999999999999968
+        y: 0.014299999999999905
+        z: -0.012999999999999824
+      rotation:
+        w: 0.50000000000000022
+        x: 0.49999999999999983
+        y: -0.50000000000000011
+        z: 0.49999999999999978
+    axis:
+      x: 0
+      y: 0
+      z: -1
+    limits:
+      lower: -0.50600000000000001
+      upper: 1.885
+      velocity: 8.4800000000000004
+      effort: 0.94999999999999996
+  joint_6:
+    type: revolute
+    name: joint_6
+    parent_link: pip_2
+    child_link: dip_2
+    transform:
+      translation:
+        x: 0.014999999999999975
+        y: 0.0143
+        z: -0.013000000000000018
+      rotation:
+        w: 0.50000000000000022
+        x: 0.49999999999999983
+        y: -0.50000000000000011
+        z: 0.49999999999999978
+    axis:
+      x: 0
+      y: 0
+      z: -1
+    limits:
+      lower: -0.50600000000000001
+      upper: 1.885
+      velocity: 8.4800000000000004
+      effort: 0.94999999999999996
+  joint_10:
+    type: revolute
+    name: joint_10
+    parent_link: pip_3
+    child_link: dip_3
+    transform:
+      translation:
+        x: 0.014999999999999972
+        y: 0.014299999999999952
+        z: -0.01299999999999996
+      rotation:
+        w: 0.50000000000000022
+        x: 0.49999999999999983
+        y: -0.50000000000000011
+        z: 0.49999999999999978
+    axis:
+      x: 0
+      y: 0
+      z: -1
+    limits:
+      lower: -0.50600000000000001
+      upper: 1.885
+      velocity: 8.4800000000000004
+      effort: 0.94999999999999996
+  joint_13:
+    type: revolute
+    name: joint_13
+    parent_link: pip_4
+    child_link: thumb_pip
+    transform:
+      translation:
+        x: -2.7755575615628914e-17
+        y: 0.014300000000000005
+        z: -0.013000000000000012
+      rotation:
+        w: 0.50000000000000022
+        x: 0.49999999999999983
+        y: -0.50000000000000011
+        z: 0.49999999999999978
+    axis:
+      x: 0
+      y: 0
+      z: -1
+    limits:
+      lower: -0.46999999999999997
+      upper: 2.4430000000000001
+      velocity: 8.4800000000000004
+      effort: 0.94999999999999996
+  joint_15:
+    type: revolute
+    name: joint_15
+    parent_link: thumb_dip
+    child_link: thumb_fingertip
+    transform:
+      translation:
+        x: -1.2490009027033011e-16
+        y: 0.046599999999999864
+        z: 0.00019999999999997711
+      rotation:
+        w: 6.123233995736766e-17
+        x: -2.711709361696763e-31
+        y: 7.5485836766959898e-45
+        z: 1
+    axis:
+      x: 0
+      y: 0
+      z: -1
+    limits:
+      lower: -1.3400000000000001
+      upper: 1.8799999999999999
+      velocity: 8.4800000000000004
+      effort: 0.94999999999999996
+  joint_14:
+    type: revolute
+    name: joint_14
+    parent_link: thumb_pip
+    child_link: thumb_dip
+    transform:
+      translation:
+        x: 0
+        y: 0.014499999999999966
+        z: -0.017000000000000053
+      rotation:
+        w: 0.70710678118654757
+        x: -0.70710678118654746
+        y: 6.972611193681137e-32
+        z: -6.9726111936811272e-32
+    axis:
+      x: 0
+      y: 0
+      z: -1
+    limits:
+      lower: -1.2
+      upper: 1.8999999999999999
+      velocity: 8.4800000000000004
+      effort: 0.94999999999999996
+links:
+  dip:
+    joints:
+      - joint_3
+    name: dip
+    parent_joint: joint_2
+    inertial:
+      mass: 0.036999999999999998
+      inertia:
+        xx: 5.5419999999999996e-06
+        xy: -6.0699999999999997e-07
+        yy: 5.7270000000000004e-06
+        yz: -2.3000000000000001e-08
+        zz: 6.6819999999999997e-06
+        xz: -1.7e-08
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0.021133352895225003
+          y: -0.0084321191467048792
+          z: 0.0097850881620952408
+        orientation:
+          w: 6.123233995736766e-17
+          x: -1
+          y: -2.2197740526961801e-32
+          z: 2.2537555621082204e-32
+      type: mesh
+      filename: meshes/dip.stl
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  dip_2:
+    joints:
+      - joint_7
+    name: dip_2
+    parent_joint: joint_6
+    inertial:
+      mass: 0.036999999999999998
+      inertia:
+        xx: 5.5419999999999996e-06
+        xy: -6.0699999999999997e-07
+        yy: 5.7270000000000004e-06
+        yz: -2.3000000000000001e-08
+        zz: 6.6819999999999997e-06
+        xz: -1.7e-08
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0.021133352895225003
+          y: -0.0084321191467048653
+          z: 0.0097850881620952374
+        orientation:
+          w: 6.123233995736766e-17
+          x: -1
+          y: -7.2040916082559343e-32
+          z: 1.0573466892635982e-32
+      type: mesh
+      filename: meshes/dip.stl
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  dip_3:
+    joints:
+      - joint_11
+    name: dip_3
+    parent_joint: joint_10
+    inertial:
+      mass: 0.036999999999999998
+      inertia:
+        xx: 5.5419999999999996e-06
+        xy: -6.0699999999999997e-07
+        yy: 5.7270000000000004e-06
+        yz: -2.3000000000000001e-08
+        zz: 6.6819999999999997e-06
+        xz: -1.7e-08
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0.021133352895225006
+          y: -0.0084321191467048653
+          z: 0.0097850881620952374
+        orientation:
+          w: 6.123233995736766e-17
+          x: -1
+          y: -7.7827058038075177e-33
+          z: -7.0478255569595414e-34
+      type: mesh
+      filename: meshes/dip.stl
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  fingertip:
+    name: fingertip
+    parent_joint: joint_3
+    inertial:
+      mass: 0.016
+      inertia:
+        xx: 3.3680000000000002e-06
+        xy: 1.15e-07
+        yy: 1.556e-06
+        yz: 0
+        zz: 2.8629999999999999e-06
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0.013286424108533503
+          y: -0.0061142383865419869
+          z: 0.014499999999999498
+        orientation:
+          w: 6.123233995736766e-17
+          x: 1
+          y: 2.2197740526961804e-32
+          z: -5.9965589850308537e-34
+      type: mesh
+      filename: meshes/fingertip.stl
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  fingertip_2:
+    name: fingertip_2
+    parent_joint: joint_7
+    inertial:
+      mass: 0.016
+      inertia:
+        xx: 3.3680000000000002e-06
+        xy: 1.15e-07
+        yy: 1.556e-06
+        yz: 0
+        zz: 2.8629999999999999e-06
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0.013286424108533496
+          y: -0.0061142383865420008
+          z: 0.014499999999999496
+        orientation:
+          w: 6.123233995736766e-17
+          x: 1
+          y: 7.2040916082559343e-32
+          z: 2.1589798941418016e-33
+      type: mesh
+      filename: meshes/fingertip.stl
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  fingertip_3:
+    name: fingertip_3
+    parent_joint: joint_11
+    inertial:
+      mass: 0.016
+      inertia:
+        xx: 3.3680000000000002e-06
+        xy: 1.15e-07
+        yy: 1.556e-06
+        yz: 0
+        zz: 2.8629999999999999e-06
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0.013286424108533501
+          y: -0.0061142383865419869
+          z: 0.014499999999999499
+        orientation:
+          w: 6.123233995736766e-17
+          x: 1
+          y: 7.7827058038075177e-33
+          z: -4.3085358475287694e-33
+      type: mesh
+      filename: meshes/fingertip.stl
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  mcp_joint:
+    joints:
+      - joint_0
+    name: mcp_joint
+    parent_joint: joint_1
+    inertial:
+      mass: 0.043999999999999997
+      inertia:
+        xx: 1.1499e-05
+        xy: 3.0489999999999999e-06
+        yy: 7.7959999999999996e-06
+        yz: 1.12e-07
+        zz: 1.4759e-05
+        xz: 1.2100000000000001e-07
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0.008406902261174496
+          y: 0.0077662438597169954
+          z: 0.014657354985032912
+        orientation:
+          w: 1
+          x: 8.1878948066104999e-16
+          y: -5.1052366512455089e-31
+          z: 8.5889843916640353e-32
+      type: mesh
+      filename: meshes/mcp_joint.stl
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  mcp_joint_2:
+    joints:
+      - joint_4
+    name: mcp_joint_2
+    parent_joint: joint_5
+    inertial:
+      mass: 0.043999999999999997
+      inertia:
+        xx: 1.1499e-05
+        xy: 3.0489999999999999e-06
+        yy: 7.7959999999999996e-06
+        yz: 1.12e-07
+        zz: 1.4759e-05
+        xz: 1.2100000000000001e-07
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0.008406902261174496
+          y: 0.0077662438597169954
+          z: 0.014657354985032914
+        orientation:
+          w: 1
+          x: 8.1878948066104999e-16
+          y: -5.0382327345170002e-31
+          z: 4.1252519641446774e-46
+      type: mesh
+      filename: meshes/mcp_joint.stl
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  mcp_joint_3:
+    joints:
+      - joint_8
+    name: mcp_joint_3
+    parent_joint: joint_9
+    inertial:
+      mass: 0.043999999999999997
+      inertia:
+        xx: 1.1499e-05
+        xy: 3.0489999999999999e-06
+        yy: 7.7959999999999996e-06
+        yz: 1.12e-07
+        zz: 1.4759e-05
+        xz: 1.2100000000000001e-07
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0.0084069022611744995
+          y: 0.0077662438597169963
+          z: 0.014657354985032914
+        orientation:
+          w: 1
+          x: 8.1878948066104999e-16
+          y: -5.0297524943163135e-31
+          z: 2.8648207922760588e-32
+      type: mesh
+      filename: meshes/mcp_joint.stl
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  palm_lower:
+    joints:
+      - joint_1
+      - joint_12
+      - joint_5
+      - joint_9
+    name: palm_lower
+    inertial:
+      mass: 0.23699999999999999
+      inertia:
+        xx: 0.000354094
+        xy: -1.1930000000000001e-06
+        yy: 0.00026091500000000002
+        yz: -2.9050000000000001e-06
+        zz: 0.00052925699999999999
+        xz: -2.4449999999999999e-06
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: -0.020095249652862544
+          y: 0.025757756134899473
+          z: -0.034722403578460216
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/palm_lower.stl
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  pip:
+    joints:
+      - joint_2
+    name: pip
+    parent_joint: joint_0
+    inertial:
+      mass: 0.032000000000000001
+      inertia:
+        xx: 4.7979999999999996e-06
+        xy: 1.2e-08
+        yy: 2.8619999999999999e-06
+        yz: 1.0999999999999999e-08
+        zz: 4.2339999999999996e-06
+        xz: 4.0000000000000002e-09
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0.009643363092271328
+          y: 0.00029999999999998951
+          z: 0.00078403401041737646
+        orientation:
+          w: 0.50000000000000011
+          x: -0.5
+          y: -0.5
+          z: -0.49999999999999989
+      type: mesh
+      filename: meshes/pip.stl
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  pip_2:
+    joints:
+      - joint_6
+    name: pip_2
+    parent_joint: joint_4
+    inertial:
+      mass: 0.032000000000000001
+      inertia:
+        xx: 4.7979999999999996e-06
+        xy: 1.2e-08
+        yy: 2.8619999999999999e-06
+        yz: 1.0999999999999999e-08
+        zz: 4.2339999999999996e-06
+        xz: 4.0000000000000002e-09
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0.009643363092271328
+          y: 0.00029999999999999472
+          z: 0.00078403401041737646
+        orientation:
+          w: 0.50000000000000011
+          x: -0.5
+          y: -0.5
+          z: -0.49999999999999989
+      type: mesh
+      filename: meshes/pip.stl
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  pip_3:
+    joints:
+      - joint_10
+    name: pip_3
+    parent_joint: joint_8
+    inertial:
+      mass: 0.032000000000000001
+      inertia:
+        xx: 4.7979999999999996e-06
+        xy: 1.2e-08
+        yy: 2.8619999999999999e-06
+        yz: 1.0999999999999999e-08
+        zz: 4.2339999999999996e-06
+        xz: 4.0000000000000002e-09
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0.0096433630922713315
+          y: 0.00029999999999998084
+          z: 0.00078403401041737646
+        orientation:
+          w: 0.50000000000000011
+          x: -0.5
+          y: -0.5
+          z: -0.49999999999999989
+      type: mesh
+      filename: meshes/pip.stl
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  pip_4:
+    joints:
+      - joint_13
+    name: pip_4
+    parent_joint: joint_12
+    inertial:
+      mass: 0.032000000000000001
+      inertia:
+        xx: 4.7979999999999996e-06
+        xy: 1.2e-08
+        yy: 2.8619999999999999e-06
+        yz: 1.0999999999999999e-08
+        zz: 4.2339999999999996e-06
+        xz: 4.0000000000000002e-09
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: -0.0053566369077286714
+          y: 0.00029999999999999992
+          z: 0.00078403401041737819
+        orientation:
+          w: 0.50000000000000011
+          x: -0.5
+          y: -0.5
+          z: -0.49999999999999989
+      type: mesh
+      filename: meshes/pip.stl
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  thumb_dip:
+    joints:
+      - joint_15
+    name: thumb_dip
+    parent_joint: joint_14
+    inertial:
+      mass: 0.037999999999999999
+      inertia:
+        xx: 8.4740000000000005e-06
+        xy: 2.41e-07
+        yy: 3.8410000000000002e-06
+        yz: 2.4999999999999999e-08
+        zz: 7.6790000000000005e-06
+        xz: 2.6000000000000001e-08
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0.043968715707239175
+          y: 0.057952952973709199
+          z: -0.0086286764493694757
+        orientation:
+          w: 1
+          x: 9.7144514654700495e-17
+          y: 1.63757896132211e-15
+          z: -1.5908181340638487e-31
+      type: mesh
+      filename: meshes/thumb_dip.stl
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  thumb_fingertip:
+    name: thumb_fingertip
+    parent_joint: joint_15
+    inertial:
+      mass: 0.049000000000000002
+      inertia:
+        xx: 2.0372000000000001e-05
+        xy: -4.89e-07
+        yy: 4.3359999999999997e-06
+        yz: -9.6999999999999995e-08
+        zz: 1.9845000000000001e-05
+        xz: -2.9999999999999997e-08
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0.062559538462667388
+          y: 0.078459682911396988
+          z: 0.048992911807332215
+        orientation:
+          w: 1
+          x: 2.1895288505078193e-47
+          y: -1.6653345369377351e-16
+          z: 6.0212043388959677e-47
+      type: mesh
+      filename: meshes/thumb_fingertip.stl
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  thumb_pip:
+    joints:
+      - joint_14
+    name: thumb_pip
+    parent_joint: joint_13
+    inertial:
+      mass: 0.0030000000000000001
+      inertia:
+        xx: 5.9299999999999998e-07
+        xy: 0
+        yy: 5.4899999999999995e-07
+        yz: 0
+        zz: 2.2399999999999999e-07
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0.011961920770611187
+          y: -5.3082538364890297e-16
+          z: -0.0158526489566642
+        orientation:
+          w: 0.70710678118654757
+          x: 0.70710678118654746
+          y: 5.6746020793222671e-47
+          z: -5.6746020793250392e-47
+      type: mesh
+      filename: meshes/thumb_pip.stl
+      scale:
+        x: 1
+        y: 1
+        z: 1

@@ -1,0 +1,560 @@
+system:
+  name: ur5
+  root_link: base_link
+links:
+  base:
+    name: base
+    parent_joint: base_link-base_fixed_joint
+    inertial:
+      mass: 0
+      inertia:
+        xx: 0
+        xy: 0
+        yy: 0
+        yz: 0
+        zz: 0
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+  base_link:
+    joints:
+      - base_link-base_fixed_joint
+      - shoulder_pan_joint
+    name: base_link
+    inertial:
+      mass: 4
+      inertia:
+        xx: 0.0044333315599999999
+        xy: 0
+        yy: 0.0044333315599999999
+        yz: 0
+        zz: 0.0071999999999999998
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/visual/base.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  ee_link:
+    name: ee_link
+    parent_joint: ee_fixed_joint
+    inertial:
+      mass: 0
+      inertia:
+        xx: 0
+        xy: 0
+        yy: 0
+        yz: 0
+        zz: 0
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+  forearm_link:
+    joints:
+      - wrist_1_joint
+    name: forearm_link
+    parent_joint: elbow_joint
+    inertial:
+      mass: 2.2749999999999999
+      inertia:
+        xx: 0.049443313555999999
+        xy: 0
+        yy: 0.049443313555999999
+        yz: 0
+        zz: 0.0040949999999999997
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0.25
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/visual/forearm.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  shoulder_link:
+    joints:
+      - shoulder_lift_joint
+    name: shoulder_link
+    parent_joint: shoulder_pan_joint
+    inertial:
+      mass: 3.7000000000000002
+      inertia:
+        xx: 0.010267495893
+        xy: 0
+        yy: 0.010267495893
+        yz: 0
+        zz: 0.0066600000000000001
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/visual/shoulder.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  tool0:
+    name: tool0
+    parent_joint: wrist_3_link-tool0_fixed_joint
+    inertial:
+      mass: 0
+      inertia:
+        xx: 0
+        xy: 0
+        yy: 0
+        yz: 0
+        zz: 0
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+  upper_arm_link:
+    joints:
+      - elbow_joint
+    name: upper_arm_link
+    parent_joint: shoulder_lift_joint
+    inertial:
+      mass: 8.3930000000000007
+      inertia:
+        xx: 0.22689067591000001
+        xy: 0
+        yy: 0.22689067591000001
+        yz: 0
+        zz: 0.0151074
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0.28000000000000003
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/visual/upperarm.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  wrist_1_link:
+    joints:
+      - wrist_2_joint
+    name: wrist_1_link
+    parent_joint: wrist_1_joint
+    inertial:
+      mass: 1.2190000000000001
+      inertia:
+        xx: 0.11117275553100001
+        xy: 0
+        yy: 0.11117275553100001
+        yz: 0
+        zz: 0.21942
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/visual/wrist1.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  wrist_2_link:
+    joints:
+      - wrist_3_joint
+    name: wrist_2_link
+    parent_joint: wrist_2_joint
+    inertial:
+      mass: 1.2190000000000001
+      inertia:
+        xx: 0.11117275553100001
+        xy: 0
+        yy: 0.11117275553100001
+        yz: 0
+        zz: 0.21942
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/visual/wrist2.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  wrist_3_link:
+    joints:
+      - ee_fixed_joint
+      - wrist_3_link-tool0_fixed_joint
+    name: wrist_3_link
+    parent_joint: wrist_3_joint
+    inertial:
+      mass: 0.18790000000000001
+      inertia:
+        xx: 0.0171364731454
+        xy: 0
+        yy: 0.0171364731454
+        yz: 0
+        zz: 0.033821999999999998
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/visual/wrist3.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+joints:
+  base_link-base_fixed_joint:
+    type: fixed
+    name: base_link-base_fixed_joint
+    parent_link: base_link
+    child_link: base
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        w: 1.7948965149208059e-09
+        x: 0
+        y: 0
+        z: -1
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  shoulder_pan_joint:
+    type: revolute
+    name: shoulder_pan_joint
+    parent_link: base_link
+    child_link: shoulder_link
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0.089159000000000002
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 1
+    limits:
+      lower: -6.2831853000000004
+      upper: 6.2831853000000004
+      velocity: 3.1499999999999999
+      effort: 150
+  wrist_1_joint:
+    type: revolute
+    name: wrist_1_joint
+    parent_link: forearm_link
+    child_link: wrist_1_link
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0.39224999999999999
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 1
+      z: 0
+    limits:
+      lower: -6.2831853000000004
+      upper: 6.2831853000000004
+      velocity: 3.2000000000000002
+      effort: 28
+  shoulder_lift_joint:
+    type: revolute
+    name: shoulder_lift_joint
+    parent_link: shoulder_link
+    child_link: upper_arm_link
+    transform:
+      translation:
+        x: 0
+        y: 0.13585
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 1
+      z: 0
+    limits:
+      lower: -6.2831853000000004
+      upper: 6.2831853000000004
+      velocity: 3.1499999999999999
+      effort: 150
+  elbow_joint:
+    type: revolute
+    name: elbow_joint
+    parent_link: upper_arm_link
+    child_link: forearm_link
+    transform:
+      translation:
+        x: 0
+        y: -0.1197
+        z: 0.42499999999999999
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 1
+      z: 0
+    limits:
+      lower: -6.2831853000000004
+      upper: 6.2831853000000004
+      velocity: 3.1499999999999999
+      effort: 150
+  wrist_2_joint:
+    type: revolute
+    name: wrist_2_joint
+    parent_link: wrist_1_link
+    child_link: wrist_2_link
+    transform:
+      translation:
+        x: 0
+        y: 0.092999999999999999
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 1
+    limits:
+      lower: -6.2831853000000004
+      upper: 6.2831853000000004
+      velocity: 3.2000000000000002
+      effort: 28
+  wrist_3_joint:
+    type: revolute
+    name: wrist_3_joint
+    parent_link: wrist_2_link
+    child_link: wrist_3_link
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0.094649999999999998
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 1
+      z: 0
+    limits:
+      lower: -6.2831853000000004
+      upper: 6.2831853000000004
+      velocity: 3.2000000000000002
+      effort: 28
+  ee_fixed_joint:
+    type: fixed
+    name: ee_fixed_joint
+    parent_link: wrist_3_link
+    child_link: ee_link
+    transform:
+      translation:
+        x: 0
+        y: 0.082299999999999998
+        z: 0
+      rotation:
+        w: 0.70710678182113929
+        x: 0
+        y: 0
+        z: 0.70710678055195575
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  wrist_3_link-tool0_fixed_joint:
+    type: fixed
+    name: wrist_3_link-tool0_fixed_joint
+    parent_link: wrist_3_link
+    child_link: tool0
+    transform:
+      translation:
+        x: 0
+        y: 0.082299999999999998
+        z: 0
+      rotation:
+        w: 0.70710678182113929
+        x: -0.70710678055195575
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 0

@@ -1,0 +1,1981 @@
+system:
+  name: atlas
+  root_link: pelvis
+links:
+  head:
+    name: head
+    parent_joint: neck_ry
+    inertial:
+      mass: 1.41984
+      inertia:
+        xx: 0.0039687999999999998
+        xy: -1.5797000000000001e-06
+        yy: 0.0041177999999999996
+        yz: -6.8415000000000005e-07
+        zz: 0.0035243000000000002
+        xz: -0.00089293
+      origin:
+        position:
+          x: -0.075493000000000005
+          y: 3.3383000000000002e-05
+          z: 0.027740000000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/head.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  l_clav:
+    joints:
+      - l_arm_shx
+    name: l_clav
+    parent_joint: l_arm_shz
+    inertial:
+      mass: 4.4660000000000002
+      inertia:
+        xx: 0.010999999999999999
+        xy: 0
+        yy: 0.0089999999999999993
+        yz: 0.0040000000000000001
+        zz: 0.0040000000000000001
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: -0.048000000000000001
+          z: -0.084000000000000005
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/r_clav.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  l_foot:
+    name: l_foot
+    parent_joint: l_leg_akx
+    inertial:
+      mass: 2.4100000000000001
+      inertia:
+        xx: 0.002
+        xy: 0
+        yy: 0.0070000000000000001
+        yz: 0
+        zz: 0.0080000000000000002
+        xz: 0
+      origin:
+        position:
+          x: 0.027
+          y: 0
+          z: -0.067000000000000004
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/l_foot.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  l_hand:
+    name: l_hand
+    parent_joint: l_arm_wry2
+    inertial:
+      mass: 1
+      inertia:
+        xx: 0.0001
+        xy: 0
+        yy: 0.0001
+        yz: 0
+        zz: 0.0001
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: -0.14999999999999999
+          z: 0.01
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: sphere
+      radius: 0.029999999999999999
+  l_larm:
+    joints:
+      - l_arm_wry
+    name: l_larm
+    parent_joint: l_arm_elx
+    inertial:
+      mass: 3.2480000000000002
+      inertia:
+        xx: 0.00265
+        xy: 0
+        yy: 0.0044600000000000004
+        yz: 0
+        zz: 0.0044600000000000004
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/r_larm.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  l_lfarm:
+    joints:
+      - l_arm_wry2
+    name: l_lfarm
+    parent_joint: l_arm_wrx
+    inertial:
+      mass: 2.5089999999999999
+      inertia:
+        xx: 0.00265
+        xy: 0
+        yy: 0.0044600000000000004
+        yz: 0
+        zz: 0.0044600000000000004
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: -1.0341155355510722e-13
+          x: -0
+          y: 1
+          z: -0
+      type: mesh
+      filename: meshes/r_hand.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  l_lglut:
+    joints:
+      - l_leg_hpy
+    name: l_lglut
+    parent_joint: l_leg_hpx
+    inertial:
+      mass: 0.89800000000000002
+      inertia:
+        xx: 0.00069132600000000003
+        xy: -2.24344e-05
+        yy: 0.00126856
+        yz: 0.00013786199999999999
+        zz: 0.0010648700000000001
+        xz: 2.5050799999999998e-06
+      origin:
+        position:
+          x: 0.0133341
+          y: 0.017048399999999998
+          z: -0.031205199999999999
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/l_lglut.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  l_lleg:
+    joints:
+      - l_leg_aky
+    name: l_lleg
+    parent_joint: l_leg_kny
+    inertial:
+      mass: 4.5149999999999997
+      inertia:
+        xx: 0.076999999999999999
+        xy: 0
+        yy: 0.075999999999999998
+        yz: 0
+        zz: 0.01
+        xz: -0.0030000000000000001
+      origin:
+        position:
+          x: 0.001
+          y: 0
+          z: -0.187
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/l_lleg.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  l_scap:
+    joints:
+      - l_arm_ely
+    name: l_scap
+    parent_joint: l_arm_shx
+    inertial:
+      mass: 3.899
+      inertia:
+        xx: 0.0031900000000000001
+        xy: 0
+        yy: 0.0058300000000000001
+        yz: 0
+        zz: 0.0058300000000000001
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/r_scap.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  l_talus:
+    joints:
+      - l_leg_akx
+    name: l_talus
+    parent_joint: l_leg_aky
+    inertial:
+      mass: 0.125
+      inertia:
+        xx: 1.01674e-05
+        xy: 0
+        yy: 8.4277500000000008e-06
+        yz: 0
+        zz: 1.3010099999999999e-05
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/l_talus.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  l_uarm:
+    joints:
+      - l_arm_elx
+    name: l_uarm
+    parent_joint: l_arm_ely
+    inertial:
+      mass: 4.3860000000000001
+      inertia:
+        xx: 0.0065599999999999999
+        xy: 0
+        yy: 0.0035799999999999998
+        yz: 0
+        zz: 0.0065599999999999999
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0.065000000000000002
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/r_uarm.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  l_ufarm:
+    joints:
+      - l_arm_wrx
+    name: l_ufarm
+    parent_joint: l_arm_wry
+    inertial:
+      mass: 4.3860000000000001
+      inertia:
+        xx: 0.0065599999999999999
+        xy: 0
+        yy: 0.0035799999999999998
+        yz: 0
+        zz: 0.0065599999999999999
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0.065000000000000002
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/r_farm.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  l_uglut:
+    joints:
+      - l_leg_hpx
+    name: l_uglut
+    parent_joint: l_leg_hpz
+    inertial:
+      mass: 1.9590000000000001
+      inertia:
+        xx: 0.00074275999999999997
+        xy: -3.7960700000000002e-08
+        yy: 0.00068817900000000003
+        yz: -3.2735000000000002e-08
+        zz: 0.00041241999999999998
+        xz: -2.7954899999999999e-05
+      origin:
+        position:
+          x: 0.0052926199999999996
+          y: -0.0034473199999999998
+          z: 0.0031304599999999998
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/l_uglut.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  l_uleg:
+    joints:
+      - l_leg_kny
+    name: l_uleg
+    parent_joint: l_leg_hpy
+    inertial:
+      mass: 8.2040000000000006
+      inertia:
+        xx: 0.089999999999999997
+        xy: 0
+        yy: 0.089999999999999997
+        yz: 0
+        zz: 0.02
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: -0.20999999999999999
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/l_uleg.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  ltorso:
+    joints:
+      - back_bky
+    name: ltorso
+    parent_joint: back_bkz
+    inertial:
+      mass: 2.27
+      inertia:
+        xx: 0.0039091999999999998
+        xy: -5.0449100000000003e-08
+        yy: 0.0034169399999999998
+        yz: 4.8711899999999996e-07
+        zz: 0.0017449200000000001
+        xz: -0.000342157
+      origin:
+        position:
+          x: -0.0112984
+          y: -3.1536600000000001e-06
+          z: 0.0746835
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/ltorso.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  mtorso:
+    joints:
+      - back_bkx
+    name: mtorso
+    parent_joint: back_bky
+    inertial:
+      mass: 0.79900000000000004
+      inertia:
+        xx: 0.00045418100000000001
+        xy: -6.1076399999999997e-05
+        yy: 0.00048328200000000003
+        yz: 5.27463e-05
+        zz: 0.00044421499999999997
+        xz: 3.9400899999999997e-05
+      origin:
+        position:
+          x: -0.0081626600000000004
+          y: -0.013124500000000001
+          z: 0.0305974
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/mtorso.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  pelvis:
+    joints:
+      - back_bkz
+      - l_leg_hpz
+      - r_leg_hpz
+    name: pelvis
+    inertial:
+      mass: 9.5090000000000003
+      inertia:
+        xx: 0.1244
+        xy: 0.00080000000000000004
+        yy: 0.095799999999999996
+        yz: -0.00050000000000000001
+        zz: 0.1167
+        xz: -0.00069999999999999999
+      origin:
+        position:
+          x: 0.0111
+          y: 0
+          z: 0.027099999999999999
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/pelvis.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  r_clav:
+    joints:
+      - r_arm_shx
+    name: r_clav
+    parent_joint: r_arm_shz
+    inertial:
+      mass: 4.4660000000000002
+      inertia:
+        xx: 0.010999999999999999
+        xy: 0
+        yy: 0.0089999999999999993
+        yz: 0.0040000000000000001
+        zz: 0.0040000000000000001
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: -0.048000000000000001
+          z: -0.084000000000000005
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/r_clav.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  r_foot:
+    name: r_foot
+    parent_joint: r_leg_akx
+    inertial:
+      mass: 2.4100000000000001
+      inertia:
+        xx: 0.002
+        xy: 0
+        yy: 0.0070000000000000001
+        yz: 0
+        zz: 0.0080000000000000002
+        xz: 0
+      origin:
+        position:
+          x: 0.027
+          y: 0
+          z: -0.067000000000000004
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/r_foot.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  r_hand:
+    name: r_hand
+    parent_joint: r_arm_wry2
+    inertial:
+      mass: 1
+      inertia:
+        xx: 0.0001
+        xy: 0
+        yy: 0.0001
+        yz: 0
+        zz: 0.0001
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: -0.14999999999999999
+          z: -0.01
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: sphere
+      radius: 0.029999999999999999
+  r_larm:
+    joints:
+      - r_arm_wry
+    name: r_larm
+    parent_joint: r_arm_elx
+    inertial:
+      mass: 3.2480000000000002
+      inertia:
+        xx: 0.00265
+        xy: 0
+        yy: 0.0044600000000000004
+        yz: 0
+        zz: 0.0044600000000000004
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/r_larm.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  r_lfarm:
+    joints:
+      - r_arm_wry2
+    name: r_lfarm
+    parent_joint: r_arm_wrx
+    inertial:
+      mass: 2.5089999999999999
+      inertia:
+        xx: 0.00265
+        xy: 0
+        yy: 0.0044600000000000004
+        yz: 0
+        zz: 0.0044600000000000004
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: -1.0341155355510722e-13
+          x: -0
+          y: 1
+          z: -0
+      type: mesh
+      filename: meshes/r_hand.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  r_lglut:
+    joints:
+      - r_leg_hpy
+    name: r_lglut
+    parent_joint: r_leg_hpx
+    inertial:
+      mass: 0.89800000000000002
+      inertia:
+        xx: 0.00069132600000000003
+        xy: 2.24344e-05
+        yy: 0.00126856
+        yz: -0.00013786199999999999
+        zz: 0.0010648700000000001
+        xz: 2.5050799999999998e-06
+      origin:
+        position:
+          x: 0.0133341
+          y: -0.017048399999999998
+          z: -0.031205199999999999
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/r_lglut.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  r_lleg:
+    joints:
+      - r_leg_aky
+    name: r_lleg
+    parent_joint: r_leg_kny
+    inertial:
+      mass: 4.5149999999999997
+      inertia:
+        xx: 0.076999999999999999
+        xy: -0
+        yy: 0.075999999999999998
+        yz: -0
+        zz: 0.01
+        xz: -0.0030000000000000001
+      origin:
+        position:
+          x: 0.001
+          y: 0
+          z: -0.187
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/r_lleg.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  r_scap:
+    joints:
+      - r_arm_ely
+    name: r_scap
+    parent_joint: r_arm_shx
+    inertial:
+      mass: 3.899
+      inertia:
+        xx: 0.0031900000000000001
+        xy: 0
+        yy: 0.0058300000000000001
+        yz: 0
+        zz: 0.0058300000000000001
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/r_scap.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  r_talus:
+    joints:
+      - r_leg_akx
+    name: r_talus
+    parent_joint: r_leg_aky
+    inertial:
+      mass: 0.125
+      inertia:
+        xx: 1.01674e-05
+        xy: 0
+        yy: 8.4277500000000008e-06
+        yz: 0
+        zz: 1.3010099999999999e-05
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/r_talus.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  r_uarm:
+    joints:
+      - r_arm_elx
+    name: r_uarm
+    parent_joint: r_arm_ely
+    inertial:
+      mass: 4.3860000000000001
+      inertia:
+        xx: 0.0065599999999999999
+        xy: 0
+        yy: 0.0035799999999999998
+        yz: 0
+        zz: 0.0065599999999999999
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0.065000000000000002
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/r_uarm.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  r_ufarm:
+    joints:
+      - r_arm_wrx
+    name: r_ufarm
+    parent_joint: r_arm_wry
+    inertial:
+      mass: 4.3860000000000001
+      inertia:
+        xx: 0.0065599999999999999
+        xy: 0
+        yy: 0.0035799999999999998
+        yz: 0
+        zz: 0.0065599999999999999
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0.065000000000000002
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/r_farm.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  r_uglut:
+    joints:
+      - r_leg_hpx
+    name: r_uglut
+    parent_joint: r_leg_hpz
+    inertial:
+      mass: 1.9590000000000001
+      inertia:
+        xx: 0.00074275999999999997
+        xy: 3.7960700000000002e-08
+        yy: 0.00068817900000000003
+        yz: 3.2735000000000002e-08
+        zz: 0.00041241999999999998
+        xz: -2.7954899999999999e-05
+      origin:
+        position:
+          x: 0.0052926199999999996
+          y: 0.0034473199999999998
+          z: 0.0031304599999999998
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/r_uglut.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  r_uleg:
+    joints:
+      - r_leg_kny
+    name: r_uleg
+    parent_joint: r_leg_hpy
+    inertial:
+      mass: 8.2040000000000006
+      inertia:
+        xx: 0.089999999999999997
+        xy: 0
+        yy: 0.089999999999999997
+        yz: 0
+        zz: 0.02
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: -0.20999999999999999
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/r_uleg.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  utorso:
+    joints:
+      - l_arm_shz
+      - neck_ry
+      - r_arm_shz
+    name: utorso
+    parent_joint: back_bkx
+    inertial:
+      mass: 84.409000000000006
+      inertia:
+        xx: 1.577
+        xy: -0.032000000000000001
+        yy: 1.6020000000000001
+        yz: 0.047
+        zz: 0.56499999999999995
+        xz: 0.10199999999999999
+      origin:
+        position:
+          x: -0.062199999999999998
+          y: 0.0023
+          z: 0.31569999999999998
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/utorso.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+joints:
+  l_arm_shx:
+    type: revolute
+    name: l_arm_shx
+    parent_link: l_clav
+    child_link: l_scap
+    transform:
+      translation:
+        x: 0
+        y: -0.11
+        z: -0.245
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: -1
+      y: -0
+      z: -0
+    limits:
+      lower: -1.5708
+      upper: 1.5708
+      velocity: 12
+      effort: 99
+  l_arm_wry:
+    type: revolute
+    name: l_arm_wry
+    parent_link: l_larm
+    child_link: l_ufarm
+    transform:
+      translation:
+        x: 0
+        y: -0.187
+        z: -0.0091999999999999998
+      rotation:
+        w: -1.0341155355510722e-13
+        x: -0
+        y: 1
+        z: -0
+    axis:
+      x: -0
+      y: -1
+      z: -0
+    limits:
+      lower: 0
+      upper: 3.1415899999999999
+      velocity: 12
+      effort: 25
+  l_arm_wry2:
+    type: revolute
+    name: l_arm_wry2
+    parent_link: l_lfarm
+    child_link: l_hand
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        w: -1.0341155355510722e-13
+        x: -0
+        y: 1
+        z: -0
+    axis:
+      x: 0
+      y: 1
+      z: 0
+    limits:
+      lower: -0.001
+      upper: 0.001
+      velocity: 1
+      effort: 5
+  l_leg_hpy:
+    type: revolute
+    name: l_leg_hpy
+    parent_link: l_lglut
+    child_link: l_uleg
+    transform:
+      translation:
+        x: 0.050000000000000003
+        y: 0.022499999999999999
+        z: -0.066000000000000003
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 1
+      z: 0
+    limits:
+      lower: -1.6123400000000001
+      upper: 0.65764
+      velocity: 12
+      effort: 840
+  l_leg_aky:
+    type: revolute
+    name: l_leg_aky
+    parent_link: l_lleg
+    child_link: l_talus
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: -0.42199999999999999
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 1
+      z: 0
+    limits:
+      lower: -1
+      upper: 0.69999999999999996
+      velocity: 12
+      effort: 92
+  l_arm_ely:
+    type: revolute
+    name: l_arm_ely
+    parent_link: l_scap
+    child_link: l_uarm
+    transform:
+      translation:
+        x: 0
+        y: -0.187
+        z: -0.016
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: -0
+      y: -1
+      z: -0
+    limits:
+      lower: 0
+      upper: 3.1415899999999999
+      velocity: 12
+      effort: 63
+  l_leg_akx:
+    type: revolute
+    name: l_leg_akx
+    parent_link: l_talus
+    child_link: l_foot
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 1
+      y: 0
+      z: 0
+    limits:
+      lower: -0.80000000000000004
+      upper: 0.80000000000000004
+      velocity: 12
+      effort: 45
+  l_arm_elx:
+    type: revolute
+    name: l_arm_elx
+    parent_link: l_uarm
+    child_link: l_larm
+    transform:
+      translation:
+        x: 0
+        y: -0.11899999999999999
+        z: 0.0091999999999999998
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: -1
+      y: -0
+      z: -0
+    limits:
+      lower: 0
+      upper: 2.3561899999999998
+      velocity: 12
+      effort: 112
+  l_arm_wrx:
+    type: revolute
+    name: l_arm_wrx
+    parent_link: l_ufarm
+    child_link: l_lfarm
+    transform:
+      translation:
+        x: 0
+        y: -0.11899999999999999
+        z: 0.0091999999999999998
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 1
+      y: 0
+      z: 0
+    limits:
+      lower: -1.1780999999999999
+      upper: 1.1780999999999999
+      velocity: 12
+      effort: 25
+  l_leg_hpx:
+    type: revolute
+    name: l_leg_hpx
+    parent_link: l_uglut
+    child_link: l_lglut
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 1
+      y: 0
+      z: 0
+    limits:
+      lower: -0.52359900000000004
+      upper: 0.52359900000000004
+      velocity: 12
+      effort: 530
+  l_leg_kny:
+    type: revolute
+    name: l_leg_kny
+    parent_link: l_uleg
+    child_link: l_lleg
+    transform:
+      translation:
+        x: -0.050000000000000003
+        y: 0
+        z: -0.374
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 1
+      z: 0
+    limits:
+      lower: 0
+      upper: 2.3563700000000001
+      velocity: 12
+      effort: 890
+  back_bky:
+    type: revolute
+    name: back_bky
+    parent_link: ltorso
+    child_link: mtorso
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0.16200000000000001
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 1
+      z: 0
+    limits:
+      lower: -0.219388
+      upper: 0.53878300000000001
+      velocity: 9
+      effort: 445
+  back_bkx:
+    type: revolute
+    name: back_bkx
+    parent_link: mtorso
+    child_link: utorso
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0.050000000000000003
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 1
+      y: 0
+      z: 0
+    limits:
+      lower: -0.52359900000000004
+      upper: 0.52359900000000004
+      velocity: 12
+      effort: 300
+  back_bkz:
+    type: revolute
+    name: back_bkz
+    parent_link: pelvis
+    child_link: ltorso
+    transform:
+      translation:
+        x: -0.012500000000000001
+        y: 0
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 1
+    limits:
+      lower: -0.66322499999999995
+      upper: 0.66322499999999995
+      velocity: 12
+      effort: 106
+  l_leg_hpz:
+    type: revolute
+    name: l_leg_hpz
+    parent_link: pelvis
+    child_link: l_uglut
+    transform:
+      translation:
+        x: 0
+        y: 0.088999999999999996
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 1
+    limits:
+      lower: -0.17435800000000001
+      upper: 0.78679399999999999
+      velocity: 12
+      effort: 275
+  r_leg_hpz:
+    type: revolute
+    name: r_leg_hpz
+    parent_link: pelvis
+    child_link: r_uglut
+    transform:
+      translation:
+        x: 0
+        y: -0.088999999999999996
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 1
+    limits:
+      lower: -0.78679399999999999
+      upper: 0.17435800000000001
+      velocity: 12
+      effort: 275
+  r_arm_shx:
+    type: revolute
+    name: r_arm_shx
+    parent_link: r_clav
+    child_link: r_scap
+    transform:
+      translation:
+        x: 0
+        y: -0.11
+        z: -0.245
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 1
+      y: 0
+      z: 0
+    limits:
+      lower: -1.5708
+      upper: 1.5708
+      velocity: 12
+      effort: 99
+  r_arm_wry:
+    type: revolute
+    name: r_arm_wry
+    parent_link: r_larm
+    child_link: r_ufarm
+    transform:
+      translation:
+        x: 0
+        y: -0.187
+        z: -0.0091999999999999998
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 1
+      z: 0
+    limits:
+      lower: 0
+      upper: 3.1415899999999999
+      velocity: 12
+      effort: 25
+  r_arm_wry2:
+    type: revolute
+    name: r_arm_wry2
+    parent_link: r_lfarm
+    child_link: r_hand
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 1
+      z: 0
+    limits:
+      lower: -0.001
+      upper: 0.001
+      velocity: 1
+      effort: 5
+  r_leg_hpy:
+    type: revolute
+    name: r_leg_hpy
+    parent_link: r_lglut
+    child_link: r_uleg
+    transform:
+      translation:
+        x: 0.050000000000000003
+        y: -0.022499999999999999
+        z: -0.066000000000000003
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 1
+      z: 0
+    limits:
+      lower: -1.6123400000000001
+      upper: 0.65764
+      velocity: 12
+      effort: 840
+  r_leg_aky:
+    type: revolute
+    name: r_leg_aky
+    parent_link: r_lleg
+    child_link: r_talus
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: -0.42199999999999999
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 1
+      z: 0
+    limits:
+      lower: -1
+      upper: 0.69999999999999996
+      velocity: 12
+      effort: 92
+  r_arm_ely:
+    type: revolute
+    name: r_arm_ely
+    parent_link: r_scap
+    child_link: r_uarm
+    transform:
+      translation:
+        x: 0
+        y: -0.187
+        z: -0.016
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 1
+      z: 0
+    limits:
+      lower: 0
+      upper: 3.1415899999999999
+      velocity: 12
+      effort: 63
+  r_leg_akx:
+    type: revolute
+    name: r_leg_akx
+    parent_link: r_talus
+    child_link: r_foot
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 1
+      y: 0
+      z: 0
+    limits:
+      lower: -0.80000000000000004
+      upper: 0.80000000000000004
+      velocity: 12
+      effort: 45
+  r_arm_elx:
+    type: revolute
+    name: r_arm_elx
+    parent_link: r_uarm
+    child_link: r_larm
+    transform:
+      translation:
+        x: 0
+        y: -0.11899999999999999
+        z: 0.0091999999999999998
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 1
+      y: 0
+      z: 0
+    limits:
+      lower: -2.3561899999999998
+      upper: 0
+      velocity: 12
+      effort: 112
+  r_arm_wrx:
+    type: revolute
+    name: r_arm_wrx
+    parent_link: r_ufarm
+    child_link: r_lfarm
+    transform:
+      translation:
+        x: 0
+        y: -0.11899999999999999
+        z: 0.0091999999999999998
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 1
+      y: 0
+      z: 0
+    limits:
+      lower: -1.1780999999999999
+      upper: 1.1780999999999999
+      velocity: 12
+      effort: 25
+  r_leg_hpx:
+    type: revolute
+    name: r_leg_hpx
+    parent_link: r_uglut
+    child_link: r_lglut
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 1
+      y: 0
+      z: 0
+    limits:
+      lower: -0.52359900000000004
+      upper: 0.52359900000000004
+      velocity: 12
+      effort: 530
+  r_leg_kny:
+    type: revolute
+    name: r_leg_kny
+    parent_link: r_uleg
+    child_link: r_lleg
+    transform:
+      translation:
+        x: -0.050000000000000003
+        y: 0
+        z: -0.374
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 1
+      z: 0
+    limits:
+      lower: 0
+      upper: 2.3563700000000001
+      velocity: 12
+      effort: 890
+  l_arm_shz:
+    type: revolute
+    name: l_arm_shz
+    parent_link: utorso
+    child_link: l_clav
+    transform:
+      translation:
+        x: 0.1406
+        y: 0.22559999999999999
+        z: 0.47760000000000002
+      rotation:
+        w: -1.0341155355510722e-13
+        x: -0
+        y: 0
+        z: 1
+    axis:
+      x: 0
+      y: 0
+      z: 1
+    limits:
+      lower: -1.5708
+      upper: 0.78539800000000004
+      velocity: 12
+      effort: 87
+  neck_ry:
+    type: revolute
+    name: neck_ry
+    parent_link: utorso
+    child_link: head
+    transform:
+      translation:
+        x: 0.25459999999999999
+        y: 0
+        z: 0.62150000000000005
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 1
+      z: 0
+    limits:
+      lower: -0.60213899999999998
+      upper: 1.1431899999999999
+      velocity: 6.2800000000000002
+      effort: 5
+  r_arm_shz:
+    type: revolute
+    name: r_arm_shz
+    parent_link: utorso
+    child_link: r_clav
+    transform:
+      translation:
+        x: 0.1406
+        y: -0.22559999999999999
+        z: 0.47760000000000002
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 1
+    limits:
+      lower: -0.78539800000000004
+      upper: 1.5708
+      velocity: 12
+      effort: 87

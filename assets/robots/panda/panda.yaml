@@ -1,0 +1,772 @@
+system:
+  name: panda
+  root_link: panda_link0
+links:
+  panda_endeffector_link:
+    name: panda_endeffector_link
+    parent_joint: panda_endeffector_joint
+    inertial:
+      mass: 0
+      inertia:
+        xx: 0
+        xy: 0
+        yy: 0
+        yz: 0
+        zz: 0
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+  panda_hand:
+    joints:
+      - panda_endeffector_joint
+      - panda_finger_joint1
+      - panda_finger_joint2
+    name: panda_hand
+    parent_joint: panda_hand_joint
+    inertial:
+      mass: 0.73
+      inertia:
+        xx: 0.001
+        xy: 0
+        yy: 0.0025
+        yz: 0
+        zz: 0.0017
+        xz: 0
+      origin:
+        position:
+          x: -0.01
+          y: 0
+          z: 0.03
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/visual/hand.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  panda_leftfinger:
+    name: panda_leftfinger
+    parent_joint: panda_finger_joint1
+    inertial:
+      mass: 0.015
+      inertia:
+        xx: 2.3749999999999997e-06
+        xy: 0
+        yy: 2.3749999999999997e-06
+        yz: 0
+        zz: 7.5000000000000002e-07
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/visual/finger.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  panda_link0:
+    joints:
+      - panda_joint1
+    name: panda_link0
+    inertial:
+      mass: 0.62976900000000002
+      inertia:
+        xx: 0.00315
+        xy: 8.2903999999999996e-07
+        yy: 0.0038800000000000002
+        yz: 8.2299000000000006e-06
+        zz: 0.0042849999999999997
+        xz: 0.00014999999999999999
+      origin:
+        position:
+          x: -0.041017999999999999
+          y: -0.00013999999999999999
+          z: 0.049973999999999998
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/visual/link0.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  panda_link1:
+    joints:
+      - panda_joint2
+    name: panda_link1
+    parent_joint: panda_joint1
+    inertial:
+      mass: 4.9706840000000003
+      inertia:
+        xx: 0.70337000000000005
+        xy: -0.00013899999999999999
+        yy: 0.70660999999999996
+        yz: 0.019168999999999999
+        zz: 0.0091170000000000001
+        xz: 0.0067720000000000002
+      origin:
+        position:
+          x: 0.003875
+          y: 0.002081
+          z: -0.047620000000000003
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/visual/link1.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  panda_link2:
+    joints:
+      - panda_joint3
+    name: panda_link2
+    parent_joint: panda_joint2
+    inertial:
+      mass: 0.646926
+      inertia:
+        xx: 0.0079620000000000003
+        xy: -0.0039249999999999997
+        yy: 0.02811
+        yz: 0.00070399999999999998
+        zz: 0.025995000000000001
+        xz: 0.010253999999999999
+      origin:
+        position:
+          x: -0.0031410000000000001
+          y: -0.028719999999999999
+          z: 0.0034949999999999998
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/visual/link2.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  panda_link3:
+    joints:
+      - panda_joint4
+    name: panda_link3
+    parent_joint: panda_joint3
+    inertial:
+      mass: 3.2286039999999998
+      inertia:
+        xx: 0.037241999999999997
+        xy: -0.0047609999999999996
+        yy: 0.036155
+        yz: -0.012805
+        zz: 0.010829999999999999
+        xz: -0.011396
+      origin:
+        position:
+          x: 0.027518000000000001
+          y: 0.039252000000000002
+          z: -0.066502000000000006
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/visual/link3.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  panda_link4:
+    joints:
+      - panda_joint5
+    name: panda_link4
+    parent_joint: panda_joint4
+    inertial:
+      mass: 3.5878950000000001
+      inertia:
+        xx: 0.025853000000000001
+        xy: 0.007796
+        yy: 0.019552
+        yz: 0.0086409999999999994
+        zz: 0.028323000000000001
+        xz: -0.0013320000000000001
+      origin:
+        position:
+          x: -0.053170000000000002
+          y: 0.104419
+          z: 0.027453999999999999
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/visual/link4.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  panda_link5:
+    joints:
+      - panda_joint6
+    name: panda_link5
+    parent_joint: panda_joint5
+    inertial:
+      mass: 1.225946
+      inertia:
+        xx: 0.035548999999999997
+        xy: -0.002117
+        yy: 0.029474
+        yz: 0.00022900000000000001
+        zz: 0.0086269999999999993
+        xz: -0.0040369999999999998
+      origin:
+        position:
+          x: -0.011953
+          y: 0.041064999999999997
+          z: -0.038436999999999999
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/visual/link5.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  panda_link6:
+    joints:
+      - panda_joint7
+    name: panda_link6
+    parent_joint: panda_joint6
+    inertial:
+      mass: 1.666555
+      inertia:
+        xx: 0.001964
+        xy: 0.00010900000000000001
+        yy: 0.0043540000000000002
+        yz: 0.00034099999999999999
+        zz: 0.0054330000000000003
+        xz: -0.001158
+      origin:
+        position:
+          x: 0.060149000000000001
+          y: -0.014116999999999999
+          z: -0.010517
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/visual/link6.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  panda_link7:
+    joints:
+      - panda_joint8
+    name: panda_link7
+    parent_joint: panda_joint7
+    inertial:
+      mass: 0.73552200000000001
+      inertia:
+        xx: 0.012515999999999999
+        xy: -0.000428
+        yy: 0.010026999999999999
+        yz: -0.00074100000000000001
+        zz: 0.0048149999999999998
+        xz: -0.001196
+      origin:
+        position:
+          x: 0.010517
+          y: -0.0042519999999999997
+          z: 0.061596999999999999
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/visual/link7.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  panda_link8:
+    joints:
+      - panda_hand_joint
+    name: panda_link8
+    parent_joint: panda_joint8
+    inertial:
+      mass: 0
+      inertia:
+        xx: 0
+        xy: 0
+        yy: 0
+        yz: 0
+        zz: 0
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+  panda_rightfinger:
+    name: panda_rightfinger
+    parent_joint: panda_finger_joint2
+    inertial:
+      mass: 0.015
+      inertia:
+        xx: 2.3749999999999997e-06
+        xy: 0
+        yy: 2.3749999999999997e-06
+        yz: 0
+        zz: 7.5000000000000002e-07
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 6.123233995736766e-17
+          x: 0
+          y: 0
+          z: 1
+      type: mesh
+      filename: meshes/visual/finger.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+joints:
+  panda_endeffector_joint:
+    type: fixed
+    name: panda_endeffector_joint
+    parent_link: panda_hand
+    child_link: panda_endeffector_link
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0.10340000000000001
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  panda_finger_joint1:
+    type: prismatic
+    name: panda_finger_joint1
+    parent_link: panda_hand
+    child_link: panda_leftfinger
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0.058400000000000001
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 1
+      z: 0
+    limits:
+      lower: 0
+      upper: 0.040000000000000001
+      velocity: 0.10000000000000001
+      effort: 10
+  panda_finger_joint2:
+    type: prismatic
+    name: panda_finger_joint2
+    parent_link: panda_hand
+    child_link: panda_rightfinger
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0.058400000000000001
+      rotation:
+        w: 0
+        x: 0
+        y: 0
+        z: -1
+    axis:
+      x: 0
+      y: 1
+      z: 0
+    limits:
+      lower: 0
+      upper: 0.040000000000000001
+      velocity: 0.10000000000000001
+      effort: 10
+  panda_joint1:
+    type: revolute
+    name: panda_joint1
+    parent_link: panda_link0
+    child_link: panda_link1
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0.33300000000000002
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 1
+    limits:
+      lower: -2.8973
+      upper: 2.8973
+      velocity: 2.1749999999999998
+      effort: 87
+  panda_joint2:
+    type: revolute
+    name: panda_joint2
+    parent_link: panda_link1
+    child_link: panda_link2
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        w: 0.70710678118654757
+        x: -0.70710678118654746
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 1
+    limits:
+      lower: -1.7627999999999999
+      upper: 1.7627999999999999
+      velocity: 2.1749999999999998
+      effort: 87
+  panda_joint3:
+    type: revolute
+    name: panda_joint3
+    parent_link: panda_link2
+    child_link: panda_link3
+    transform:
+      translation:
+        x: 0
+        y: -0.316
+        z: 0
+      rotation:
+        w: 0.70710678118654757
+        x: 0.70710678118654746
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 1
+    limits:
+      lower: -2.8973
+      upper: 2.8973
+      velocity: 2.1749999999999998
+      effort: 87
+  panda_joint4:
+    type: revolute
+    name: panda_joint4
+    parent_link: panda_link3
+    child_link: panda_link4
+    transform:
+      translation:
+        x: 0.082500000000000004
+        y: 0
+        z: 0
+      rotation:
+        w: 0.70710678118654757
+        x: 0.70710678118654746
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 1
+    limits:
+      lower: -3.0718000000000001
+      upper: -0.069800000000000001
+      velocity: 2.1749999999999998
+      effort: 87
+  panda_joint5:
+    type: revolute
+    name: panda_joint5
+    parent_link: panda_link4
+    child_link: panda_link5
+    transform:
+      translation:
+        x: -0.082500000000000004
+        y: 0.38400000000000001
+        z: 0
+      rotation:
+        w: 0.70710678118654757
+        x: -0.70710678118654746
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 1
+    limits:
+      lower: -2.8973
+      upper: 2.8973
+      velocity: 2.6099999999999999
+      effort: 12
+  panda_joint6:
+    type: revolute
+    name: panda_joint6
+    parent_link: panda_link5
+    child_link: panda_link6
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        w: 0.70710678118654757
+        x: 0.70710678118654746
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 1
+    limits:
+      lower: -0.017500000000000002
+      upper: 3.7524999999999999
+      velocity: 2.6099999999999999
+      effort: 12
+  panda_joint7:
+    type: revolute
+    name: panda_joint7
+    parent_link: panda_link6
+    child_link: panda_link7
+    transform:
+      translation:
+        x: 0.087999999999999995
+        y: 0
+        z: 0
+      rotation:
+        w: 0.70710678118654757
+        x: 0.70710678118654746
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 1
+    limits:
+      lower: -2.8973
+      upper: 2.8973
+      velocity: 2.6099999999999999
+      effort: 12
+  panda_joint8:
+    type: fixed
+    name: panda_joint8
+    parent_link: panda_link7
+    child_link: panda_link8
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0.107
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  panda_hand_joint:
+    type: fixed
+    name: panda_hand_joint
+    parent_link: panda_link8
+    child_link: panda_hand
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        w: 0.92387953251128674
+        x: 0
+        y: 0
+        z: -0.38268343236508978
+    axis:
+      x: 0
+      y: 0
+      z: 0

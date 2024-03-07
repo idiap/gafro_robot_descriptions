@@ -1,0 +1,4154 @@
+system:
+  name: anymal
+  root_link: base
+links:
+  LF_FOOT:
+    name: LF_FOOT
+    parent_joint: LF_shank_fixed_LF_FOOT
+    inertial:
+      mass: 0.25
+      inertia:
+        xx: 0.0031717409700000002
+        xy: 2.6304799999999999e-06
+        yy: 0.0031717409199999999
+        yz: 6.8155830000000004e-05
+        zz: 8.3191959999999996e-05
+        xz: 6.8155810000000003e-05
+      origin:
+        position:
+          x: 0.0094800000000000006
+          y: -0.0094800000000000006
+          z: 0.14680000000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 0.92387953251137256
+          x: 0
+          y: 0
+          z: -0.38268343236488267
+      type: mesh
+      filename: meshes/foot.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  LF_HAA:
+    joints:
+      - LF_HAA
+    name: LF_HAA
+    parent_joint: base_LF_HAA
+    inertial:
+      mass: 2.04
+      inertia:
+        xx: 0.001053013
+        xy: 4.5269999999999999e-05
+        yy: 0.0018055090000000001
+        yz: 9.9090000000000002e-05
+        zz: 0.001765827
+        xz: 8.8549999999999998e-05
+      origin:
+        position:
+          x: -0.063
+          y: 6.9999999999999994e-05
+          z: 0.00046000000000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/drive.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  LF_HFE:
+    joints:
+      - LF_HFE
+    name: LF_HFE
+    parent_joint: LF_hip_fixed_LF_HFE
+    inertial:
+      mass: 2.04
+      inertia:
+        xx: 0.001053013
+        xy: 4.5269999999999999e-05
+        yy: 0.0018055090000000001
+        yz: 9.9090000000000002e-05
+        zz: 0.001765827
+        xz: 8.8549999999999998e-05
+      origin:
+        position:
+          x: -0.063
+          y: 6.9999999999999994e-05
+          z: 0.00046000000000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/drive.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  LF_HIP:
+    joints:
+      - LF_HIP_LF_hip_fixed
+    name: LF_HIP
+    parent_joint: LF_HAA
+    inertial:
+      mass: 0.001
+      inertia:
+        xx: 9.9999999999999995e-07
+        xy: 0
+        yy: 9.9999999999999995e-07
+        yz: 0
+        zz: 9.9999999999999995e-07
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+  LF_KFE:
+    joints:
+      - LF_KFE
+    name: LF_KFE
+    parent_joint: LF_thigh_fixed_LF_KFE
+    inertial:
+      mass: 2.04
+      inertia:
+        xx: 0.001053013
+        xy: 4.5269999999999999e-05
+        yy: 0.0018055090000000001
+        yz: 9.9090000000000002e-05
+        zz: 0.001765827
+        xz: 8.8549999999999998e-05
+      origin:
+        position:
+          x: -0.063
+          y: 6.9999999999999994e-05
+          z: 0.00046000000000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/drive.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  LF_SHANK:
+    joints:
+      - LF_shank_LF_shank_fixed
+    name: LF_SHANK
+    parent_joint: LF_KFE
+    inertial:
+      mass: 0.001
+      inertia:
+        xx: 9.9999999999999995e-07
+        xy: 0
+        yy: 9.9999999999999995e-07
+        yz: 0
+        zz: 9.9999999999999995e-07
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+  LF_THIGH:
+    joints:
+      - LF_THIGH_LF_thigh_fixed
+    name: LF_THIGH
+    parent_joint: LF_HFE
+    inertial:
+      mass: 0.001
+      inertia:
+        xx: 9.9999999999999995e-07
+        xy: 0
+        yy: 9.9999999999999995e-07
+        yz: 0
+        zz: 9.9999999999999995e-07
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+  LF_hip_fixed:
+    joints:
+      - LF_hip_fixed_LF_HFE
+    name: LF_hip_fixed
+    parent_joint: LF_HIP_LF_hip_fixed
+    inertial:
+      mass: 0.73999999999999999
+      inertia:
+        xx: 0.0013931060000000001
+        xy: 8.4011999999999995e-05
+        yy: 0.0037985789999999998
+        yz: 7.1318999999999999e-05
+        zz: 0.003897509
+        xz: 2.3377999999999999e-05
+      origin:
+        position:
+          x: 0.048000000000000001
+          y: 0.0080000000000000002
+          z: -0.0030000000000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/hip_l.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  LF_shank_fixed:
+    joints:
+      - LF_shank_fixed_LF_FOOT
+    name: LF_shank_fixed
+    parent_joint: LF_shank_LF_shank_fixed
+    inertial:
+      mass: 0.33742
+      inertia:
+        xx: 0.00032748005000000002
+        xy: 2.1425610000000001e-05
+        yy: 0.00110974122
+        yz: 7.6010000000000004e-08
+        zz: 0.00089388521
+        xz: 1.33942e-05
+      origin:
+        position:
+          x: 0.034630000000000001
+          y: 0.0068799999999999998
+          z: 0.00097999999999999997
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/shank_l.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  LF_thigh_fixed:
+    joints:
+      - LF_thigh_fixed_LF_KFE
+    name: LF_thigh_fixed
+    parent_joint: LF_THIGH_LF_thigh_fixed
+    inertial:
+      mass: 1.03
+      inertia:
+        xx: 0.018644469
+        xy: 5.2000000000000002e-08
+        yy: 0.019312599
+        yz: 0.0025200769999999999
+        zz: 0.0028383610000000002
+        xz: 1.0156999999999999e-05
+      origin:
+        position:
+          x: 0
+          y: 0.017999999999999999
+          z: -0.16900000000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/thigh.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  LH_FOOT:
+    name: LH_FOOT
+    parent_joint: LH_shank_fixed_LH_FOOT
+    inertial:
+      mass: 0.25
+      inertia:
+        xx: 0.0031717409700000002
+        xy: -2.6304799999999999e-06
+        yy: 0.0031717409199999999
+        yz: 6.8155830000000004e-05
+        zz: 8.3191959999999996e-05
+        xz: -6.8155810000000003e-05
+      origin:
+        position:
+          x: -0.0094800000000000006
+          y: -0.0094800000000000006
+          z: 0.14680000000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 0.38268343236617297
+          x: 0
+          y: 0
+          z: -0.9238795325108381
+      type: mesh
+      filename: meshes/foot.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  LH_HAA:
+    joints:
+      - LH_HAA
+    name: LH_HAA
+    parent_joint: base_LH_HAA
+    inertial:
+      mass: 2.04
+      inertia:
+        xx: 0.001053013
+        xy: 4.5269999999999999e-05
+        yy: 0.0018055090000000001
+        yz: 9.9090000000000002e-05
+        zz: 0.001765827
+        xz: 8.8549999999999998e-05
+      origin:
+        position:
+          x: -0.063
+          y: 6.9999999999999994e-05
+          z: 0.00046000000000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/drive.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  LH_HFE:
+    joints:
+      - LH_HFE
+    name: LH_HFE
+    parent_joint: LH_hip_fixed_LH_HFE
+    inertial:
+      mass: 2.04
+      inertia:
+        xx: 0.001053013
+        xy: 4.5269999999999999e-05
+        yy: 0.0018055090000000001
+        yz: 9.9090000000000002e-05
+        zz: 0.001765827
+        xz: 8.8549999999999998e-05
+      origin:
+        position:
+          x: -0.063
+          y: 6.9999999999999994e-05
+          z: 0.00046000000000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/drive.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  LH_HIP:
+    joints:
+      - LH_HIP_LH_hip_fixed
+    name: LH_HIP
+    parent_joint: LH_HAA
+    inertial:
+      mass: 0.001
+      inertia:
+        xx: 9.9999999999999995e-07
+        xy: 0
+        yy: 9.9999999999999995e-07
+        yz: 0
+        zz: 9.9999999999999995e-07
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+  LH_KFE:
+    joints:
+      - LH_KFE
+    name: LH_KFE
+    parent_joint: LH_thigh_fixed_LH_KFE
+    inertial:
+      mass: 2.04
+      inertia:
+        xx: 0.001053013
+        xy: 4.5269999999999999e-05
+        yy: 0.0018055090000000001
+        yz: 9.9090000000000002e-05
+        zz: 0.001765827
+        xz: 8.8549999999999998e-05
+      origin:
+        position:
+          x: -0.063
+          y: 6.9999999999999994e-05
+          z: 0.00046000000000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/drive.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  LH_SHANK:
+    joints:
+      - LH_shank_LH_shank_fixed
+    name: LH_SHANK
+    parent_joint: LH_KFE
+    inertial:
+      mass: 0.001
+      inertia:
+        xx: 9.9999999999999995e-07
+        xy: 0
+        yy: 9.9999999999999995e-07
+        yz: 0
+        zz: 9.9999999999999995e-07
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+  LH_THIGH:
+    joints:
+      - LH_THIGH_LH_thigh_fixed
+    name: LH_THIGH
+    parent_joint: LH_HFE
+    inertial:
+      mass: 0.001
+      inertia:
+        xx: 9.9999999999999995e-07
+        xy: 0
+        yy: 9.9999999999999995e-07
+        yz: 0
+        zz: 9.9999999999999995e-07
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+  LH_hip_fixed:
+    joints:
+      - LH_hip_fixed_LH_HFE
+    name: LH_hip_fixed
+    parent_joint: LH_HIP_LH_hip_fixed
+    inertial:
+      mass: 0.73999999999999999
+      inertia:
+        xx: 0.0013931060000000001
+        xy: -8.4011999999999995e-05
+        yy: 0.0037985789999999998
+        yz: 7.1318999999999999e-05
+        zz: 0.003897509
+        xz: -2.3377999999999999e-05
+      origin:
+        position:
+          x: -0.048000000000000001
+          y: 0.0080000000000000002
+          z: -0.0030000000000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: -1.0341155355510722e-13
+          x: 0
+          y: -0
+          z: -1
+      type: mesh
+      filename: meshes/hip_r.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  LH_shank_fixed:
+    joints:
+      - LH_shank_fixed_LH_FOOT
+    name: LH_shank_fixed
+    parent_joint: LH_shank_LH_shank_fixed
+    inertial:
+      mass: 0.33742
+      inertia:
+        xx: 0.00032748005000000002
+        xy: -2.1425610000000001e-05
+        yy: 0.00110974122
+        yz: 7.6010000000000004e-08
+        zz: 0.00089388521
+        xz: -1.33942e-05
+      origin:
+        position:
+          x: -0.034630000000000001
+          y: 0.0068799999999999998
+          z: 0.00097999999999999997
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: -1.0341155355510722e-13
+          x: 0
+          y: -0
+          z: -1
+      type: mesh
+      filename: meshes/shank_r.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  LH_thigh_fixed:
+    joints:
+      - LH_thigh_fixed_LH_KFE
+    name: LH_thigh_fixed
+    parent_joint: LH_THIGH_LH_thigh_fixed
+    inertial:
+      mass: 1.03
+      inertia:
+        xx: 0.018644469
+        xy: -5.2000000000000002e-08
+        yy: 0.019312599
+        yz: 0.0025200769999999999
+        zz: 0.0028383610000000002
+        xz: -1.0156999999999999e-05
+      origin:
+        position:
+          x: -0
+          y: 0.017999999999999999
+          z: -0.16900000000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/thigh.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  RF_FOOT:
+    name: RF_FOOT
+    parent_joint: RF_shank_fixed_RF_FOOT
+    inertial:
+      mass: 0.25
+      inertia:
+        xx: 0.0031717409700000002
+        xy: -2.6304799999999999e-06
+        yy: 0.0031717409199999999
+        yz: -6.8155830000000004e-05
+        zz: 8.3191959999999996e-05
+        xz: 6.8155810000000003e-05
+      origin:
+        position:
+          x: 0.0094800000000000006
+          y: 0.0094800000000000006
+          z: 0.14680000000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 0.92387953251137256
+          x: 0
+          y: 0
+          z: 0.38268343236488267
+      type: mesh
+      filename: meshes/foot.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  RF_HAA:
+    joints:
+      - RF_HAA
+    name: RF_HAA
+    parent_joint: base_RF_HAA
+    inertial:
+      mass: 2.04
+      inertia:
+        xx: 0.001053013
+        xy: 4.5269999999999999e-05
+        yy: 0.0018055090000000001
+        yz: 9.9090000000000002e-05
+        zz: 0.001765827
+        xz: 8.8549999999999998e-05
+      origin:
+        position:
+          x: -0.063
+          y: 6.9999999999999994e-05
+          z: 0.00046000000000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/drive.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  RF_HFE:
+    joints:
+      - RF_HFE
+    name: RF_HFE
+    parent_joint: RF_hip_fixed_RF_HFE
+    inertial:
+      mass: 2.04
+      inertia:
+        xx: 0.001053013
+        xy: 4.5269999999999999e-05
+        yy: 0.0018055090000000001
+        yz: 9.9090000000000002e-05
+        zz: 0.001765827
+        xz: 8.8549999999999998e-05
+      origin:
+        position:
+          x: -0.063
+          y: 6.9999999999999994e-05
+          z: 0.00046000000000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/drive.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  RF_HIP:
+    joints:
+      - RF_HIP_RF_hip_fixed
+    name: RF_HIP
+    parent_joint: RF_HAA
+    inertial:
+      mass: 0.001
+      inertia:
+        xx: 9.9999999999999995e-07
+        xy: 0
+        yy: 9.9999999999999995e-07
+        yz: 0
+        zz: 9.9999999999999995e-07
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+  RF_KFE:
+    joints:
+      - RF_KFE
+    name: RF_KFE
+    parent_joint: RF_thigh_fixed_RF_KFE
+    inertial:
+      mass: 2.04
+      inertia:
+        xx: 0.001053013
+        xy: 4.5269999999999999e-05
+        yy: 0.0018055090000000001
+        yz: 9.9090000000000002e-05
+        zz: 0.001765827
+        xz: 8.8549999999999998e-05
+      origin:
+        position:
+          x: -0.063
+          y: 6.9999999999999994e-05
+          z: 0.00046000000000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/drive.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  RF_SHANK:
+    joints:
+      - RF_shank_RF_shank_fixed
+    name: RF_SHANK
+    parent_joint: RF_KFE
+    inertial:
+      mass: 0.001
+      inertia:
+        xx: 9.9999999999999995e-07
+        xy: 0
+        yy: 9.9999999999999995e-07
+        yz: 0
+        zz: 9.9999999999999995e-07
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+  RF_THIGH:
+    joints:
+      - RF_THIGH_RF_thigh_fixed
+    name: RF_THIGH
+    parent_joint: RF_HFE
+    inertial:
+      mass: 0.001
+      inertia:
+        xx: 9.9999999999999995e-07
+        xy: 0
+        yy: 9.9999999999999995e-07
+        yz: 0
+        zz: 9.9999999999999995e-07
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+  RF_hip_fixed:
+    joints:
+      - RF_hip_fixed_RF_HFE
+    name: RF_hip_fixed
+    parent_joint: RF_HIP_RF_hip_fixed
+    inertial:
+      mass: 0.73999999999999999
+      inertia:
+        xx: 0.0013931060000000001
+        xy: -8.4011999999999995e-05
+        yy: 0.0037985789999999998
+        yz: -7.1318999999999999e-05
+        zz: 0.003897509
+        xz: 2.3377999999999999e-05
+      origin:
+        position:
+          x: 0.048000000000000001
+          y: -0.0080000000000000002
+          z: -0.0030000000000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/hip_r.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  RF_shank_fixed:
+    joints:
+      - RF_shank_fixed_RF_FOOT
+    name: RF_shank_fixed
+    parent_joint: RF_shank_RF_shank_fixed
+    inertial:
+      mass: 0.33742
+      inertia:
+        xx: 0.00032748005000000002
+        xy: -2.1425610000000001e-05
+        yy: 0.00110974122
+        yz: -7.6010000000000004e-08
+        zz: 0.00089388521
+        xz: 1.33942e-05
+      origin:
+        position:
+          x: 0.034630000000000001
+          y: -0.0068799999999999998
+          z: 0.00097999999999999997
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/shank_r.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  RF_thigh_fixed:
+    joints:
+      - RF_thigh_fixed_RF_KFE
+    name: RF_thigh_fixed
+    parent_joint: RF_THIGH_RF_thigh_fixed
+    inertial:
+      mass: 1.03
+      inertia:
+        xx: 0.018644469
+        xy: -5.2000000000000002e-08
+        yy: 0.019312599
+        yz: -0.0025200769999999999
+        zz: 0.0028383610000000002
+        xz: 1.0156999999999999e-05
+      origin:
+        position:
+          x: 0
+          y: -0.017999999999999999
+          z: -0.16900000000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: -1.0341155355510722e-13
+          x: 0
+          y: -0
+          z: -1
+      type: mesh
+      filename: meshes/thigh.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  RH_FOOT:
+    name: RH_FOOT
+    parent_joint: RH_shank_fixed_RH_FOOT
+    inertial:
+      mass: 0.25
+      inertia:
+        xx: 0.0031717409700000002
+        xy: 2.6304799999999999e-06
+        yy: 0.0031717409199999999
+        yz: -6.8155830000000004e-05
+        zz: 8.3191959999999996e-05
+        xz: -6.8155810000000003e-05
+      origin:
+        position:
+          x: -0.0094800000000000006
+          y: 0.0094800000000000006
+          z: 0.14680000000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: -0.38268343236636404
+          x: 0
+          y: -0
+          z: -0.92387953251075894
+      type: mesh
+      filename: meshes/foot.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  RH_HAA:
+    joints:
+      - RH_HAA
+    name: RH_HAA
+    parent_joint: base_RH_HAA
+    inertial:
+      mass: 2.04
+      inertia:
+        xx: 0.001053013
+        xy: 4.5269999999999999e-05
+        yy: 0.0018055090000000001
+        yz: 9.9090000000000002e-05
+        zz: 0.001765827
+        xz: 8.8549999999999998e-05
+      origin:
+        position:
+          x: -0.063
+          y: 6.9999999999999994e-05
+          z: 0.00046000000000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/drive.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  RH_HFE:
+    joints:
+      - RH_HFE
+    name: RH_HFE
+    parent_joint: RH_hip_fixed_RH_HFE
+    inertial:
+      mass: 2.04
+      inertia:
+        xx: 0.001053013
+        xy: 4.5269999999999999e-05
+        yy: 0.0018055090000000001
+        yz: 9.9090000000000002e-05
+        zz: 0.001765827
+        xz: 8.8549999999999998e-05
+      origin:
+        position:
+          x: -0.063
+          y: 6.9999999999999994e-05
+          z: 0.00046000000000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/drive.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  RH_HIP:
+    joints:
+      - RH_HIP_RH_hip_fixed
+    name: RH_HIP
+    parent_joint: RH_HAA
+    inertial:
+      mass: 0.001
+      inertia:
+        xx: 9.9999999999999995e-07
+        xy: 0
+        yy: 9.9999999999999995e-07
+        yz: 0
+        zz: 9.9999999999999995e-07
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+  RH_KFE:
+    joints:
+      - RH_KFE
+    name: RH_KFE
+    parent_joint: RH_thigh_fixed_RH_KFE
+    inertial:
+      mass: 2.04
+      inertia:
+        xx: 0.001053013
+        xy: 4.5269999999999999e-05
+        yy: 0.0018055090000000001
+        yz: 9.9090000000000002e-05
+        zz: 0.001765827
+        xz: 8.8549999999999998e-05
+      origin:
+        position:
+          x: -0.063
+          y: 6.9999999999999994e-05
+          z: 0.00046000000000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/drive.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  RH_SHANK:
+    joints:
+      - RH_shank_RH_shank_fixed
+    name: RH_SHANK
+    parent_joint: RH_KFE
+    inertial:
+      mass: 0.001
+      inertia:
+        xx: 9.9999999999999995e-07
+        xy: 0
+        yy: 9.9999999999999995e-07
+        yz: 0
+        zz: 9.9999999999999995e-07
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+  RH_THIGH:
+    joints:
+      - RH_THIGH_RH_thigh_fixed
+    name: RH_THIGH
+    parent_joint: RH_HFE
+    inertial:
+      mass: 0.001
+      inertia:
+        xx: 9.9999999999999995e-07
+        xy: 0
+        yy: 9.9999999999999995e-07
+        yz: 0
+        zz: 9.9999999999999995e-07
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+  RH_hip_fixed:
+    joints:
+      - RH_hip_fixed_RH_HFE
+    name: RH_hip_fixed
+    parent_joint: RH_HIP_RH_hip_fixed
+    inertial:
+      mass: 0.73999999999999999
+      inertia:
+        xx: 0.0013931060000000001
+        xy: 8.4011999999999995e-05
+        yy: 0.0037985789999999998
+        yz: -7.1318999999999999e-05
+        zz: 0.003897509
+        xz: -2.3377999999999999e-05
+      origin:
+        position:
+          x: -0.048000000000000001
+          y: -0.0080000000000000002
+          z: -0.0030000000000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: -1.0341155355510722e-13
+          x: 0
+          y: -0
+          z: -1
+      type: mesh
+      filename: meshes/hip_l.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  RH_shank_fixed:
+    joints:
+      - RH_shank_fixed_RH_FOOT
+    name: RH_shank_fixed
+    parent_joint: RH_shank_RH_shank_fixed
+    inertial:
+      mass: 0.33742
+      inertia:
+        xx: 0.00032748005000000002
+        xy: 2.1425610000000001e-05
+        yy: 0.00110974122
+        yz: -7.6010000000000004e-08
+        zz: 0.00089388521
+        xz: -1.33942e-05
+      origin:
+        position:
+          x: -0.034630000000000001
+          y: -0.0068799999999999998
+          z: 0.00097999999999999997
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: -1.0341155355510722e-13
+          x: 0
+          y: -0
+          z: -1
+      type: mesh
+      filename: meshes/shank_l.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  RH_thigh_fixed:
+    joints:
+      - RH_thigh_fixed_RH_KFE
+    name: RH_thigh_fixed
+    parent_joint: RH_THIGH_RH_thigh_fixed
+    inertial:
+      mass: 1.03
+      inertia:
+        xx: 0.018644469
+        xy: 5.2000000000000002e-08
+        yy: 0.019312599
+        yz: -0.0025200769999999999
+        zz: 0.0028383610000000002
+        xz: -1.0156999999999999e-05
+      origin:
+        position:
+          x: -0
+          y: -0.017999999999999999
+          z: -0.16900000000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: -1.0341155355510722e-13
+          x: 0
+          y: -0
+          z: -1
+      type: mesh
+      filename: meshes/thigh.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  base:
+    joints:
+      - base_LF_HAA
+      - base_LH_HAA
+      - base_RF_HAA
+      - base_RH_HAA
+      - base_battery
+      - base_bottom_shell
+      - base_face_front
+      - base_face_rear
+      - base_handle
+      - base_hatch
+      - base_remote
+      - base_to_base_inertia
+      - base_to_depth_camera_left_camera
+      - base_to_depth_camera_right_camera
+      - base_to_docking_hatch_cover
+      - base_to_lidar_cage
+      - base_top_shell
+      - imu_joint
+    name: base
+    inertial:
+      mass: 0
+      inertia:
+        xx: 0
+        xy: 0
+        yy: 0
+        yz: 0
+        zz: 0
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/base.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  base_inertia:
+    name: base_inertia
+    parent_joint: base_to_base_inertia
+    inertial:
+      mass: 6.2220000000000004
+      inertia:
+        xx: 0.017938806000000002
+        xy: 0.0038796299999999998
+        yy: 0.37088774499999999
+        yz: 6.8962999999999997e-05
+        zz: 0.37249765299999998
+        xz: 0.001500772
+      origin:
+        position:
+          x: -0.017999999999999999
+          y: -0.002
+          z: 0.024
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+  battery:
+    name: battery
+    parent_joint: base_battery
+    inertial:
+      mass: 5.5342500000000001
+      inertia:
+        xx: 0.0074947479400000001
+        xy: 0.00016686281999999999
+        yy: 0.072233891300000005
+        yz: 1.4290199999999999e-06
+        zz: 0.074827175349999997
+        xz: 7.8276300000000001e-05
+      origin:
+        position:
+          x: -0.00067000000000000002
+          y: -0.00023000000000000001
+          z: -0.033619999999999997
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/battery.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  bottom_shell:
+    name: bottom_shell
+    parent_joint: base_bottom_shell
+    inertial:
+      mass: 1.1499999999999999
+      inertia:
+        xx: 0.0092735367700000002
+        xy: 5.4122200000000002e-06
+        yy: 0.06134388239
+        yz: 2.3041999999999999e-07
+        zz: 0.068535314649999998
+        xz: 9.0398209999999999e-05
+      origin:
+        position:
+          x: -0.0033300000000000001
+          y: 1.0000000000000001e-05
+          z: -0.077049999999999993
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/bottom_shell.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  depth_camera_front_camera:
+    joints:
+      - depth_camera_front_camera_to_camera_parent
+    name: depth_camera_front_camera
+    parent_joint: face_front_to_depth_camera_front_camera
+    inertial:
+      mass: 0.16042999999999999
+      inertia:
+        xx: 0.00063705100000000002
+        xy: 0.00048456900000000002
+        yy: 0.00092940199999999996
+        yz: 5.1379999999999998e-06
+        zz: 0.00048456900000000002
+        xz: 0.00042421100000000002
+      origin:
+        position:
+          x: -0.021000000000000001
+          y: -0.002
+          z: 0.025000000000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/depth_camera.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  depth_camera_front_camera_parent:
+    joints:
+      - depth_camera_front_camera_parent_to_color_frame
+      - depth_camera_front_camera_parent_to_depth_optical_frame
+    name: depth_camera_front_camera_parent
+    parent_joint: depth_camera_front_camera_to_camera_parent
+    inertial:
+      mass: 0
+      inertia:
+        xx: 0
+        xy: 0
+        yy: 0
+        yz: 0
+        zz: 0
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+  depth_camera_front_color_frame:
+    joints:
+      - depth_camera_front_color_frame_to_color_optical_frame
+    name: depth_camera_front_color_frame
+    parent_joint: depth_camera_front_camera_parent_to_color_frame
+    inertial:
+      mass: 0
+      inertia:
+        xx: 0
+        xy: 0
+        yy: 0
+        yz: 0
+        zz: 0
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+  depth_camera_front_color_optical_frame:
+    name: depth_camera_front_color_optical_frame
+    parent_joint: depth_camera_front_color_frame_to_color_optical_frame
+    inertial:
+      mass: 0
+      inertia:
+        xx: 0
+        xy: 0
+        yy: 0
+        yz: 0
+        zz: 0
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+  depth_camera_front_depth_optical_frame:
+    name: depth_camera_front_depth_optical_frame
+    parent_joint: depth_camera_front_camera_parent_to_depth_optical_frame
+    inertial:
+      mass: 0
+      inertia:
+        xx: 0
+        xy: 0
+        yy: 0
+        yz: 0
+        zz: 0
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+  depth_camera_left_camera:
+    joints:
+      - depth_camera_left_camera_to_camera_parent
+    name: depth_camera_left_camera
+    parent_joint: base_to_depth_camera_left_camera
+    inertial:
+      mass: 0.16042999999999999
+      inertia:
+        xx: 0.00063705100000000002
+        xy: 0.00048456900000000002
+        yy: 0.00092940199999999996
+        yz: 5.1379999999999998e-06
+        zz: 0.00048456900000000002
+        xz: 0.00042421100000000002
+      origin:
+        position:
+          x: -0.021000000000000001
+          y: -0.002
+          z: 0.025000000000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/depth_camera.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  depth_camera_left_camera_parent:
+    joints:
+      - depth_camera_left_camera_parent_to_color_frame
+      - depth_camera_left_camera_parent_to_depth_optical_frame
+    name: depth_camera_left_camera_parent
+    parent_joint: depth_camera_left_camera_to_camera_parent
+    inertial:
+      mass: 0
+      inertia:
+        xx: 0
+        xy: 0
+        yy: 0
+        yz: 0
+        zz: 0
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+  depth_camera_left_color_frame:
+    joints:
+      - depth_camera_left_color_frame_to_color_optical_frame
+    name: depth_camera_left_color_frame
+    parent_joint: depth_camera_left_camera_parent_to_color_frame
+    inertial:
+      mass: 0
+      inertia:
+        xx: 0
+        xy: 0
+        yy: 0
+        yz: 0
+        zz: 0
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+  depth_camera_left_color_optical_frame:
+    name: depth_camera_left_color_optical_frame
+    parent_joint: depth_camera_left_color_frame_to_color_optical_frame
+    inertial:
+      mass: 0
+      inertia:
+        xx: 0
+        xy: 0
+        yy: 0
+        yz: 0
+        zz: 0
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+  depth_camera_left_depth_optical_frame:
+    name: depth_camera_left_depth_optical_frame
+    parent_joint: depth_camera_left_camera_parent_to_depth_optical_frame
+    inertial:
+      mass: 0
+      inertia:
+        xx: 0
+        xy: 0
+        yy: 0
+        yz: 0
+        zz: 0
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+  depth_camera_rear_camera:
+    joints:
+      - depth_camera_rear_camera_to_camera_parent
+    name: depth_camera_rear_camera
+    parent_joint: face_rear_to_depth_camera_rear_camera
+    inertial:
+      mass: 0.16042999999999999
+      inertia:
+        xx: 0.00063705100000000002
+        xy: 0.00048456900000000002
+        yy: 0.00092940199999999996
+        yz: 5.1379999999999998e-06
+        zz: 0.00048456900000000002
+        xz: 0.00042421100000000002
+      origin:
+        position:
+          x: -0.021000000000000001
+          y: -0.002
+          z: 0.025000000000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/depth_camera.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  depth_camera_rear_camera_parent:
+    joints:
+      - depth_camera_rear_camera_parent_to_color_frame
+      - depth_camera_rear_camera_parent_to_depth_optical_frame
+    name: depth_camera_rear_camera_parent
+    parent_joint: depth_camera_rear_camera_to_camera_parent
+    inertial:
+      mass: 0
+      inertia:
+        xx: 0
+        xy: 0
+        yy: 0
+        yz: 0
+        zz: 0
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+  depth_camera_rear_color_frame:
+    joints:
+      - depth_camera_rear_color_frame_to_color_optical_frame
+    name: depth_camera_rear_color_frame
+    parent_joint: depth_camera_rear_camera_parent_to_color_frame
+    inertial:
+      mass: 0
+      inertia:
+        xx: 0
+        xy: 0
+        yy: 0
+        yz: 0
+        zz: 0
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+  depth_camera_rear_color_optical_frame:
+    name: depth_camera_rear_color_optical_frame
+    parent_joint: depth_camera_rear_color_frame_to_color_optical_frame
+    inertial:
+      mass: 0
+      inertia:
+        xx: 0
+        xy: 0
+        yy: 0
+        yz: 0
+        zz: 0
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+  depth_camera_rear_depth_optical_frame:
+    name: depth_camera_rear_depth_optical_frame
+    parent_joint: depth_camera_rear_camera_parent_to_depth_optical_frame
+    inertial:
+      mass: 0
+      inertia:
+        xx: 0
+        xy: 0
+        yy: 0
+        yz: 0
+        zz: 0
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+  depth_camera_right_camera:
+    joints:
+      - depth_camera_right_camera_to_camera_parent
+    name: depth_camera_right_camera
+    parent_joint: base_to_depth_camera_right_camera
+    inertial:
+      mass: 0.16042999999999999
+      inertia:
+        xx: 0.00063705100000000002
+        xy: 0.00048456900000000002
+        yy: 0.00092940199999999996
+        yz: 5.1379999999999998e-06
+        zz: 0.00048456900000000002
+        xz: 0.00042421100000000002
+      origin:
+        position:
+          x: -0.021000000000000001
+          y: -0.002
+          z: 0.025000000000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/depth_camera.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  depth_camera_right_camera_parent:
+    joints:
+      - depth_camera_right_camera_parent_to_color_frame
+      - depth_camera_right_camera_parent_to_depth_optical_frame
+    name: depth_camera_right_camera_parent
+    parent_joint: depth_camera_right_camera_to_camera_parent
+    inertial:
+      mass: 0
+      inertia:
+        xx: 0
+        xy: 0
+        yy: 0
+        yz: 0
+        zz: 0
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+  depth_camera_right_color_frame:
+    joints:
+      - depth_camera_right_color_frame_to_color_optical_frame
+    name: depth_camera_right_color_frame
+    parent_joint: depth_camera_right_camera_parent_to_color_frame
+    inertial:
+      mass: 0
+      inertia:
+        xx: 0
+        xy: 0
+        yy: 0
+        yz: 0
+        zz: 0
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+  depth_camera_right_color_optical_frame:
+    name: depth_camera_right_color_optical_frame
+    parent_joint: depth_camera_right_color_frame_to_color_optical_frame
+    inertial:
+      mass: 0
+      inertia:
+        xx: 0
+        xy: 0
+        yy: 0
+        yz: 0
+        zz: 0
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+  depth_camera_right_depth_optical_frame:
+    name: depth_camera_right_depth_optical_frame
+    parent_joint: depth_camera_right_camera_parent_to_depth_optical_frame
+    inertial:
+      mass: 0
+      inertia:
+        xx: 0
+        xy: 0
+        yy: 0
+        yz: 0
+        zz: 0
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+  docking_hatch_cover:
+    name: docking_hatch_cover
+    parent_joint: base_to_docking_hatch_cover
+    inertial:
+      mass: 0.065000000000000002
+      inertia:
+        xx: 0.00063283000000000002
+        xy: 0
+        yy: 0.0011097100000000001
+        yz: 0
+        zz: 0.00171883
+        xz: 3.4499999999999998e-07
+      origin:
+        position:
+          x: -0.0030000000000000001
+          y: 0
+          z: 0.0050000000000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+  face_front:
+    joints:
+      - face_front_to_depth_camera_front_camera
+      - face_front_to_wide_angle_camera_front_camera
+    name: face_front
+    parent_joint: base_face_front
+    inertial:
+      mass: 0.72999999999999998
+      inertia:
+        xx: 0.0052386109999999998
+        xy: 1.7609e-05
+        yy: 0.002643098
+        yz: 1.9548e-05
+        zz: 0.0043259379999999997
+        xz: 7.2167000000000002e-05
+      origin:
+        position:
+          x: 0.042000000000000003
+          y: -0.001
+          z: 0.0040000000000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/face.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  face_rear:
+    joints:
+      - face_rear_to_depth_camera_rear_camera
+      - face_rear_to_wide_angle_camera_rear_camera
+    name: face_rear
+    parent_joint: base_face_rear
+    inertial:
+      mass: 0.72999999999999998
+      inertia:
+        xx: 0.0052386109999999998
+        xy: 1.7609e-05
+        yy: 0.002643098
+        yz: 1.9548e-05
+        zz: 0.0043259379999999997
+        xz: 7.2167000000000002e-05
+      origin:
+        position:
+          x: 0.042000000000000003
+          y: -0.001
+          z: 0.0040000000000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/face.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  handle:
+    name: handle
+    parent_joint: base_handle
+    inertial:
+      mass: 0.314
+      inertia:
+        xx: 0.0015257389999999999
+        xy: 0
+        yy: 0.00071584000000000003
+        yz: 1.0000000000000001e-09
+        zz: 0.0011647789999999999
+        xz: 6.2719999999999996e-05
+      origin:
+        position:
+          x: 0.37801000000000001
+          y: 0
+          z: 0.13719999999999999
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/handle.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  hatch:
+    name: hatch
+    parent_joint: base_hatch
+    inertial:
+      mass: 0.14199999999999999
+      inertia:
+        xx: 0.001
+        xy: 0.001
+        yy: 0.001
+        yz: 0.001
+        zz: 0.001
+        xz: 0.001
+      origin:
+        position:
+          x: 0.11600000000000001
+          y: 0
+          z: 0.075800000000000006
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0.11600000000000001
+          y: 0
+          z: 0.072999999999999995
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/hatch.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  imu_link:
+    name: imu_link
+    parent_joint: imu_joint
+    inertial:
+      mass: 0.01
+      inertia:
+        xx: 5.6333333333299996e-07
+        xy: 0
+        yy: 9.5999999999999991e-07
+        yz: 0
+        zz: 5.6333333333299996e-07
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0.0050000000000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: box
+      length: 0.024
+      width: 0.024
+      height: 0.01
+  lidar:
+    name: lidar
+    parent_joint: lidar_cage_to_lidar
+    inertial:
+      mass: 0.69499999999999995
+      inertia:
+        xx: 0.00084676499999999997
+        xy: 6.9565000000000002e-05
+        yy: 0.0013675829999999999
+        yz: 5.8984000000000003e-05
+        zz: 0.0013636729999999999
+        xz: 0.00027111000000000003
+      origin:
+        position:
+          x: -0.012
+          y: 0.001
+          z: -0.0080000000000000002
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/lidar.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  lidar_cage:
+    joints:
+      - lidar_cage_to_lidar
+    name: lidar_cage
+    parent_joint: base_to_lidar_cage
+    inertial:
+      mass: 0.54500000000000004
+      inertia:
+        xx: 0.0031562539999999998
+        xy: 0
+        yy: 0.0023572160000000001
+        yz: 0
+        zz: 0.001326455
+        xz: 1.0992000000000001e-05
+      origin:
+        position:
+          x: 0.002
+          y: 0
+          z: 0.099000000000000005
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/lidar_cage.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  remote:
+    name: remote
+    parent_joint: base_remote
+    inertial:
+      mass: 0.32619999999999999
+      inertia:
+        xx: 0.00052848599999999999
+        xy: 4.5469999999999997e-05
+        yy: 0.001165035
+        yz: 7.4000000000000001e-07
+        zz: 0.00124026
+        xz: 1.10327e-05
+      origin:
+        position:
+          x: -0.17100000000000001
+          y: 0.002
+          z: 0.096000000000000002
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/remote.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  top_shell:
+    name: top_shell
+    parent_joint: base_top_shell
+    inertial:
+      mass: 0.53400000000000003
+      inertia:
+        xx: 0.0066478948599999997
+        xy: 1.2479229999999999e-05
+        yy: 0.025873924110000002
+        yz: 3.7613999999999998e-07
+        zz: 0.031523037919999997
+        xz: 0.00053990096999999998
+      origin:
+        position:
+          x: -0.00777
+          y: -0.00012999999999999999
+          z: 0.065229999999999996
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/top_shell.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  wide_angle_camera_front_camera:
+    joints:
+      - wide_angle_camera_front_camera_to_camera_parent
+    name: wide_angle_camera_front_camera
+    parent_joint: face_front_to_wide_angle_camera_front_camera
+    inertial:
+      mass: 0.28699999999999998
+      inertia:
+        xx: 0.000559232
+        xy: 1.6875e-05
+        yy: 0.00094650400000000003
+        yz: 1.3234000000000001e-07
+        zz: 0.00049305200000000001
+        xz: 0.00042376099999999998
+      origin:
+        position:
+          x: -0.052999999999999999
+          y: -0.001
+          z: 0.025000000000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/wide_angle_camera.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  wide_angle_camera_front_camera_parent:
+    name: wide_angle_camera_front_camera_parent
+    parent_joint: wide_angle_camera_front_camera_to_camera_parent
+    inertial:
+      mass: 0
+      inertia:
+        xx: 0
+        xy: 0
+        yy: 0
+        yz: 0
+        zz: 0
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+  wide_angle_camera_rear_camera:
+    joints:
+      - wide_angle_camera_rear_camera_to_camera_parent
+    name: wide_angle_camera_rear_camera
+    parent_joint: face_rear_to_wide_angle_camera_rear_camera
+    inertial:
+      mass: 0.28699999999999998
+      inertia:
+        xx: 0.000559232
+        xy: 1.6875e-05
+        yy: 0.00094650400000000003
+        yz: 1.3234000000000001e-07
+        zz: 0.00049305200000000001
+        xz: 0.00042376099999999998
+      origin:
+        position:
+          x: -0.052999999999999999
+          y: -0.001
+          z: 0.025000000000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/wide_angle_camera.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  wide_angle_camera_rear_camera_parent:
+    name: wide_angle_camera_rear_camera_parent
+    parent_joint: wide_angle_camera_rear_camera_to_camera_parent
+    inertial:
+      mass: 0
+      inertia:
+        xx: 0
+        xy: 0
+        yy: 0
+        yz: 0
+        zz: 0
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+joints:
+  LF_HAA:
+    type: revolute
+    name: LF_HAA
+    parent_link: LF_HAA
+    child_link: LF_HIP
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 1
+      y: 0
+      z: 0
+    limits:
+      lower: -0.71999999999999997
+      upper: 0.48999999999999999
+      velocity: 7.5
+      effort: 80
+  LF_HFE:
+    type: revolute
+    name: LF_HFE
+    parent_link: LF_HFE
+    child_link: LF_THIGH
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 1
+      y: 0
+      z: 0
+    limits:
+      lower: -9.4247779607699993
+      upper: 9.4247779607699993
+      velocity: 7.5
+      effort: 80
+  LF_HIP_LF_hip_fixed:
+    type: fixed
+    name: LF_HIP_LF_hip_fixed
+    parent_link: LF_HIP
+    child_link: LF_hip_fixed
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        w: 0.25881904510324244
+        x: -0.96592582628887491
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  LF_KFE:
+    type: revolute
+    name: LF_KFE
+    parent_link: LF_KFE
+    child_link: LF_SHANK
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 1
+      y: 0
+      z: 0
+    limits:
+      lower: -9.4247779607699993
+      upper: 9.4247779607699993
+      velocity: 7.5
+      effort: 80
+  LF_shank_LF_shank_fixed:
+    type: fixed
+    name: LF_shank_LF_shank_fixed
+    parent_link: LF_SHANK
+    child_link: LF_shank_fixed
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        w: 0.70710678118827874
+        x: 0
+        y: 0
+        z: -0.70710678118481629
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  LF_THIGH_LF_thigh_fixed:
+    type: fixed
+    name: LF_THIGH_LF_thigh_fixed
+    parent_link: LF_THIGH
+    child_link: LF_thigh_fixed
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        w: 0.70710678118827874
+        x: 0
+        y: 0
+        z: -0.70710678118481629
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  LF_hip_fixed_LF_HFE:
+    type: fixed
+    name: LF_hip_fixed_LF_HFE
+    parent_link: LF_hip_fixed
+    child_link: LF_HFE
+    transform:
+      translation:
+        x: 0.059900000000000002
+        y: 0.083809999999999996
+        z: 0
+      rotation:
+        w: 0.70710678118827874
+        x: 0
+        y: 0
+        z: 0.70710678118481629
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  LF_shank_fixed_LF_FOOT:
+    type: fixed
+    name: LF_shank_fixed_LF_FOOT
+    parent_link: LF_shank_fixed
+    child_link: LF_FOOT
+    transform:
+      translation:
+        x: 0.08795
+        y: 0.013050000000000001
+        z: -0.33796999999999999
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  LF_thigh_fixed_LF_KFE:
+    type: fixed
+    name: LF_thigh_fixed_LF_KFE
+    parent_link: LF_thigh_fixed
+    child_link: LF_KFE
+    transform:
+      translation:
+        x: 0
+        y: 0.1003
+        z: -0.28499999999999998
+      rotation:
+        w: 0.70710678118827874
+        x: 0
+        y: 0
+        z: 0.70710678118481629
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  LH_HAA:
+    type: revolute
+    name: LH_HAA
+    parent_link: LH_HAA
+    child_link: LH_HIP
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: -1
+      y: 0
+      z: 0
+    limits:
+      lower: -0.71999999999999997
+      upper: 0.48999999999999999
+      velocity: 7.5
+      effort: 80
+  LH_HFE:
+    type: revolute
+    name: LH_HFE
+    parent_link: LH_HFE
+    child_link: LH_THIGH
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 1
+      y: 0
+      z: 0
+    limits:
+      lower: -9.4247779607699993
+      upper: 9.4247779607699993
+      velocity: 7.5
+      effort: 80
+  LH_HIP_LH_hip_fixed:
+    type: fixed
+    name: LH_HIP_LH_hip_fixed
+    parent_link: LH_HIP
+    child_link: LH_hip_fixed
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        w: -2.6764879543775668e-14
+        x: 9.9887890315533184e-14
+        y: 0.96592582628887491
+        z: -0.25881904510324244
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  LH_KFE:
+    type: revolute
+    name: LH_KFE
+    parent_link: LH_KFE
+    child_link: LH_SHANK
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 1
+      y: 0
+      z: 0
+    limits:
+      lower: -9.4247779607699993
+      upper: 9.4247779607699993
+      velocity: 7.5
+      effort: 80
+  LH_shank_LH_shank_fixed:
+    type: fixed
+    name: LH_shank_LH_shank_fixed
+    parent_link: LH_SHANK
+    child_link: LH_shank_fixed
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        w: 0.70710678118827874
+        x: 0
+        y: 0
+        z: -0.70710678118481629
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  LH_THIGH_LH_thigh_fixed:
+    type: fixed
+    name: LH_THIGH_LH_thigh_fixed
+    parent_link: LH_THIGH
+    child_link: LH_thigh_fixed
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        w: 0.70710678118827874
+        x: 0
+        y: 0
+        z: -0.70710678118481629
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  LH_hip_fixed_LH_HFE:
+    type: fixed
+    name: LH_hip_fixed_LH_HFE
+    parent_link: LH_hip_fixed
+    child_link: LH_HFE
+    transform:
+      translation:
+        x: -0.059900000000000002
+        y: 0.083809999999999996
+        z: 0
+      rotation:
+        w: 0.70710678118827874
+        x: 0
+        y: 0
+        z: 0.70710678118481629
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  LH_shank_fixed_LH_FOOT:
+    type: fixed
+    name: LH_shank_fixed_LH_FOOT
+    parent_link: LH_shank_fixed
+    child_link: LH_FOOT
+    transform:
+      translation:
+        x: -0.08795
+        y: 0.013050000000000001
+        z: -0.33796999999999999
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  LH_thigh_fixed_LH_KFE:
+    type: fixed
+    name: LH_thigh_fixed_LH_KFE
+    parent_link: LH_thigh_fixed
+    child_link: LH_KFE
+    transform:
+      translation:
+        x: -0
+        y: 0.1003
+        z: -0.28499999999999998
+      rotation:
+        w: 0.70710678118827874
+        x: 0
+        y: 0
+        z: 0.70710678118481629
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  RF_HAA:
+    type: revolute
+    name: RF_HAA
+    parent_link: RF_HAA
+    child_link: RF_HIP
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 1
+      y: 0
+      z: 0
+    limits:
+      lower: -0.48999999999999999
+      upper: 0.71999999999999997
+      velocity: 7.5
+      effort: 80
+  RF_HFE:
+    type: revolute
+    name: RF_HFE
+    parent_link: RF_HFE
+    child_link: RF_THIGH
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: -1
+      y: 0
+      z: 0
+    limits:
+      lower: -9.4247779607699993
+      upper: 9.4247779607699993
+      velocity: 7.5
+      effort: 80
+  RF_HIP_RF_hip_fixed:
+    type: fixed
+    name: RF_HIP_RF_hip_fixed
+    parent_link: RF_HIP
+    child_link: RF_hip_fixed
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        w: 0.25881904510324244
+        x: 0.96592582628887491
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  RF_KFE:
+    type: revolute
+    name: RF_KFE
+    parent_link: RF_KFE
+    child_link: RF_SHANK
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: -1
+      y: 0
+      z: 0
+    limits:
+      lower: -9.4247779607699993
+      upper: 9.4247779607699993
+      velocity: 7.5
+      effort: 80
+  RF_shank_RF_shank_fixed:
+    type: fixed
+    name: RF_shank_RF_shank_fixed
+    parent_link: RF_SHANK
+    child_link: RF_shank_fixed
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        w: 0.70710678118827874
+        x: 0
+        y: 0
+        z: 0.70710678118481629
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  RF_THIGH_RF_thigh_fixed:
+    type: fixed
+    name: RF_THIGH_RF_thigh_fixed
+    parent_link: RF_THIGH
+    child_link: RF_thigh_fixed
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        w: 0.70710678118827874
+        x: 0
+        y: 0
+        z: 0.70710678118481629
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  RF_hip_fixed_RF_HFE:
+    type: fixed
+    name: RF_hip_fixed_RF_HFE
+    parent_link: RF_hip_fixed
+    child_link: RF_HFE
+    transform:
+      translation:
+        x: 0.059900000000000002
+        y: -0.083809999999999996
+        z: 0
+      rotation:
+        w: 0.70710678118827874
+        x: 0
+        y: 0
+        z: -0.70710678118481629
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  RF_shank_fixed_RF_FOOT:
+    type: fixed
+    name: RF_shank_fixed_RF_FOOT
+    parent_link: RF_shank_fixed
+    child_link: RF_FOOT
+    transform:
+      translation:
+        x: 0.08795
+        y: -0.013050000000000001
+        z: -0.33796999999999999
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  RF_thigh_fixed_RF_KFE:
+    type: fixed
+    name: RF_thigh_fixed_RF_KFE
+    parent_link: RF_thigh_fixed
+    child_link: RF_KFE
+    transform:
+      translation:
+        x: 0
+        y: -0.1003
+        z: -0.28499999999999998
+      rotation:
+        w: 0.70710678118827874
+        x: 0
+        y: 0
+        z: -0.70710678118481629
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  RH_HAA:
+    type: revolute
+    name: RH_HAA
+    parent_link: RH_HAA
+    child_link: RH_HIP
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: -1
+      y: 0
+      z: 0
+    limits:
+      lower: -0.48999999999999999
+      upper: 0.71999999999999997
+      velocity: 7.5
+      effort: 80
+  RH_HFE:
+    type: revolute
+    name: RH_HFE
+    parent_link: RH_HFE
+    child_link: RH_THIGH
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: -1
+      y: 0
+      z: 0
+    limits:
+      lower: -9.4247779607699993
+      upper: 9.4247779607699993
+      velocity: 7.5
+      effort: 80
+  RH_HIP_RH_hip_fixed:
+    type: fixed
+    name: RH_HIP_RH_hip_fixed
+    parent_link: RH_HIP
+    child_link: RH_hip_fixed
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        w: -2.6764879543775668e-14
+        x: -9.9887890315533184e-14
+        y: -0.96592582628887491
+        z: -0.25881904510324244
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  RH_KFE:
+    type: revolute
+    name: RH_KFE
+    parent_link: RH_KFE
+    child_link: RH_SHANK
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: -1
+      y: 0
+      z: 0
+    limits:
+      lower: -9.4247779607699993
+      upper: 9.4247779607699993
+      velocity: 7.5
+      effort: 80
+  RH_shank_RH_shank_fixed:
+    type: fixed
+    name: RH_shank_RH_shank_fixed
+    parent_link: RH_SHANK
+    child_link: RH_shank_fixed
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        w: 0.70710678118827874
+        x: 0
+        y: 0
+        z: 0.70710678118481629
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  RH_THIGH_RH_thigh_fixed:
+    type: fixed
+    name: RH_THIGH_RH_thigh_fixed
+    parent_link: RH_THIGH
+    child_link: RH_thigh_fixed
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        w: 0.70710678118827874
+        x: 0
+        y: 0
+        z: 0.70710678118481629
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  RH_hip_fixed_RH_HFE:
+    type: fixed
+    name: RH_hip_fixed_RH_HFE
+    parent_link: RH_hip_fixed
+    child_link: RH_HFE
+    transform:
+      translation:
+        x: -0.059900000000000002
+        y: -0.083809999999999996
+        z: 0
+      rotation:
+        w: 0.70710678118827874
+        x: 0
+        y: 0
+        z: -0.70710678118481629
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  RH_shank_fixed_RH_FOOT:
+    type: fixed
+    name: RH_shank_fixed_RH_FOOT
+    parent_link: RH_shank_fixed
+    child_link: RH_FOOT
+    transform:
+      translation:
+        x: -0.08795
+        y: -0.013050000000000001
+        z: -0.33796999999999999
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  RH_thigh_fixed_RH_KFE:
+    type: fixed
+    name: RH_thigh_fixed_RH_KFE
+    parent_link: RH_thigh_fixed
+    child_link: RH_KFE
+    transform:
+      translation:
+        x: -0
+        y: -0.1003
+        z: -0.28499999999999998
+      rotation:
+        w: 0.70710678118827874
+        x: 0
+        y: 0
+        z: -0.70710678118481629
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  base_LF_HAA:
+    type: fixed
+    name: base_LF_HAA
+    parent_link: base
+    child_link: LF_HAA
+    transform:
+      translation:
+        x: 0.2999
+        y: 0.104
+        z: 0
+      rotation:
+        w: 0.25881904510324244
+        x: 0.96592582628887491
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  base_LH_HAA:
+    type: fixed
+    name: base_LH_HAA
+    parent_link: base
+    child_link: LH_HAA
+    transform:
+      translation:
+        x: -0.2999
+        y: 0.104
+        z: 0
+      rotation:
+        w: -2.6764879543775668e-14
+        x: 9.9887890315533184e-14
+        y: 0.96592582628887491
+        z: -0.25881904510324244
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  base_RF_HAA:
+    type: fixed
+    name: base_RF_HAA
+    parent_link: base
+    child_link: RF_HAA
+    transform:
+      translation:
+        x: 0.2999
+        y: -0.104
+        z: 0
+      rotation:
+        w: 0.25881904510324244
+        x: -0.96592582628887491
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  base_RH_HAA:
+    type: fixed
+    name: base_RH_HAA
+    parent_link: base
+    child_link: RH_HAA
+    transform:
+      translation:
+        x: -0.2999
+        y: -0.104
+        z: 0
+      rotation:
+        w: -2.6764879543775668e-14
+        x: -9.9887890315533184e-14
+        y: -0.96592582628887491
+        z: -0.25881904510324244
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  base_battery:
+    type: fixed
+    name: base_battery
+    parent_link: base
+    child_link: battery
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  base_bottom_shell:
+    type: fixed
+    name: base_bottom_shell
+    parent_link: base
+    child_link: bottom_shell
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  base_face_front:
+    type: fixed
+    name: base_face_front
+    parent_link: base
+    child_link: face_front
+    transform:
+      translation:
+        x: 0.41449999999999998
+        y: 0
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: -0
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  base_face_rear:
+    type: fixed
+    name: base_face_rear
+    parent_link: base
+    child_link: face_rear
+    transform:
+      translation:
+        x: -0.41449999999999998
+        y: 0
+        z: 0
+      rotation:
+        w: -1.0341155355510722e-13
+        x: -0
+        y: 0
+        z: 1
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  base_handle:
+    type: fixed
+    name: base_handle
+    parent_link: base
+    child_link: handle
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  base_hatch:
+    type: fixed
+    name: base_hatch
+    parent_link: base
+    child_link: hatch
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  base_remote:
+    type: fixed
+    name: base_remote
+    parent_link: base
+    child_link: remote
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  base_to_base_inertia:
+    type: fixed
+    name: base_to_base_inertia
+    parent_link: base
+    child_link: base_inertia
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  base_to_depth_camera_left_camera:
+    type: fixed
+    name: base_to_depth_camera_left_camera
+    parent_link: base
+    child_link: depth_camera_left_camera
+    transform:
+      translation:
+        x: 0
+        y: 0.07646
+        z: 0.029049999999999999
+      rotation:
+        w: 0.68301270189391894
+        x: -0.18301270189166921
+        y: 0.18301270189256535
+        z: 0.68301270189057439
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  base_to_depth_camera_right_camera:
+    type: fixed
+    name: base_to_depth_camera_right_camera
+    parent_link: base
+    child_link: depth_camera_right_camera
+    transform:
+      translation:
+        x: 0
+        y: -0.07646
+        z: 0.029049999999999999
+      rotation:
+        w: 0.68301270189391894
+        x: 0.18301270189166921
+        y: 0.18301270189256535
+        z: -0.68301270189057439
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  base_to_docking_hatch_cover:
+    type: fixed
+    name: base_to_docking_hatch_cover
+    parent_link: base
+    child_link: docking_hatch_cover
+    transform:
+      translation:
+        x: 0.34300000000000003
+        y: 0
+        z: -0.070000000000000007
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  base_to_lidar_cage:
+    type: fixed
+    name: base_to_lidar_cage
+    parent_link: base
+    child_link: lidar_cage
+    transform:
+      translation:
+        x: -0.36399999999999999
+        y: 0
+        z: 0.073499999999999996
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  base_top_shell:
+    type: fixed
+    name: base_top_shell
+    parent_link: base
+    child_link: top_shell
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  imu_joint:
+    type: fixed
+    name: imu_joint
+    parent_link: base
+    child_link: imu_link
+    transform:
+      translation:
+        x: 0.24879999999999999
+        y: 0.0083499999999999998
+        z: 0.046280000000000002
+      rotation:
+        w: 0.70710678118827874
+        x: 0
+        y: 0
+        z: 0.70710678118481629
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  depth_camera_front_camera_to_camera_parent:
+    type: fixed
+    name: depth_camera_front_camera_to_camera_parent
+    parent_link: depth_camera_front_camera
+    child_link: depth_camera_front_camera_parent
+    transform:
+      translation:
+        x: 0.025499999999999998
+        y: 0.017500000000000002
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  depth_camera_front_camera_parent_to_color_frame:
+    type: fixed
+    name: depth_camera_front_camera_parent_to_color_frame
+    parent_link: depth_camera_front_camera_parent
+    child_link: depth_camera_front_color_frame
+    transform:
+      translation:
+        x: 0
+        y: 0.014999999999999999
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  depth_camera_front_camera_parent_to_depth_optical_frame:
+    type: fixed
+    name: depth_camera_front_camera_parent_to_depth_optical_frame
+    parent_link: depth_camera_front_camera_parent
+    child_link: depth_camera_front_depth_optical_frame
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        w: 0.50000000000244826
+        x: -0.5
+        y: 0.49999999999755168
+        z: -0.5
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  depth_camera_front_color_frame_to_color_optical_frame:
+    type: fixed
+    name: depth_camera_front_color_frame_to_color_optical_frame
+    parent_link: depth_camera_front_color_frame
+    child_link: depth_camera_front_color_optical_frame
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        w: 0.50000000000244826
+        x: -0.5
+        y: 0.49999999999755168
+        z: -0.5
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  depth_camera_left_camera_to_camera_parent:
+    type: fixed
+    name: depth_camera_left_camera_to_camera_parent
+    parent_link: depth_camera_left_camera
+    child_link: depth_camera_left_camera_parent
+    transform:
+      translation:
+        x: 0.025499999999999998
+        y: 0.017500000000000002
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  depth_camera_left_camera_parent_to_color_frame:
+    type: fixed
+    name: depth_camera_left_camera_parent_to_color_frame
+    parent_link: depth_camera_left_camera_parent
+    child_link: depth_camera_left_color_frame
+    transform:
+      translation:
+        x: 0
+        y: 0.014999999999999999
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  depth_camera_left_camera_parent_to_depth_optical_frame:
+    type: fixed
+    name: depth_camera_left_camera_parent_to_depth_optical_frame
+    parent_link: depth_camera_left_camera_parent
+    child_link: depth_camera_left_depth_optical_frame
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        w: 0.50000000000244826
+        x: -0.5
+        y: 0.49999999999755168
+        z: -0.5
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  depth_camera_left_color_frame_to_color_optical_frame:
+    type: fixed
+    name: depth_camera_left_color_frame_to_color_optical_frame
+    parent_link: depth_camera_left_color_frame
+    child_link: depth_camera_left_color_optical_frame
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        w: 0.50000000000244826
+        x: -0.5
+        y: 0.49999999999755168
+        z: -0.5
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  depth_camera_rear_camera_to_camera_parent:
+    type: fixed
+    name: depth_camera_rear_camera_to_camera_parent
+    parent_link: depth_camera_rear_camera
+    child_link: depth_camera_rear_camera_parent
+    transform:
+      translation:
+        x: 0.025499999999999998
+        y: 0.017500000000000002
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  depth_camera_rear_camera_parent_to_color_frame:
+    type: fixed
+    name: depth_camera_rear_camera_parent_to_color_frame
+    parent_link: depth_camera_rear_camera_parent
+    child_link: depth_camera_rear_color_frame
+    transform:
+      translation:
+        x: 0
+        y: 0.014999999999999999
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  depth_camera_rear_camera_parent_to_depth_optical_frame:
+    type: fixed
+    name: depth_camera_rear_camera_parent_to_depth_optical_frame
+    parent_link: depth_camera_rear_camera_parent
+    child_link: depth_camera_rear_depth_optical_frame
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        w: 0.50000000000244826
+        x: -0.5
+        y: 0.49999999999755168
+        z: -0.5
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  depth_camera_rear_color_frame_to_color_optical_frame:
+    type: fixed
+    name: depth_camera_rear_color_frame_to_color_optical_frame
+    parent_link: depth_camera_rear_color_frame
+    child_link: depth_camera_rear_color_optical_frame
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        w: 0.50000000000244826
+        x: -0.5
+        y: 0.49999999999755168
+        z: -0.5
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  depth_camera_right_camera_to_camera_parent:
+    type: fixed
+    name: depth_camera_right_camera_to_camera_parent
+    parent_link: depth_camera_right_camera
+    child_link: depth_camera_right_camera_parent
+    transform:
+      translation:
+        x: 0.025499999999999998
+        y: 0.017500000000000002
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  depth_camera_right_camera_parent_to_color_frame:
+    type: fixed
+    name: depth_camera_right_camera_parent_to_color_frame
+    parent_link: depth_camera_right_camera_parent
+    child_link: depth_camera_right_color_frame
+    transform:
+      translation:
+        x: 0
+        y: 0.014999999999999999
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  depth_camera_right_camera_parent_to_depth_optical_frame:
+    type: fixed
+    name: depth_camera_right_camera_parent_to_depth_optical_frame
+    parent_link: depth_camera_right_camera_parent
+    child_link: depth_camera_right_depth_optical_frame
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        w: 0.50000000000244826
+        x: -0.5
+        y: 0.49999999999755168
+        z: -0.5
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  depth_camera_right_color_frame_to_color_optical_frame:
+    type: fixed
+    name: depth_camera_right_color_frame_to_color_optical_frame
+    parent_link: depth_camera_right_color_frame
+    child_link: depth_camera_right_color_optical_frame
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        w: 0.50000000000244826
+        x: -0.5
+        y: 0.49999999999755168
+        z: -0.5
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  face_front_to_depth_camera_front_camera:
+    type: fixed
+    name: face_front_to_depth_camera_front_camera
+    parent_link: face_front
+    child_link: depth_camera_front_camera
+    transform:
+      translation:
+        x: 0.047149999999999997
+        y: 0
+        z: -0.0292
+      rotation:
+        w: 0.96592582628910695
+        x: 0
+        y: 0.25881904510237647
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  face_front_to_wide_angle_camera_front_camera:
+    type: fixed
+    name: face_front_to_wide_angle_camera_front_camera
+    parent_link: face_front
+    child_link: wide_angle_camera_front_camera
+    transform:
+      translation:
+        x: 0.098500000000000004
+        y: 0
+        z: 0.014970000000000001
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  face_rear_to_depth_camera_rear_camera:
+    type: fixed
+    name: face_rear_to_depth_camera_rear_camera
+    parent_link: face_rear
+    child_link: depth_camera_rear_camera
+    transform:
+      translation:
+        x: 0.047149999999999997
+        y: 0
+        z: -0.0292
+      rotation:
+        w: 0.96592582628910695
+        x: 0
+        y: 0.25881904510237647
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  face_rear_to_wide_angle_camera_rear_camera:
+    type: fixed
+    name: face_rear_to_wide_angle_camera_rear_camera
+    parent_link: face_rear
+    child_link: wide_angle_camera_rear_camera
+    transform:
+      translation:
+        x: 0.098500000000000004
+        y: 0
+        z: 0.014970000000000001
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  lidar_cage_to_lidar:
+    type: fixed
+    name: lidar_cage_to_lidar
+    parent_link: lidar_cage
+    child_link: lidar
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0.068699999999999997
+      rotation:
+        w: 0.70710678118827874
+        x: 0
+        y: 0
+        z: -0.70710678118481629
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  wide_angle_camera_front_camera_to_camera_parent:
+    type: fixed
+    name: wide_angle_camera_front_camera_to_camera_parent
+    parent_link: wide_angle_camera_front_camera
+    child_link: wide_angle_camera_front_camera_parent
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        w: 0.50000000000244826
+        x: -0.5
+        y: 0.49999999999755168
+        z: -0.5
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  wide_angle_camera_rear_camera_to_camera_parent:
+    type: fixed
+    name: wide_angle_camera_rear_camera_to_camera_parent
+    parent_link: wide_angle_camera_rear_camera
+    child_link: wide_angle_camera_rear_camera_parent
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        w: 0.50000000000244826
+        x: -0.5
+        y: 0.49999999999755168
+        z: -0.5
+    axis:
+      x: 0
+      y: 0
+      z: 0

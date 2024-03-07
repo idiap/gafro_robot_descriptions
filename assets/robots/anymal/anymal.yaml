@@ -1,0 +1,1274 @@
+system:
+  name: anymal
+  root_link: base
+joints:
+  LF_ADAPTER_TO_FOOT:
+    type: fixed
+    name: LF_ADAPTER_TO_FOOT
+    parent_link: LF_ADAPTER
+    child_link: LF_FOOT
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: -0.32124999999999998
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  LF_HFE:
+    type: revolute
+    name: LF_HFE
+    parent_link: LF_HIP
+    child_link: LF_THIGH
+    transform:
+      translation:
+        x: 0.063500000000000001
+        y: 0.041000000000000002
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 1
+      z: 0
+    limits:
+      lower: -6.2800000000000002
+      upper: 6.2800000000000002
+      velocity: 15
+      effort: 80
+  LF_SHANK_TO_ADAPTER:
+    type: fixed
+    name: LF_SHANK_TO_ADAPTER
+    parent_link: LF_SHANK
+    child_link: LF_ADAPTER
+    transform:
+      translation:
+        x: 0.10000000000000001
+        y: -0.02
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  LF_KFE:
+    type: revolute
+    name: LF_KFE
+    parent_link: LF_THIGH
+    child_link: LF_SHANK
+    transform:
+      translation:
+        x: 0
+        y: 0.109
+        z: -0.25
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 1
+      z: 0
+    limits:
+      lower: -6.2800000000000002
+      upper: 6.2800000000000002
+      velocity: 15
+      effort: 80
+  LH_ADAPTER_TO_FOOT:
+    type: fixed
+    name: LH_ADAPTER_TO_FOOT
+    parent_link: LH_ADAPTER
+    child_link: LH_FOOT
+    transform:
+      translation:
+        x: -0
+        y: 0
+        z: -0.32124999999999998
+      rotation:
+        w: 1
+        x: 0
+        y: -0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  LH_HFE:
+    type: revolute
+    name: LH_HFE
+    parent_link: LH_HIP
+    child_link: LH_THIGH
+    transform:
+      translation:
+        x: -0.063500000000000001
+        y: 0.041000000000000002
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 1
+      z: 0
+    limits:
+      lower: -6.2800000000000002
+      upper: 6.2800000000000002
+      velocity: 15
+      effort: 80
+  LH_SHANK_TO_ADAPTER:
+    type: fixed
+    name: LH_SHANK_TO_ADAPTER
+    parent_link: LH_SHANK
+    child_link: LH_ADAPTER
+    transform:
+      translation:
+        x: -0.10000000000000001
+        y: -0.02
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: -0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  LH_KFE:
+    type: revolute
+    name: LH_KFE
+    parent_link: LH_THIGH
+    child_link: LH_SHANK
+    transform:
+      translation:
+        x: -0
+        y: 0.109
+        z: -0.25
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 1
+      z: 0
+    limits:
+      lower: -6.2800000000000002
+      upper: 6.2800000000000002
+      velocity: 15
+      effort: 80
+  RF_ADAPTER_TO_FOOT:
+    type: fixed
+    name: RF_ADAPTER_TO_FOOT
+    parent_link: RF_ADAPTER
+    child_link: RF_FOOT
+    transform:
+      translation:
+        x: 0
+        y: -0
+        z: -0.32124999999999998
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  RF_HFE:
+    type: revolute
+    name: RF_HFE
+    parent_link: RF_HIP
+    child_link: RF_THIGH
+    transform:
+      translation:
+        x: 0.063500000000000001
+        y: -0.041000000000000002
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 1
+      z: 0
+    limits:
+      lower: -6.2800000000000002
+      upper: 6.2800000000000002
+      velocity: 15
+      effort: 80
+  RF_SHANK_TO_ADAPTER:
+    type: fixed
+    name: RF_SHANK_TO_ADAPTER
+    parent_link: RF_SHANK
+    child_link: RF_ADAPTER
+    transform:
+      translation:
+        x: 0.10000000000000001
+        y: 0.02
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  RF_KFE:
+    type: revolute
+    name: RF_KFE
+    parent_link: RF_THIGH
+    child_link: RF_SHANK
+    transform:
+      translation:
+        x: 0
+        y: -0.109
+        z: -0.25
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 1
+      z: 0
+    limits:
+      lower: -6.2800000000000002
+      upper: 6.2800000000000002
+      velocity: 15
+      effort: 80
+  RH_ADAPTER_TO_FOOT:
+    type: fixed
+    name: RH_ADAPTER_TO_FOOT
+    parent_link: RH_ADAPTER
+    child_link: RH_FOOT
+    transform:
+      translation:
+        x: -0
+        y: -0
+        z: -0.32124999999999998
+      rotation:
+        w: 1
+        x: 0
+        y: -0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  RH_HFE:
+    type: revolute
+    name: RH_HFE
+    parent_link: RH_HIP
+    child_link: RH_THIGH
+    transform:
+      translation:
+        x: -0.063500000000000001
+        y: -0.041000000000000002
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 1
+      z: 0
+    limits:
+      lower: -6.2800000000000002
+      upper: 6.2800000000000002
+      velocity: 15
+      effort: 80
+  RH_SHANK_TO_ADAPTER:
+    type: fixed
+    name: RH_SHANK_TO_ADAPTER
+    parent_link: RH_SHANK
+    child_link: RH_ADAPTER
+    transform:
+      translation:
+        x: -0.10000000000000001
+        y: 0.02
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: -0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  RH_KFE:
+    type: revolute
+    name: RH_KFE
+    parent_link: RH_THIGH
+    child_link: RH_SHANK
+    transform:
+      translation:
+        x: -0
+        y: -0.109
+        z: -0.25
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 1
+      z: 0
+    limits:
+      lower: -6.2800000000000002
+      upper: 6.2800000000000002
+      velocity: 15
+      effort: 80
+  LF_HAA:
+    type: revolute
+    name: LF_HAA
+    parent_link: base
+    child_link: LF_HIP
+    transform:
+      translation:
+        x: 0.27700000000000002
+        y: 0.11600000000000001
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 1
+      y: 0
+      z: 0
+    limits:
+      lower: -6.2800000000000002
+      upper: 6.2800000000000002
+      velocity: 15
+      effort: 80
+  LH_HAA:
+    type: revolute
+    name: LH_HAA
+    parent_link: base
+    child_link: LH_HIP
+    transform:
+      translation:
+        x: -0.27700000000000002
+        y: 0.11600000000000001
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 1
+      y: 0
+      z: 0
+    limits:
+      lower: -6.2800000000000002
+      upper: 6.2800000000000002
+      velocity: 15
+      effort: 80
+  RF_HAA:
+    type: revolute
+    name: RF_HAA
+    parent_link: base
+    child_link: RF_HIP
+    transform:
+      translation:
+        x: 0.27700000000000002
+        y: -0.11600000000000001
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 1
+      y: 0
+      z: 0
+    limits:
+      lower: -6.2800000000000002
+      upper: 6.2800000000000002
+      velocity: 15
+      effort: 80
+  RH_HAA:
+    type: revolute
+    name: RH_HAA
+    parent_link: base
+    child_link: RH_HIP
+    transform:
+      translation:
+        x: -0.27700000000000002
+        y: -0.11600000000000001
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 1
+      y: 0
+      z: 0
+    limits:
+      lower: -6.2800000000000002
+      upper: 6.2800000000000002
+      velocity: 15
+      effort: 80
+  base_to_base_inertia:
+    type: fixed
+    name: base_to_base_inertia
+    parent_link: base
+    child_link: base_inertia
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 0
+links:
+  LF_ADAPTER:
+    joints:
+      - LF_ADAPTER_TO_FOOT
+    name: LF_ADAPTER
+    parent_joint: LF_SHANK_TO_ADAPTER
+    inertial:
+      mass: 0.140170767
+      inertia:
+        xx: 0.0015993874186200001
+        xy: -9.3200000000000007e-13
+        yy: 0.00159938741932
+        yz: 1.7562999999999999e-11
+        zz: 5.4423177328999999e-05
+        xz: 1.0390000000000001e-11
+      origin:
+        position:
+          x: -8.6600000000000001e-10
+          y: -1.4720000000000001e-09
+          z: -0.24434574918800001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0.032000000000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/anymal_foot.dae
+      scale:
+        x: 0.001
+        y: 0.001
+        z: 0.001
+  LF_FOOT:
+    name: LF_FOOT
+    parent_joint: LF_ADAPTER_TO_FOOT
+    inertial:
+      mass: 0
+      inertia:
+        xx: 0
+        xy: 0
+        yy: 0
+        yz: 0
+        zz: 0
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+  LF_HIP:
+    joints:
+      - LF_HFE
+    name: LF_HIP
+    parent_joint: LF_HAA
+    inertial:
+      mass: 1.4246206400000001
+      inertia:
+        xx: 0.0024302334956399999
+        xy: -1.5302397100000001e-05
+        yy: 0.0023025723910300002
+        yz: 2.6473021272999999e-05
+        zz: 0.0019806759227000001
+        xz: -2.1819095354000001e-05
+      origin:
+        position:
+          x: 0.064516258147000002
+          y: -0.003787101702
+          z: -0.000152184388
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/anymal_hip_l.dae
+      scale:
+        x: 0.001
+        y: 0.001
+        z: 0.001
+  LF_SHANK:
+    joints:
+      - LF_SHANK_TO_ADAPTER
+    name: LF_SHANK
+    parent_joint: LF_KFE
+    inertial:
+      mass: 0.20720430200000001
+      inertia:
+        xx: 0.00021048802479999999
+        xy: -5.6750980345e-05
+        yy: 0.00067627021002300005
+        yz: -8.2286902399999996e-07
+        zz: 0.00054503267492400002
+        xz: 1.0127699391e-05
+      origin:
+        position:
+          x: 0.030816858139000002
+          y: -0.0046172292940000002
+          z: 0.00089312571300000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/anymal_shank_l.dae
+      scale:
+        x: 0.001
+        y: 0.001
+        z: 0.001
+  LF_THIGH:
+    joints:
+      - LF_KFE
+    name: LF_THIGH
+    parent_joint: LF_HFE
+    inertial:
+      mass: 1.634976467
+      inertia:
+        xx: 0.012036794436900001
+        xy: 6.7620652059999995e-05
+        yy: 0.012064363793899999
+        yz: -0.00140610131218
+        zz: 0.0024942257488100002
+        xz: 0.00028780634044800002
+      origin:
+        position:
+          x: -0.003897968082
+          y: 0.054226618536999997
+          z: -0.214583373795
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/anymal_thigh_l.dae
+      scale:
+        x: 0.001
+        y: 0.001
+        z: 0.001
+  LH_ADAPTER:
+    joints:
+      - LH_ADAPTER_TO_FOOT
+    name: LH_ADAPTER
+    parent_joint: LH_SHANK_TO_ADAPTER
+    inertial:
+      mass: 0.140170767
+      inertia:
+        xx: 0.0015993874186200001
+        xy: -9.3200000000000007e-13
+        yy: 0.00159938741932
+        yz: 1.7562999999999999e-11
+        zz: 5.4423177328999999e-05
+        xz: 1.0390000000000001e-11
+      origin:
+        position:
+          x: -8.6600000000000001e-10
+          y: -1.4720000000000001e-09
+          z: -0.24434574918800001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0.032000000000000001
+        orientation:
+          w: -1.0341155355510722e-13
+          x: 0
+          y: -0
+          z: -1
+      type: mesh
+      filename: meshes/anymal_foot.dae
+      scale:
+        x: 0.001
+        y: 0.001
+        z: 0.001
+  LH_FOOT:
+    name: LH_FOOT
+    parent_joint: LH_ADAPTER_TO_FOOT
+    inertial:
+      mass: 0
+      inertia:
+        xx: 0
+        xy: 0
+        yy: 0
+        yz: 0
+        zz: 0
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+  LH_HIP:
+    joints:
+      - LH_HFE
+    name: LH_HIP
+    parent_joint: LH_HAA
+    inertial:
+      mass: 1.4246206400000001
+      inertia:
+        xx: 0.0024302334956399999
+        xy: 1.5302397100000001e-05
+        yy: 0.0023025723910300002
+        yz: 2.6473021272999999e-05
+        zz: 0.0019806759227000001
+        xz: 2.1819095354000001e-05
+      origin:
+        position:
+          x: -0.064516258147000002
+          y: -0.003787101702
+          z: -0.000152184388
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: -1.0341155355510722e-13
+          x: 0
+          y: -0
+          z: -1
+      type: mesh
+      filename: meshes/anymal_hip_r.dae
+      scale:
+        x: 0.001
+        y: 0.001
+        z: 0.001
+  LH_SHANK:
+    joints:
+      - LH_SHANK_TO_ADAPTER
+    name: LH_SHANK
+    parent_joint: LH_KFE
+    inertial:
+      mass: 0.20720430200000001
+      inertia:
+        xx: 0.00021048802479999999
+        xy: 5.6750980345e-05
+        yy: 0.00067627021002300005
+        yz: -8.2286902399999996e-07
+        zz: 0.00054503267492400002
+        xz: -1.0127699391e-05
+      origin:
+        position:
+          x: -0.030816858139000002
+          y: -0.0046172292940000002
+          z: 0.00089312571300000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: -1.0341155355510722e-13
+          x: 0
+          y: -0
+          z: -1
+      type: mesh
+      filename: meshes/anymal_shank_r.dae
+      scale:
+        x: 0.001
+        y: 0.001
+        z: 0.001
+  LH_THIGH:
+    joints:
+      - LH_KFE
+    name: LH_THIGH
+    parent_joint: LH_HFE
+    inertial:
+      mass: 1.634976467
+      inertia:
+        xx: 0.012036794436900001
+        xy: -6.7620652059999995e-05
+        yy: 0.012064363793899999
+        yz: -0.00140610131218
+        zz: 0.0024942257488100002
+        xz: -0.00028780634044800002
+      origin:
+        position:
+          x: 0.003897968082
+          y: 0.054226618536999997
+          z: -0.214583373795
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: -1.0341155355510722e-13
+          x: 0
+          y: -0
+          z: -1
+      type: mesh
+      filename: meshes/anymal_thigh_r.dae
+      scale:
+        x: 0.001
+        y: 0.001
+        z: 0.001
+  RF_ADAPTER:
+    joints:
+      - RF_ADAPTER_TO_FOOT
+    name: RF_ADAPTER
+    parent_joint: RF_SHANK_TO_ADAPTER
+    inertial:
+      mass: 0.140170767
+      inertia:
+        xx: 0.0015993874186200001
+        xy: -9.3200000000000007e-13
+        yy: 0.00159938741932
+        yz: 1.7562999999999999e-11
+        zz: 5.4423177328999999e-05
+        xz: 1.0390000000000001e-11
+      origin:
+        position:
+          x: -8.6600000000000001e-10
+          y: -1.4720000000000001e-09
+          z: -0.24434574918800001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0.032000000000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/anymal_foot.dae
+      scale:
+        x: 0.001
+        y: 0.001
+        z: 0.001
+  RF_FOOT:
+    name: RF_FOOT
+    parent_joint: RF_ADAPTER_TO_FOOT
+    inertial:
+      mass: 0
+      inertia:
+        xx: 0
+        xy: 0
+        yy: 0
+        yz: 0
+        zz: 0
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+  RF_HIP:
+    joints:
+      - RF_HFE
+    name: RF_HIP
+    parent_joint: RF_HAA
+    inertial:
+      mass: 1.4246206400000001
+      inertia:
+        xx: 0.0024302334956399999
+        xy: 1.5302397100000001e-05
+        yy: 0.0023025723910300002
+        yz: -2.6473021272999999e-05
+        zz: 0.0019806759227000001
+        xz: -2.1819095354000001e-05
+      origin:
+        position:
+          x: 0.064516258147000002
+          y: 0.003787101702
+          z: -0.000152184388
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/anymal_hip_r.dae
+      scale:
+        x: 0.001
+        y: 0.001
+        z: 0.001
+  RF_SHANK:
+    joints:
+      - RF_SHANK_TO_ADAPTER
+    name: RF_SHANK
+    parent_joint: RF_KFE
+    inertial:
+      mass: 0.20720430200000001
+      inertia:
+        xx: 0.00021048802479999999
+        xy: 5.6750980345e-05
+        yy: 0.00067627021002300005
+        yz: 8.2286902399999996e-07
+        zz: 0.00054503267492400002
+        xz: 1.0127699391e-05
+      origin:
+        position:
+          x: 0.030816858139000002
+          y: 0.0046172292940000002
+          z: 0.00089312571300000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/anymal_shank_r.dae
+      scale:
+        x: 0.001
+        y: 0.001
+        z: 0.001
+  RF_THIGH:
+    joints:
+      - RF_KFE
+    name: RF_THIGH
+    parent_joint: RF_HFE
+    inertial:
+      mass: 1.634976467
+      inertia:
+        xx: 0.012036794436900001
+        xy: -6.7620652059999995e-05
+        yy: 0.012064363793899999
+        yz: 0.00140610131218
+        zz: 0.0024942257488100002
+        xz: 0.00028780634044800002
+      origin:
+        position:
+          x: -0.003897968082
+          y: -0.054226618536999997
+          z: -0.214583373795
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/anymal_thigh_r.dae
+      scale:
+        x: 0.001
+        y: 0.001
+        z: 0.001
+  RH_ADAPTER:
+    joints:
+      - RH_ADAPTER_TO_FOOT
+    name: RH_ADAPTER
+    parent_joint: RH_SHANK_TO_ADAPTER
+    inertial:
+      mass: 0.140170767
+      inertia:
+        xx: 0.0015993874186200001
+        xy: -9.3200000000000007e-13
+        yy: 0.00159938741932
+        yz: 1.7562999999999999e-11
+        zz: 5.4423177328999999e-05
+        xz: 1.0390000000000001e-11
+      origin:
+        position:
+          x: -8.6600000000000001e-10
+          y: -1.4720000000000001e-09
+          z: -0.24434574918800001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0.032000000000000001
+        orientation:
+          w: -1.0341155355510722e-13
+          x: 0
+          y: -0
+          z: -1
+      type: mesh
+      filename: meshes/anymal_foot.dae
+      scale:
+        x: 0.001
+        y: 0.001
+        z: 0.001
+  RH_FOOT:
+    name: RH_FOOT
+    parent_joint: RH_ADAPTER_TO_FOOT
+    inertial:
+      mass: 0
+      inertia:
+        xx: 0
+        xy: 0
+        yy: 0
+        yz: 0
+        zz: 0
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+  RH_HIP:
+    joints:
+      - RH_HFE
+    name: RH_HIP
+    parent_joint: RH_HAA
+    inertial:
+      mass: 1.4246206400000001
+      inertia:
+        xx: 0.0024302334956399999
+        xy: -1.5302397100000001e-05
+        yy: 0.0023025723910300002
+        yz: -2.6473021272999999e-05
+        zz: 0.0019806759227000001
+        xz: 2.1819095354000001e-05
+      origin:
+        position:
+          x: -0.064516258147000002
+          y: 0.003787101702
+          z: -0.000152184388
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: -1.0341155355510722e-13
+          x: 0
+          y: -0
+          z: -1
+      type: mesh
+      filename: meshes/anymal_hip_l.dae
+      scale:
+        x: 0.001
+        y: 0.001
+        z: 0.001
+  RH_SHANK:
+    joints:
+      - RH_SHANK_TO_ADAPTER
+    name: RH_SHANK
+    parent_joint: RH_KFE
+    inertial:
+      mass: 0.20720430200000001
+      inertia:
+        xx: 0.00021048802479999999
+        xy: -5.6750980345e-05
+        yy: 0.00067627021002300005
+        yz: 8.2286902399999996e-07
+        zz: 0.00054503267492400002
+        xz: -1.0127699391e-05
+      origin:
+        position:
+          x: -0.030816858139000002
+          y: 0.0046172292940000002
+          z: 0.00089312571300000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: -1.0341155355510722e-13
+          x: 0
+          y: -0
+          z: -1
+      type: mesh
+      filename: meshes/anymal_shank_l.dae
+      scale:
+        x: 0.001
+        y: 0.001
+        z: 0.001
+  RH_THIGH:
+    joints:
+      - RH_KFE
+    name: RH_THIGH
+    parent_joint: RH_HFE
+    inertial:
+      mass: 1.634976467
+      inertia:
+        xx: 0.012036794436900001
+        xy: 6.7620652059999995e-05
+        yy: 0.012064363793899999
+        yz: 0.00140610131218
+        zz: 0.0024942257488100002
+        xz: -0.00028780634044800002
+      origin:
+        position:
+          x: 0.003897968082
+          y: -0.054226618536999997
+          z: -0.214583373795
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: -1.0341155355510722e-13
+          x: 0
+          y: -0
+          z: -1
+      type: mesh
+      filename: meshes/anymal_thigh_l.dae
+      scale:
+        x: 0.001
+        y: 0.001
+        z: 0.001
+  base:
+    joints:
+      - LF_HAA
+      - LH_HAA
+      - RF_HAA
+      - RH_HAA
+      - base_to_base_inertia
+    name: base
+    inertial:
+      mass: 0
+      inertia:
+        xx: 0
+        xy: 0
+        yy: 0
+        yz: 0
+        zz: 0
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/anymal_base.dae
+      scale:
+        x: 0.001
+        y: 0.001
+        z: 0.001
+  base_inertia:
+    name: base_inertia
+    parent_joint: base_to_base_inertia
+    inertial:
+      mass: 16.793507758000001
+      inertia:
+        xx: 0.21739110150300001
+        xy: -0.0013287323912600001
+        yy: 0.63943254673399996
+        yz: -0.00138078263145
+        zz: 0.62414077654
+        xz: -0.0022820022617300001
+      origin:
+        position:
+          x: -0.001960558279
+          y: -0.0014132177450000001
+          z: 0.050207125344
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0

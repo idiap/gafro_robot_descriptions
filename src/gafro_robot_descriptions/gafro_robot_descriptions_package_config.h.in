@@ -1,0 +1,7 @@
+#pragma once
+
+#define MY_PACKAGE_VERSION_MAJOR @gafro_robot_descriptions_VERSION_MAJOR@
+#define MY_PACKAGE_VERSION_MINOR @gafro_robot_descriptions_VERSION_MINOR@
+#define MY_PACKAGE_VERSION_PATCH @gafro_robot_descriptions_VERSION_PATCH@
+
+#define GAFRO_ROBOT_DESCRIPTIONS_DIRECTORY std::string("@GAFRO_ROBOT_DESCRIPTIONS_DIRECTORY@")
