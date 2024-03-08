@@ -37,6 +37,7 @@ target_include_directories(${PROJECT_NAME}
 		$<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}>
 		$<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}>
 		$<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}>
+    $<BUILD_INTERFACE:${YAML_CPP_INCLUDE_DIRS}>
 	PRIVATE
 		$<BUILD_INTERFACE:${CMAKE_CURRENT_LIST_DIR}>/..
 )
@@ -48,6 +49,7 @@ target_include_directories(${PROJECT_NAME}
 target_link_libraries(${PROJECT_NAME}
 	PUBLIC 
     gafro::gafro
+    ${YAML_CPP_LIBRARIES}
 )
 
 install(
