@@ -35,6 +35,8 @@ namespace gafro
       public:
         LeapHand();
 
+        LeapHand(const std::filesystem::path &assets_folder);
+
         virtual ~LeapHand();
 
       protected:
@@ -44,6 +46,11 @@ namespace gafro
     template <class T>
     LeapHand<T>::LeapHand()  //
       : System<T>(std::move(SystemSerialization(FilePath("robots/leap_hand/leap_hand.yaml")).load().cast<T>()))
+    {}
+
+    template <class T>
+    LeapHand<T>::LeapHand(const std::filesystem::path &assets_folder)
+      : System<T>(std::move(SystemSerialization(FilePath(assets_folder / "robots/leap_hand/leap_hand.yaml")).load().cast<T>()))
     {}
 
     template <class T>

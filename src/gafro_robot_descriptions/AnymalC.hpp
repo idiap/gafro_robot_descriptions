@@ -35,6 +35,8 @@ namespace gafro
       public:
         AnymalC();
 
+        AnymalC(const std::filesystem::path &assets_folder);
+
         virtual ~AnymalC();
 
       protected:
@@ -44,6 +46,11 @@ namespace gafro
     template <class T>
     AnymalC<T>::AnymalC()  //
       : System<T>(std::move(SystemSerialization(FilePath("robots/anymal_c/anymal_c.yaml")).load().cast<T>()))
+    {}
+
+    template <class T>
+    AnymalC<T>::AnymalC(const std::filesystem::path &assets_folder)
+      : System<T>(std::move(SystemSerialization(FilePath(assets_folder / "robots/anymal_c/anymal_c.yaml")).load().cast<T>()))
     {}
 
     template <class T>
