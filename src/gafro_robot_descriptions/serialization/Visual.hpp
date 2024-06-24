@@ -22,7 +22,7 @@
 #include <memory>
 #include <string>
 //
-#include <gafro/algebra/Motor.hpp>
+#include <gafro/algebra/cga/Motor.hpp>
 
 namespace gafro
 {
@@ -46,6 +46,12 @@ namespace gafro
         const Type &getType() const;
 
         const Motor<double> &getTransform() const;
+
+        template <class Derived>
+        const Derived *cast() const
+        {
+            return static_cast<const Derived *>(this);
+        }
 
       private:
         const Type type_;

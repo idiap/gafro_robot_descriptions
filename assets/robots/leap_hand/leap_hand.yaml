@@ -26,6 +26,82 @@ joints:
       upper: 2.0419999999999998
       velocity: 8.4800000000000004
       effort: 0.94999999999999996
+  thumb_center_joint:
+    type: fixed
+    name: thumb_center_joint
+    parent_link: thumb_fingertip
+    child_link: thumb_center
+    transform:
+      translation:
+        x: -0.01
+        y: -0.05
+        z: -0.015
+      rotation:
+        w: 0
+        x: 0
+        y: -1
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  fingertip_center_joint:
+    type: fixed
+    name: fingertip_center_joint
+    parent_link: fingertip
+    child_link: fingertip_center
+    transform:
+      translation:
+        x: -0.01
+        y: -0.035
+        z: 0.015
+      rotation:
+        w: 0
+        x: 0
+        y: -1
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  fingertip_2_center_joint:
+    type: fixed
+    name: fingertip_2_center_joint
+    parent_link: fingertip_2
+    child_link: fingertip_2_center
+    transform:
+      translation:
+        x: -0.01
+        y: -0.035
+        z: 0.015
+      rotation:
+        w: 0
+        x: 0
+        y: -1
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  fingertip_3_center_joint:
+    type: fixed
+    name: fingertip_3_center_joint
+    parent_link: fingertip_3
+    child_link: fingertip_3_center
+    transform:
+      translation:
+        x: -0.01
+        y: -0.035
+        z: 0.015
+      rotation:
+        w: 0
+        x: 0
+        y: -1
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 0
   joint_7:
     type: revolute
     name: joint_7
@@ -513,6 +589,8 @@ links:
   fingertip:
     name: fingertip
     parent_joint: joint_3
+    joints: 
+      - fingertip_center_joint
     inertial:
       mass: 0.016
       inertia:
@@ -549,9 +627,99 @@ links:
         x: 1
         y: 1
         z: 1
+  thumb_center:
+    name: thumb_center
+    parent_joint: thumb_center_joint
+    inertial:
+      mass: 0.0
+      inertia:
+        xx: 0
+        xy: 0
+        yy: 0
+        yz: 0
+        zz: 0
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+  fingertip_center:
+    name: fingertip_center
+    parent_joint: fingertip_center_joint
+    inertial:
+      mass: 0.0
+      inertia:
+        xx: 0
+        xy: 0
+        yy: 0
+        yz: 0
+        zz: 0
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+  fingertip_2_center:
+    name: fingertip_2_center
+    parent_joint: fingertip_2_center_joint
+    inertial:
+      mass: 0.0
+      inertia:
+        xx: 0
+        xy: 0
+        yy: 0
+        yz: 0
+        zz: 0
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+  fingertip_3_center:
+    name: fingertip_3_center
+    parent_joint: fingertip_3_center_joint
+    inertial:
+      mass: 0.0
+      inertia:
+        xx: 0
+        xy: 0
+        yy: 0
+        yz: 0
+        zz: 0
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
   fingertip_2:
     name: fingertip_2
     parent_joint: joint_7
+    joints: 
+      - fingertip_2_center_joint
     inertial:
       mass: 0.016
       inertia:
@@ -591,6 +759,8 @@ links:
   fingertip_3:
     name: fingertip_3
     parent_joint: joint_11
+    joints: 
+      - fingertip_3_center_joint
     inertial:
       mass: 0.016
       inertia:
@@ -753,9 +923,9 @@ links:
   palm_lower:
     joints:
       - joint_1
-      - joint_12
       - joint_5
       - joint_9
+      - joint_12
     name: palm_lower
     inertial:
       mass: 0.23699999999999999
@@ -1001,6 +1171,8 @@ links:
   thumb_fingertip:
     name: thumb_fingertip
     parent_joint: joint_15
+    joints:
+      - thumb_center_joint
     inertial:
       mass: 0.049000000000000002
       inertia:

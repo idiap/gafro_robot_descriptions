@@ -1,3 +1,5 @@
+find_package(gafro REQUIRED)
+
 add_executable(unittests
     main.cpp
 )
@@ -14,7 +16,8 @@ target_include_directories(unittests
 
 target_link_libraries(unittests
     PRIVATE
-        gafro
+        gafro_robot_descriptions
+        gafro::gafro
         $<BUILD_INTERFACE:${YAML_CPP_LIBRARIES}>
         $<INSTALL_INTERFACE:${YAML_CPP_LIBRARIES}>
 )
@@ -23,9 +26,6 @@ if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
     target_compile_options(unittests PUBLIC "-Wall" "-Wno-class-memaccess")
 endif()
 
-add_subdirectory(algebra)
-add_subdirectory(optimization)
-add_subdirectory(physics)
 add_subdirectory(robots)
 
 # Run the unit tests

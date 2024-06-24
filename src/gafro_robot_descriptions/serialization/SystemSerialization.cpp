@@ -286,9 +286,9 @@ namespace gafro
             joint = std::make_unique<RevoluteJoint<double>>();
 
             static_cast<RevoluteJoint<double> *>(joint.get())
-              ->setAxis(RevoluteJoint<double>::Axis(Eigen::Vector3d({ getValue<double>(node, { "axis", "x" }),  //
+              ->setAxis(RevoluteJoint<double>::Axis(Eigen::Vector3d({ getValue<double>(node, { "axis", "z" }),  //
                                                                       getValue<double>(node, { "axis", "y" }),  //
-                                                                      getValue<double>(node, { "axis", "z" }) })
+                                                                      getValue<double>(node, { "axis", "x" }) })
                                                       .normalized()));
         }
         else if (joint_type == "prismatic")
@@ -296,9 +296,9 @@ namespace gafro
             joint = std::make_unique<PrismaticJoint<double>>();
 
             static_cast<PrismaticJoint<double> *>(joint.get())
-              ->setAxis(PrismaticJoint<double>::Axis({ getValue<double>(node, { "axis", "x" }),  //
+              ->setAxis(PrismaticJoint<double>::Axis({ getValue<double>(node, { "axis", "z" }),  //
                                                        getValue<double>(node, { "axis", "y" }),  //
-                                                       getValue<double>(node, { "axis", "z" }) }));
+                                                       getValue<double>(node, { "axis", "x" }) }));
         }
         else
         {

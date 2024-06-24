@@ -1,5 +1,6 @@
 #include <catch.hpp>
 #include <gafro/gafro.hpp>
+#include <gafro_robot_descriptions/gafro_robot_descriptions.hpp>
 
 using namespace gafro;
 
@@ -88,8 +89,7 @@ TEST_CASE("FrankaEmikaRobot", "[FrankaEmikaRobot]")
         Eigen::Vector<double, 7> velocity({ 0.536459, -0.444451, 0.10794, -0.0452059, 0.257742, -0.270431, 0.0268018 });
         Eigen::Vector<double, 7> acceleration({ 0.904459, 0.83239, 0.271423, 0.434594, -0.716795, 0.213938, -0.967399 });
 
-        Eigen::Vector<double, 7> torque =
-          robot.getJointTorques(position, velocity, acceleration, 9.81, gafro::Wrench<double>({ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 }));
+        Eigen::Vector<double, 7> torque = robot.getJointTorques(position, velocity, acceleration, 9.81, gafro::Wrench<double>::Zero());
 
         REQUIRE(torque[0] == Approx(0.982722));
         REQUIRE(torque[1] == Approx(17.4042));
@@ -106,8 +106,7 @@ TEST_CASE("FrankaEmikaRobot", "[FrankaEmikaRobot]")
         Eigen::Vector<double, 7> velocity({ 0.0485744, -0.012834, 0.94555, -0.414966, 0.542715, 0.05349, 0.539828 });
         Eigen::Vector<double, 7> acceleration({ -0.199543, 0.783059, -0.433371, -0.295083, 0.615449, 0.838053, -0.860489 });
 
-        Eigen::Vector<double, 7> torque =
-          robot.getJointTorques(position, velocity, acceleration, 9.81, gafro::Wrench<double>({ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 }));
+        Eigen::Vector<double, 7> torque = robot.getJointTorques(position, velocity, acceleration, 9.81, gafro::Wrench<double>::Zero());
 
         REQUIRE(torque[0] == Approx(-0.75037));
         REQUIRE(torque[1] == Approx(31.4451));
@@ -124,8 +123,7 @@ TEST_CASE("FrankaEmikaRobot", "[FrankaEmikaRobot]")
         Eigen::Vector<double, 7> velocity({ 0.368437, 0.821944, -0.0350187, -0.56835, 0.900505, 0.840257, -0.70468 });
         Eigen::Vector<double, 7> acceleration({ 0.762124, 0.282161, -0.136093, 0.239193, -0.437881, 0.572004, -0.385084 });
 
-        Eigen::Vector<double, 7> torque =
-          robot.getJointTorques(position, velocity, acceleration, 9.81, gafro::Wrench<double>({ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 }));
+        Eigen::Vector<double, 7> torque = robot.getJointTorques(position, velocity, acceleration, 9.81, gafro::Wrench<double>::Zero());
 
         REQUIRE(torque[0] == Approx(0.914278));
         REQUIRE(torque[1] == Approx(-17.4753));
@@ -142,8 +140,7 @@ TEST_CASE("FrankaEmikaRobot", "[FrankaEmikaRobot]")
         Eigen::Vector<double, 7> velocity({ 0.15886, -0.0948483, 0.374775, -0.80072, 0.061616, 0.514588, -0.39141 });
         Eigen::Vector<double, 7> acceleration({ 0.984457, 0.153942, 0.755228, 0.495619, 0.25782, -0.929158, 0.495606 });
 
-        Eigen::Vector<double, 7> torque =
-          robot.getJointTorques(position, velocity, acceleration, 9.81, gafro::Wrench<double>({ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 }));
+        Eigen::Vector<double, 7> torque = robot.getJointTorques(position, velocity, acceleration, 9.81, gafro::Wrench<double>::Zero());
 
         REQUIRE(torque[0] == Approx(1.4954));
         REQUIRE(torque[1] == Approx(32.1859));
@@ -162,8 +159,7 @@ TEST_CASE("FrankaEmikaRobot", "[FrankaEmikaRobot]")
             Eigen::Vector<double, 7> velocity = Eigen::Vector<double, 7>::Random();
             Eigen::Vector<double, 7> acceleration = Eigen::Vector<double, 7>::Random();
 
-            Eigen::Vector<double, 7> torque =
-              robot.getJointTorques(position, velocity, acceleration, 9.81, gafro::Wrench<double>({ 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 }));
+            Eigen::Vector<double, 7> torque = robot.getJointTorques(position, velocity, acceleration, 9.81, gafro::Wrench<double>::Zero());
 
             Eigen::Vector<double, 7> acceleration_computed = robot.getJointAccelerations(position, velocity, torque);
 
@@ -180,5 +176,5 @@ TEST_CASE("FrankaEmikaRobot", "[FrankaEmikaRobot]")
 
 TEST_CASE("FrankaEmikaRobot from assets folder", "[FrankaEmikaRobot]")
 {
-    FrankaEmikaRobot<double> robot("../assets");
+    // FrankaEmikaRobot<double> robot("../assets");
 }

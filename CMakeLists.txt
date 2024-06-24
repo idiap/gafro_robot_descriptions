@@ -49,6 +49,7 @@ else()
 endif()
 
 add_subdirectory(src/${PROJECT_NAME})
+add_subdirectory(tests)
 
 include(CMakePackageConfigHelpers)
 
