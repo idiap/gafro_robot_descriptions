@@ -48,11 +48,10 @@ namespace gafro
       : Manipulator<T, 7>(std::move(SystemSerialization(FilePath("robots/panda/panda.yaml")).load().cast<T>()), "panda_endeffector_joint")
     {}
 
-    // template <class T>
-    // FrankaEmikaRobot<T>::FrankaEmikaRobot(const std::filesystem::path &assets_folder)  //
-    //   : Manipulator<T, 7>(std::move(SystemSerialization(filename).load().cast<T>())FilePath(assets_folder / "robots/panda/panda.yaml"),
-    //   "panda_endeffector_joint")
-    // {}
+    template <class T>
+    FrankaEmikaRobot<T>::FrankaEmikaRobot(const std::filesystem::path &assets_folder)
+      : Manipulator<T, 7>(std::move(SystemSerialization(FilePath(assets_folder / "robots/panda/panda.yaml")).load().cast<T>()), "panda_endeffector_joint")
+    {}
 
     template <class T>
     FrankaEmikaRobot<T>::~FrankaEmikaRobot()

@@ -48,10 +48,10 @@ namespace gafro
       : Manipulator<T, 6>(std::move(SystemSerialization(FilePath("robots/ur5/ur5.yaml")).load().cast<T>()), "wrist_3_link-tool0_fixed_joint")
     {}
 
-    // template <class T>
-    // UR5<T>::UR5(const std::filesystem::path &assets_folder)  //
-    //   : Manipulator<T, 6>(FilePath(assets_folder / "robots/ur5/ur5.yaml"), "wrist_3_link-tool0_fixed_joint")
-    // {}
+    template <class T>
+    UR5<T>::UR5(const std::filesystem::path &assets_folder)
+      : Manipulator<T, 6>(std::move(SystemSerialization(FilePath(assets_folder / "robots/ur5/ur5.yaml")).load().cast<T>()), "wrist_3_link-tool0_fixed_joint")
+    {}
 
     template <class T>
     UR5<T>::~UR5()
