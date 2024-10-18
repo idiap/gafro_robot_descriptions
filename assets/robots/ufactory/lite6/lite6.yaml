@@ -1,0 +1,476 @@
+system:
+  name: lite6
+  root_link: lite6_link_base
+joints:
+  lite6_joint2:
+    type: revolute
+    name: lite6_joint2
+    parent_link: lite6_link1
+    child_link: lite6_link2
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        w: -0.50000367319498396
+        x: 0.49999816339070213
+        y: 0.50000183659580555
+        z: 0.49999632678477735
+    axis:
+      x: 0
+      y: 0
+      z: 1
+    limits:
+      lower: -2.6179899999999998
+      upper: 2.6179899999999998
+      velocity: 3.1400000000000001
+      effort: 50
+  lite6_joint3:
+    type: revolute
+    name: lite6_joint3
+    parent_link: lite6_link2
+    child_link: lite6_link3
+    transform:
+      translation:
+        x: 0.20019999999999999
+        y: 0
+        z: 0
+      rotation:
+        w: -2.5973434669646151e-06
+        x: -0.7071054825064661
+        y: -0.70710807985470336
+        z: -2.5973530075574152e-06
+    axis:
+      x: 0
+      y: 0
+      z: 1
+    limits:
+      lower: -0.061087000000000002
+      upper: 5.2359879999999999
+      velocity: 3.1400000000000001
+      effort: 32
+  lite6_joint4:
+    type: revolute
+    name: lite6_joint4
+    parent_link: lite6_link3
+    child_link: lite6_link4
+    transform:
+      translation:
+        x: 0.086999999999999994
+        y: -0.22761000000000001
+        z: 0
+      rotation:
+        w: 0.70710548251123639
+        x: 0.70710807985947366
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 1
+    limits:
+      lower: -6.2831853071795862
+      upper: 6.2831853071795862
+      velocity: 3.1400000000000001
+      effort: 32
+  lite6_joint5:
+    type: revolute
+    name: lite6_joint5
+    parent_link: lite6_link4
+    child_link: lite6_link5
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        w: 0.70710548251123639
+        x: 0.70710807985947366
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 1
+    limits:
+      lower: -2.1642000000000001
+      upper: 2.1642000000000001
+      velocity: 3.1400000000000001
+      effort: 32
+  lite6_joint6:
+    type: revolute
+    name: lite6_joint6
+    parent_link: lite6_link5
+    child_link: lite6_link6
+    transform:
+      translation:
+        x: 0
+        y: 0.0625
+        z: 0
+      rotation:
+        w: 0.70710548251123639
+        x: -0.70710807985947366
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 1
+    limits:
+      lower: -6.2831853071795862
+      upper: 6.2831853071795862
+      velocity: 3.1400000000000001
+      effort: 20
+  lite6_joint_eef:
+    type: fixed
+    name: lite6_joint_eef
+    parent_link: lite6_link6
+    child_link: lite6_link_eef
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  lite6_joint1:
+    type: revolute
+    name: lite6_joint1
+    parent_link: lite6_link_base
+    child_link: lite6_link1
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0.24349999999999999
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 1
+    limits:
+      lower: -6.2831853071795862
+      upper: 6.2831853071795862
+      velocity: 3.1400000000000001
+      effort: 50
+links:
+  lite6_link1:
+    joints:
+      - lite6_joint2
+    name: lite6_link1
+    parent_joint: lite6_joint1
+    inertial:
+      mass: 1.169
+      inertia:
+        xx: 0.0014516399999999999
+        xy: 1.24e-05
+        yy: 0.00088730000000000005
+        yz: 0.00012549999999999999
+        zz: 0.00131993
+        xz: -6.7000000000000002e-06
+      origin:
+        position:
+          x: -0.00036000000000000002
+          y: 0.037879999999999997
+          z: -0.0027000000000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/link1.stl
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  lite6_link2:
+    joints:
+      - lite6_joint3
+    name: lite6_link2
+    parent_joint: lite6_joint2
+    inertial:
+      mass: 1.1919999999999999
+      inertia:
+        xx: 0.0015854
+        xy: -6.7660000000000001e-06
+        yy: 0.0056096999999999996
+        yz: 1.1400000000000001e-06
+        zz: 0.0048500000000000001
+        xz: -0.0011513599999999999
+      origin:
+        position:
+          x: 0.17799999999999999
+          y: 0
+          z: 0.057599999999999998
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/link2.stl
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  lite6_link3:
+    joints:
+      - lite6_joint4
+    name: lite6_link3
+    parent_joint: lite6_joint3
+    inertial:
+      mass: 0.93000000000000005
+      inertia:
+        xx: 0.00088610000000000002
+        xy: -0.00039287000000000002
+        yy: 0.0015785
+        yz: -2.4450000000000001e-05
+        zz: 0.00184677
+        xz: 7.0660000000000004e-05
+      origin:
+        position:
+          x: 0.072849999999999998
+          y: -0.029999999999999999
+          z: -0.00089999999999999998
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/link3.stl
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  lite6_link4:
+    joints:
+      - lite6_joint5
+    name: lite6_link4
+    parent_joint: lite6_joint4
+    inertial:
+      mass: 1.3100000000000001
+      inertia:
+        xx: 0.003705
+        xy: -1.9999999999999999e-06
+        yy: 0.0030455
+        yz: -0.00093187999999999995
+        zz: 0.0015413
+        xz: 7.17e-06
+      origin:
+        position:
+          x: -0.00040000000000000002
+          y: -0.0275
+          z: -0.081699999999999995
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/link4.stl
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  lite6_link5:
+    joints:
+      - lite6_joint6
+    name: lite6_link5
+    parent_joint: lite6_joint5
+    inertial:
+      mass: 0.78400000000000003
+      inertia:
+        xx: 0.00056680000000000001
+        xy: 5.9999999999999997e-07
+        yy: 0.00050770000000000003
+        yz: -4.7999999999999996e-07
+        zz: 0.00052999999999999998
+        xz: -5.3000000000000001e-06
+      origin:
+        position:
+          x: 0
+          y: 0.01
+          z: 0.0019
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/link5.stl
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  lite6_link6:
+    joints:
+      - lite6_joint_eef
+    name: lite6_link6
+    parent_joint: lite6_joint6
+    inertial:
+      mass: 0.17999999999999999
+      inertia:
+        xx: 7.7260000000000002e-05
+        xy: 9.9999999999999995e-07
+        yy: 8.5665000000000001e-05
+        yz: -5.9999999999999997e-07
+        zz: 0.00014814
+        xz: 3.9999999999999998e-07
+      origin:
+        position:
+          x: 0
+          y: -0.0019400000000000001
+          z: -0.010200000000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/link6.stl
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  lite6_link_base:
+    joints:
+      - lite6_joint1
+    name: lite6_link_base
+    inertial:
+      mass: 1.6539350178316501
+      inertia:
+        xx: 0
+        xy: 0
+        yy: 0
+        yz: 0
+        zz: 0
+        xz: 0
+      origin:
+        position:
+          x: -0.0082954457905319197
+          y: 3.26357432323433e-05
+          z: 0.063119458498708897
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/base.stl
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  lite6_link_eef:
+    name: lite6_link_eef
+    parent_joint: lite6_joint_eef
+    inertial:
+      mass: 0
+      inertia:
+        xx: 0
+        xy: 0
+        yy: 0
+        yz: 0
+        zz: 0
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
