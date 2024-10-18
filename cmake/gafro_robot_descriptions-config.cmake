@@ -1,13 +1,9 @@
-@PACKAGE_INIT@
-
-
 # Include the exported CMake file
 get_filename_component(gafro_robot_descriptions_CMAKE_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
 
 # This macro enables usage of find_dependency().
 # https://cmake.org/cmake/help/v3.11/module/CMakeFindDependencyMacro.html
 include(CMakeFindDependencyMacro)
-find_package(Eigen3 REQUIRED)
 
 # Declare the used packages in order to communicate the requirements upstream.
 if(NOT TARGET gafro_robot_descriptions::gafro_robot_descriptions)
