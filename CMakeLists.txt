@@ -100,7 +100,7 @@ install(EXPORT ${PROJECT_NAME}-config-targets
 
 install(
     DIRECTORY
-        "${CMAKE_CURRENT_BINARY_DIR}/assets/"
+        "${CMAKE_CURRENT_LIST_DIR}/assets/"
     DESTINATION
         "share/${CMAKE_PROJECT_NAME}/assets/"
     COMPONENT
