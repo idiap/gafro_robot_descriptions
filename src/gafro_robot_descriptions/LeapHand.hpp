@@ -19,7 +19,7 @@
 
 #pragma once
 
-#include <gafro/robot/System.hpp>
+#include <gafro/robot/Hand.hpp>
 //
 #include <gafro_robot_descriptions/serialization/FilePath.hpp>
 #include <gafro_robot_descriptions/serialization/SystemSerialization.hpp>
@@ -30,7 +30,7 @@ namespace gafro
 {
 
     template <class T>
-    class LeapHand : public System<T>
+    class LeapHand : public Hand<T, 4, 4>
     {
       public:
         LeapHand();
@@ -45,12 +45,14 @@ namespace gafro
 
     template <class T>
     LeapHand<T>::LeapHand()  //
-      : System<T>(std::move(SystemSerialization(FilePath("robots/leap_hand/leap_hand.yaml")).load().cast<T>()))
+      : Hand<T, 4, 4>(std::move(SystemSerialization(FilePath("robots/leap_hand/leap_hand.yaml")).load().cast<T>()),
+                      { "fingertip_center_joint", "fingertip_2_center_joint", "fingertip_3_center_joint", "thumb_center_joint" })
     {}
 
     template <class T>
     LeapHand<T>::LeapHand(const std::filesystem::path &assets_folder)
-      : System<T>(std::move(SystemSerialization(FilePath(assets_folder / "robots/leap_hand/leap_hand.yaml")).load().cast<T>()))
+      : Hand<T, 4, 4>(std::move(SystemSerialization(FilePath(assets_folder / "robots/leap_hand/leap_hand.yaml")).load().cast<T>()),
+                      { "fingertip_center_joint", "fingertip_2_center_joint", "fingertip_3_center_joint", "thumb_center_joint" })
     {}
 
     template <class T>
