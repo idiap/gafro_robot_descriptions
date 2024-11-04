@@ -19,15 +19,17 @@ set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
-
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake")
 
 set(${PROJECT_NAME}_PREFIX_PACKAGE share/${PROJECT_NAME}/cmake)
 set(${PROJECT_NAME}_PREFIX_INCLUDE include/${PROJECT_NAME})
 
-set(GAFRO_ROBOT_DESCRIPTIONS_DIRECTORY "${CMAKE_INSTALL_PREFIX}/share/${CMAKE_PROJECT_NAME}/assets/")
-file(COPY "assets/" DESTINATION "${CMAKE_CURRENT_BINARY_DIR}/assets/")
+if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
+    set(GAFRO_ROBOT_DESCRIPTIONS_DIRECTORY "${CMAKE_INSTALL_PREFIX}/share/${CMAKE_PROJECT_NAME}/assets/")
+else()
+    set(GAFRO_ROBOT_DESCRIPTIONS_DIRECTORY "${CMAKE_BINARY_DIR}/assets/")
+    file(COPY "assets/" DESTINATION "${GAFRO_ROBOT_DESCRIPTIONS_DIRECTORY}")
+endif()
 
 # Check if yaml-cpp was imported by a project higher in the chain
 if(yaml-cpp_POPULATED)
@@ -49,7 +51,7 @@ else()
 endif()
 
 add_subdirectory(src/${PROJECT_NAME})
-add_subdirectory(tests)
+# add_subdirectory(tests)
 
 include(CMakePackageConfigHelpers)
 
@@ -98,7 +100,7 @@ install(EXPORT ${PROJECT_NAME}-config-targets
 
 install(
     DIRECTORY
-        "${CMAKE_CURRENT_BINARY_DIR}/assets/"
+        "${CMAKE_CURRENT_LIST_DIR}/assets/"
     DESTINATION
         "share/${CMAKE_PROJECT_NAME}/assets/"
     COMPONENT
