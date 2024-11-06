@@ -1,0 +1,3296 @@
+system:
+  name: g1_29dof_with_hand_rev_1_0
+  root_link: pelvis
+links:
+  d435_link:
+    name: d435_link
+    parent_joint: d435_joint
+    inertial:
+      mass: 0
+      inertia:
+        xx: 0
+        xy: 0
+        yy: 0
+        yz: 0
+        zz: 0
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+  head_link:
+    name: head_link
+    parent_joint: head_joint
+    inertial:
+      mass: 1.036
+      inertia:
+        xx: 0.0040850510000000001
+        xy: -2.543e-06
+        yy: 0.0041852119999999998
+        yz: -3.726e-06
+        zz: 0.0018079109999999999
+        xz: -6.9455000000000005e-05
+      origin:
+        position:
+          x: 0.005267
+          y: 0.000299
+          z: 0.44986900000000002
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/head_link.STL
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  imu_in_pelvis:
+    name: imu_in_pelvis
+    parent_joint: imu_in_pelvis_joint
+    inertial:
+      mass: 0
+      inertia:
+        xx: 0
+        xy: 0
+        yy: 0
+        yz: 0
+        zz: 0
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+  imu_in_torso:
+    name: imu_in_torso
+    parent_joint: imu_in_torso_joint
+    inertial:
+      mass: 0
+      inertia:
+        xx: 0
+        xy: 0
+        yy: 0
+        yz: 0
+        zz: 0
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+  left_ankle_pitch_link:
+    joints:
+      - left_ankle_roll_joint
+    name: left_ankle_pitch_link
+    parent_joint: left_ankle_pitch_joint
+    inertial:
+      mass: 0.073999999999999996
+      inertia:
+        xx: 8.3999999999999992e-06
+        xy: 0
+        yy: 1.8899999999999999e-05
+        yz: 0
+        zz: 1.26e-05
+        xz: -2.9000000000000002e-06
+      origin:
+        position:
+          x: -0.0072690000000000003
+          y: 0
+          z: 0.011136999999999999
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/left_ankle_pitch_link.STL
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  left_ankle_roll_link:
+    name: left_ankle_roll_link
+    parent_joint: left_ankle_roll_joint
+    inertial:
+      mass: 0.60799999999999998
+      inertia:
+        xx: 0.0002231
+        xy: 1.9999999999999999e-07
+        yy: 0.0016161000000000001
+        yz: -9.9999999999999995e-08
+        zz: 0.0016666999999999999
+        xz: 8.9099999999999997e-05
+      origin:
+        position:
+          x: 0.026505000000000001
+          y: 0
+          z: -0.016424999999999999
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/left_ankle_roll_link.STL
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  left_elbow_link:
+    joints:
+      - left_wrist_roll_joint
+    name: left_elbow_link
+    parent_joint: left_elbow_joint
+    inertial:
+      mass: 0.59999999999999998
+      inertia:
+        xx: 0.00028909999999999998
+        xy: 6.5300000000000002e-05
+        yy: 0.00041520000000000001
+        yz: -5.5999999999999997e-06
+        zz: 0.00041970000000000001
+        xz: 1.7200000000000001e-05
+      origin:
+        position:
+          x: 0.064956
+          y: 0.0044539999999999996
+          z: -0.010062
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/left_elbow_link.STL
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  left_hand_index_0_link:
+    joints:
+      - left_hand_index_1_joint
+    name: left_hand_index_0_link
+    parent_joint: left_hand_index_0_joint
+    inertial:
+      mass: 0.058850699999999999
+      inertia:
+        xx: 6.0157394700000001e-06
+        xy: -5.0770783999999998e-07
+        yy: 1.274699945e-05
+        yz: 1.6088849999999999e-07
+        zz: 1.234543582e-05
+        xz: -2.7839003e-07
+      origin:
+        position:
+          x: 0.035474357739999997
+          y: 0.00082788768000000002
+          z: 0.00038089960000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/left_hand_index_0_link.STL
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  left_hand_index_1_link:
+    name: left_hand_index_1_link
+    parent_joint: left_hand_index_1_joint
+    inertial:
+      mass: 0.02030626
+      inertia:
+        xx: 1.53561368e-06
+        xy: -3.4221300000000002e-08
+        yy: 4.6126781700000001e-06
+        yz: -8.2388099999999992e-09
+        zz: 3.8662577599999998e-06
+        xz: -2.5498850000000001e-08
+      origin:
+        position:
+          x: 0.02628192939
+          y: 0.00171735242
+          z: -0.00010778879000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/left_hand_index_1_link.STL
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  left_hand_middle_0_link:
+    joints:
+      - left_hand_middle_1_joint
+    name: left_hand_middle_0_link
+    parent_joint: left_hand_middle_0_joint
+    inertial:
+      mass: 0.058850699999999999
+      inertia:
+        xx: 6.0157394700000001e-06
+        xy: -5.0770783999999998e-07
+        yy: 1.274699945e-05
+        yz: 1.6088849999999999e-07
+        zz: 1.234543582e-05
+        xz: -2.7839003e-07
+      origin:
+        position:
+          x: 0.035474357739999997
+          y: 0.00082788768000000002
+          z: 0.00038089960000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/left_hand_middle_0_link.STL
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  left_hand_middle_1_link:
+    name: left_hand_middle_1_link
+    parent_joint: left_hand_middle_1_joint
+    inertial:
+      mass: 0.02030626
+      inertia:
+        xx: 1.53561368e-06
+        xy: -3.4221300000000002e-08
+        yy: 4.6126781700000001e-06
+        yz: -8.2388099999999992e-09
+        zz: 3.8662577599999998e-06
+        xz: -2.5498850000000001e-08
+      origin:
+        position:
+          x: 0.02628192939
+          y: 0.00171735242
+          z: -0.00010778879000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/left_hand_middle_1_link.STL
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  left_hand_palm_link:
+    joints:
+      - left_hand_index_0_joint
+      - left_hand_middle_0_joint
+      - left_hand_thumb_0_joint
+    name: left_hand_palm_link
+    parent_joint: left_hand_palm_joint
+    inertial:
+      mass: 0.37283854
+      inertia:
+        xx: 0.00027535181026999998
+        xy: -1.5955194649999998e-05
+        yy: 0.00053951827219000004
+        yz: -4.2279434999999999e-07
+        zz: 0.00039623390907000001
+        xz: -2.4216189000000002e-06
+      origin:
+        position:
+          x: 0.062146348359999999
+          y: -0.00050869656000000004
+          z: -0.00058171093000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/left_hand_palm_link.STL
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  left_hand_thumb_0_link:
+    joints:
+      - left_hand_thumb_1_joint
+    name: left_hand_thumb_0_link
+    parent_joint: left_hand_thumb_0_joint
+    inertial:
+      mass: 0.086236569999999999
+      inertia:
+        xx: 1.6029192380000001e-05
+        xy: 1.0683177e-07
+        yy: 1.451795012e-05
+        yz: -5.1094751999999996e-07
+        zz: 1.637877663e-05
+        xz: 1.6728875e-07
+      origin:
+        position:
+          x: -0.00088424580000000003
+          y: -0.0086340707900000001
+          z: 0.00094429335999999999
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/left_hand_thumb_0_link.STL
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  left_hand_thumb_1_link:
+    joints:
+      - left_hand_thumb_2_joint
+    name: left_hand_thumb_1_link
+    parent_joint: left_hand_thumb_1_joint
+    inertial:
+      mass: 0.058850699999999999
+      inertia:
+        xx: 1.274699945e-05
+        xy: -5.0770783999999998e-07
+        yy: 6.0157394700000001e-06
+        yz: -2.7839003e-07
+        zz: 1.234543582e-05
+        xz: 1.6088849999999999e-07
+      origin:
+        position:
+          x: -0.00082788768000000002
+          y: -0.035474357739999997
+          z: -0.00038089960000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/left_hand_thumb_1_link.STL
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  left_hand_thumb_2_link:
+    name: left_hand_thumb_2_link
+    parent_joint: left_hand_thumb_2_joint
+    inertial:
+      mass: 0.02030626
+      inertia:
+        xx: 4.6126781700000001e-06
+        xy: -3.4221300000000002e-08
+        yy: 1.53561368e-06
+        yz: -2.5498850000000001e-08
+        zz: 3.8662577599999998e-06
+        xz: -8.2388099999999992e-09
+      origin:
+        position:
+          x: -0.00171735242
+          y: -0.02628192939
+          z: 0.00010778879000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/left_hand_thumb_2_link.STL
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  left_hip_pitch_link:
+    joints:
+      - left_hip_roll_joint
+    name: left_hip_pitch_link
+    parent_joint: left_hip_pitch_joint
+    inertial:
+      mass: 1.3500000000000001
+      inertia:
+        xx: 0.0018109999999999999
+        xy: 3.68e-05
+        yy: 0.0014193000000000001
+        yz: 0.00017100000000000001
+        zz: 0.0012811999999999999
+        xz: -3.4400000000000003e-05
+      origin:
+        position:
+          x: 0.0027409999999999999
+          y: 0.047791
+          z: -0.02606
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/left_hip_pitch_link.STL
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  left_hip_roll_link:
+    joints:
+      - left_hip_yaw_joint
+    name: left_hip_roll_link
+    parent_joint: left_hip_roll_joint
+    inertial:
+      mass: 1.52
+      inertia:
+        xx: 0.0023773000000000002
+        xy: -3.8e-06
+        yy: 0.0024123
+        yz: 1.84e-05
+        zz: 0.0016595
+        xz: -0.00039080000000000001
+      origin:
+        position:
+          x: 0.029812000000000002
+          y: -0.0010449999999999999
+          z: -0.087933999999999998
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/left_hip_roll_link.STL
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  left_hip_yaw_link:
+    joints:
+      - left_knee_joint
+    name: left_hip_yaw_link
+    parent_joint: left_hip_yaw_joint
+    inertial:
+      mass: 1.702
+      inertia:
+        xx: 0.0057774000000000002
+        xy: -0.00054109999999999998
+        yy: 0.0076124000000000001
+        yz: -0.00070719999999999995
+        zz: 0.0031489999999999999
+        xz: -0.0023947999999999999
+      origin:
+        position:
+          x: -0.057709000000000003
+          y: -0.010980999999999999
+          z: -0.15078
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/left_hip_yaw_link.STL
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  left_knee_link:
+    joints:
+      - left_ankle_pitch_joint
+    name: left_knee_link
+    parent_joint: left_knee_joint
+    inertial:
+      mass: 1.9319999999999999
+      inertia:
+        xx: 0.011329000000000001
+        xy: 4.8199999999999999e-05
+        yy: 0.011277000000000001
+        yz: -0.00071460000000000002
+        zz: 0.0015168
+        xz: -4.49e-05
+      origin:
+        position:
+          x: 0.005457
+          y: 0.0039639999999999996
+          z: -0.12074
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/left_knee_link.STL
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  left_shoulder_pitch_link:
+    joints:
+      - left_shoulder_roll_joint
+    name: left_shoulder_pitch_link
+    parent_joint: left_shoulder_pitch_joint
+    inertial:
+      mass: 0.71799999999999997
+      inertia:
+        xx: 0.00042910000000000002
+        xy: -9.2e-06
+        yy: 0.00045300000000000001
+        yz: 2.26e-05
+        zz: 0.00042299999999999998
+        xz: 6.3999999999999997e-06
+      origin:
+        position:
+          x: 0
+          y: 0.035892
+          z: -0.011627999999999999
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/left_shoulder_pitch_link.STL
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  left_shoulder_roll_link:
+    joints:
+      - left_shoulder_yaw_joint
+    name: left_shoulder_roll_link
+    parent_joint: left_shoulder_roll_joint
+    inertial:
+      mass: 0.64300000000000002
+      inertia:
+        xx: 0.0006177
+        xy: -9.9999999999999995e-07
+        yy: 0.0006912
+        yz: -5.3000000000000001e-06
+        zz: 0.00038939999999999998
+        xz: 8.6999999999999997e-06
+      origin:
+        position:
+          x: -0.00022699999999999999
+          y: 0.0072700000000000004
+          z: -0.063242999999999994
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/left_shoulder_roll_link.STL
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  left_shoulder_yaw_link:
+    joints:
+      - left_elbow_joint
+    name: left_shoulder_yaw_link
+    parent_joint: left_shoulder_yaw_joint
+    inertial:
+      mass: 0.73399999999999999
+      inertia:
+        xx: 0.00099879999999999999
+        xy: 7.9000000000000006e-06
+        yy: 0.0010605
+        yz: -2.8600000000000001e-05
+        zz: 0.00043540000000000001
+        xz: 0.00014119999999999999
+      origin:
+        position:
+          x: 0.010773
+          y: -0.0029489999999999998
+          z: -0.072009000000000004
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/left_shoulder_yaw_link.STL
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  left_wrist_pitch_link:
+    joints:
+      - left_wrist_yaw_joint
+    name: left_wrist_pitch_link
+    parent_joint: left_wrist_pitch_joint
+    inertial:
+      mass: 0.48404955999999999
+      inertia:
+        xx: 0.00016579646273
+        xy: -1.231206746e-05
+        yy: 0.00042954057410000003
+        yz: 8.1417711999999998e-07
+        zz: 0.00042953697654000002
+        xz: 1.231699194e-05
+      origin:
+        position:
+          x: 0.022999898370000001
+          y: -0.00111685314
+          z: -0.0011165809599999999
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/left_wrist_pitch_link.STL
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  left_wrist_roll_link:
+    joints:
+      - left_wrist_pitch_joint
+    name: left_wrist_roll_link
+    parent_joint: left_wrist_roll_joint
+    inertial:
+      mass: 0.085444980000000004
+      inertia:
+        xx: 4.8215440230000001e-05
+        xy: -4.2451102099999998e-06
+        yy: 3.7228990929999999e-05
+        yz: -1.2352500000000001e-09
+        zz: 5.4821065410000003e-05
+        xz: 5.1059899999999997e-09
+      origin:
+        position:
+          x: 0.017139447780000001
+          y: 0.00053759094000000005
+          z: 4.8864000000000001e-07
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/left_wrist_roll_link.STL
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  left_wrist_yaw_link:
+    joints:
+      - left_hand_palm_joint
+    name: left_wrist_yaw_link
+    parent_joint: left_wrist_yaw_joint
+    inertial:
+      mass: 0.084576470000000001
+      inertia:
+        xx: 4.9291288280000003e-05
+        xy: -4.5735493999999998e-07
+        yy: 5.9733381340000002e-05
+        yz: 4.3217198000000002e-07
+        zz: 3.9280838259999998e-05
+        xz: 4.4586759100000003e-06
+      origin:
+        position:
+          x: 0.02200381568
+          y: 0.00049485095999999998
+          z: 0.00053861122999999999
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/left_wrist_yaw_link.STL
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  logo_link:
+    name: logo_link
+    parent_joint: logo_joint
+    inertial:
+      mass: 0.001
+      inertia:
+        xx: 9.9999999999999995e-08
+        xy: 0
+        yy: 9.9999999999999995e-08
+        yz: 0
+        zz: 9.9999999999999995e-08
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/logo_link.STL
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  mid360_link:
+    name: mid360_link
+    parent_joint: mid360_joint
+    inertial:
+      mass: 0
+      inertia:
+        xx: 0
+        xy: 0
+        yy: 0
+        yz: 0
+        zz: 0
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+  pelvis:
+    joints:
+      - imu_in_pelvis_joint
+      - left_hip_pitch_joint
+      - pelvis_contour_joint
+      - right_hip_pitch_joint
+      - waist_yaw_joint
+    name: pelvis
+    inertial:
+      mass: 3.8130000000000002
+      inertia:
+        xx: 0.010548999999999999
+        xy: 0
+        yy: 0.0093089000000000002
+        yz: 0
+        zz: 0.0079184000000000008
+        xz: 2.0999999999999998e-06
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: -0.076050000000000006
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/pelvis.STL
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  pelvis_contour_link:
+    name: pelvis_contour_link
+    parent_joint: pelvis_contour_joint
+    inertial:
+      mass: 0.001
+      inertia:
+        xx: 9.9999999999999995e-08
+        xy: 0
+        yy: 9.9999999999999995e-08
+        yz: 0
+        zz: 9.9999999999999995e-08
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/pelvis_contour_link.STL
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  right_ankle_pitch_link:
+    joints:
+      - right_ankle_roll_joint
+    name: right_ankle_pitch_link
+    parent_joint: right_ankle_pitch_joint
+    inertial:
+      mass: 0.073999999999999996
+      inertia:
+        xx: 8.3999999999999992e-06
+        xy: 0
+        yy: 1.8899999999999999e-05
+        yz: 0
+        zz: 1.26e-05
+        xz: -2.9000000000000002e-06
+      origin:
+        position:
+          x: -0.0072690000000000003
+          y: 0
+          z: 0.011136999999999999
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/right_ankle_pitch_link.STL
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  right_ankle_roll_link:
+    name: right_ankle_roll_link
+    parent_joint: right_ankle_roll_joint
+    inertial:
+      mass: 0.60799999999999998
+      inertia:
+        xx: 0.0002231
+        xy: -1.9999999999999999e-07
+        yy: 0.0016161000000000001
+        yz: 9.9999999999999995e-08
+        zz: 0.0016666999999999999
+        xz: 8.9099999999999997e-05
+      origin:
+        position:
+          x: 0.026505000000000001
+          y: 0
+          z: -0.016424999999999999
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/right_ankle_roll_link.STL
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  right_elbow_link:
+    joints:
+      - right_wrist_roll_joint
+    name: right_elbow_link
+    parent_joint: right_elbow_joint
+    inertial:
+      mass: 0.59999999999999998
+      inertia:
+        xx: 0.00028909999999999998
+        xy: -6.5300000000000002e-05
+        yy: 0.00041520000000000001
+        yz: 5.5999999999999997e-06
+        zz: 0.00041970000000000001
+        xz: 1.7200000000000001e-05
+      origin:
+        position:
+          x: 0.064956
+          y: -0.0044539999999999996
+          z: -0.010062
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/right_elbow_link.STL
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  right_hand_index_0_link:
+    joints:
+      - right_hand_index_1_joint
+    name: right_hand_index_0_link
+    parent_joint: right_hand_index_0_joint
+    inertial:
+      mass: 0.058850699999999999
+      inertia:
+        xx: 6.0157394700000001e-06
+        xy: 5.0770783999999998e-07
+        yy: 1.274699945e-05
+        yz: -1.6088849999999999e-07
+        zz: 1.234543582e-05
+        xz: -2.7839003e-07
+      origin:
+        position:
+          x: 0.035474357739999997
+          y: -0.00082788768000000002
+          z: 0.00038089960000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/right_hand_index_0_link.STL
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  right_hand_index_1_link:
+    name: right_hand_index_1_link
+    parent_joint: right_hand_index_1_joint
+    inertial:
+      mass: 0.02030626
+      inertia:
+        xx: 1.53561368e-06
+        xy: 3.4221300000000002e-08
+        yy: 4.6126781700000001e-06
+        yz: 8.2388099999999992e-09
+        zz: 3.8662577599999998e-06
+        xz: -2.5498850000000001e-08
+      origin:
+        position:
+          x: 0.02628192939
+          y: -0.00171735242
+          z: -0.00010778879000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/right_hand_index_1_link.STL
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  right_hand_middle_0_link:
+    joints:
+      - right_hand_middle_1_joint
+    name: right_hand_middle_0_link
+    parent_joint: right_hand_middle_0_joint
+    inertial:
+      mass: 0.058850699999999999
+      inertia:
+        xx: 6.0157394700000001e-06
+        xy: 5.0770783999999998e-07
+        yy: 1.274699945e-05
+        yz: -1.6088849999999999e-07
+        zz: 1.234543582e-05
+        xz: -2.7839003e-07
+      origin:
+        position:
+          x: 0.035474357739999997
+          y: -0.00082788768000000002
+          z: 0.00038089960000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/right_hand_middle_0_link.STL
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  right_hand_middle_1_link:
+    name: right_hand_middle_1_link
+    parent_joint: right_hand_middle_1_joint
+    inertial:
+      mass: 0.02030626
+      inertia:
+        xx: 1.53561368e-06
+        xy: 3.4221300000000002e-08
+        yy: 4.6126781700000001e-06
+        yz: 8.2388099999999992e-09
+        zz: 3.8662577599999998e-06
+        xz: -2.5498850000000001e-08
+      origin:
+        position:
+          x: 0.02628192939
+          y: -0.00171735242
+          z: -0.00010778879000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/right_hand_middle_1_link.STL
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  right_hand_palm_link:
+    joints:
+      - right_hand_index_0_joint
+      - right_hand_middle_0_joint
+      - right_hand_thumb_0_joint
+    name: right_hand_palm_link
+    parent_joint: right_hand_palm_joint
+    inertial:
+      mass: 0.37283854
+      inertia:
+        xx: 0.00027535181026999998
+        xy: 1.5955194649999998e-05
+        yy: 0.00053951827219000004
+        yz: 4.2279434999999999e-07
+        zz: 0.00039623390907000001
+        xz: -2.4216189000000002e-06
+      origin:
+        position:
+          x: 0.062146348359999999
+          y: 0.00050869656000000004
+          z: -0.00058171093000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/right_hand_palm_link.STL
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  right_hand_thumb_0_link:
+    joints:
+      - right_hand_thumb_1_joint
+    name: right_hand_thumb_0_link
+    parent_joint: right_hand_thumb_0_joint
+    inertial:
+      mass: 0.086236569999999999
+      inertia:
+        xx: 1.6029192380000001e-05
+        xy: -1.0683177e-07
+        yy: 1.451795012e-05
+        yz: 5.1094751999999996e-07
+        zz: 1.637877663e-05
+        xz: 1.6728875e-07
+      origin:
+        position:
+          x: -0.00088424580000000003
+          y: 0.0086340707900000001
+          z: 0.00094429335999999999
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/right_hand_thumb_0_link.STL
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  right_hand_thumb_1_link:
+    joints:
+      - right_hand_thumb_2_joint
+    name: right_hand_thumb_1_link
+    parent_joint: right_hand_thumb_1_joint
+    inertial:
+      mass: 0.058850699999999999
+      inertia:
+        xx: 1.274699945e-05
+        xy: 5.0770783999999998e-07
+        yy: 6.0157394700000001e-06
+        yz: 2.7839003e-07
+        zz: 1.234543582e-05
+        xz: 1.6088849999999999e-07
+      origin:
+        position:
+          x: -0.00082788768000000002
+          y: 0.035474357739999997
+          z: -0.00038089960000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/right_hand_thumb_1_link.STL
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  right_hand_thumb_2_link:
+    name: right_hand_thumb_2_link
+    parent_joint: right_hand_thumb_2_joint
+    inertial:
+      mass: 0.02030626
+      inertia:
+        xx: 4.6126781700000001e-06
+        xy: 3.4221300000000002e-08
+        yy: 1.53561368e-06
+        yz: 2.5498850000000001e-08
+        zz: 3.8662577599999998e-06
+        xz: -8.2388099999999992e-09
+      origin:
+        position:
+          x: -0.00171735242
+          y: 0.02628192939
+          z: 0.00010778879000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/right_hand_thumb_2_link.STL
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  right_hip_pitch_link:
+    joints:
+      - right_hip_roll_joint
+    name: right_hip_pitch_link
+    parent_joint: right_hip_pitch_joint
+    inertial:
+      mass: 1.3500000000000001
+      inertia:
+        xx: 0.0018109999999999999
+        xy: -3.68e-05
+        yy: 0.0014193000000000001
+        yz: -0.00017100000000000001
+        zz: 0.0012811999999999999
+        xz: -3.4400000000000003e-05
+      origin:
+        position:
+          x: 0.0027409999999999999
+          y: -0.047791
+          z: -0.02606
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/right_hip_pitch_link.STL
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  right_hip_roll_link:
+    joints:
+      - right_hip_yaw_joint
+    name: right_hip_roll_link
+    parent_joint: right_hip_roll_joint
+    inertial:
+      mass: 1.52
+      inertia:
+        xx: 0.0023773000000000002
+        xy: 3.8e-06
+        yy: 0.0024123
+        yz: -1.84e-05
+        zz: 0.0016595
+        xz: -0.00039080000000000001
+      origin:
+        position:
+          x: 0.029812000000000002
+          y: 0.0010449999999999999
+          z: -0.087933999999999998
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/right_hip_roll_link.STL
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  right_hip_yaw_link:
+    joints:
+      - right_knee_joint
+    name: right_hip_yaw_link
+    parent_joint: right_hip_yaw_joint
+    inertial:
+      mass: 1.702
+      inertia:
+        xx: 0.0057774000000000002
+        xy: 0.00054109999999999998
+        yy: 0.0076124000000000001
+        yz: 0.00070719999999999995
+        zz: 0.0031489999999999999
+        xz: -0.0023947999999999999
+      origin:
+        position:
+          x: -0.057709000000000003
+          y: 0.010980999999999999
+          z: -0.15078
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/right_hip_yaw_link.STL
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  right_knee_link:
+    joints:
+      - right_ankle_pitch_joint
+    name: right_knee_link
+    parent_joint: right_knee_joint
+    inertial:
+      mass: 1.9319999999999999
+      inertia:
+        xx: 0.011329000000000001
+        xy: -4.8199999999999999e-05
+        yy: 0.011277000000000001
+        yz: 0.00071460000000000002
+        zz: 0.0015168
+        xz: 4.49e-05
+      origin:
+        position:
+          x: 0.005457
+          y: -0.0039639999999999996
+          z: -0.12074
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/right_knee_link.STL
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  right_shoulder_pitch_link:
+    joints:
+      - right_shoulder_roll_joint
+    name: right_shoulder_pitch_link
+    parent_joint: right_shoulder_pitch_joint
+    inertial:
+      mass: 0.71799999999999997
+      inertia:
+        xx: 0.00042910000000000002
+        xy: 9.2e-06
+        yy: 0.00045300000000000001
+        yz: -2.26e-05
+        zz: 0.00042299999999999998
+        xz: 6.3999999999999997e-06
+      origin:
+        position:
+          x: 0
+          y: -0.035892
+          z: -0.011627999999999999
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/right_shoulder_pitch_link.STL
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  right_shoulder_roll_link:
+    joints:
+      - right_shoulder_yaw_joint
+    name: right_shoulder_roll_link
+    parent_joint: right_shoulder_roll_joint
+    inertial:
+      mass: 0.64300000000000002
+      inertia:
+        xx: 0.0006177
+        xy: 9.9999999999999995e-07
+        yy: 0.0006912
+        yz: 5.3000000000000001e-06
+        zz: 0.00038939999999999998
+        xz: 8.6999999999999997e-06
+      origin:
+        position:
+          x: -0.00022699999999999999
+          y: -0.0072700000000000004
+          z: -0.063242999999999994
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/right_shoulder_roll_link.STL
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  right_shoulder_yaw_link:
+    joints:
+      - right_elbow_joint
+    name: right_shoulder_yaw_link
+    parent_joint: right_shoulder_yaw_joint
+    inertial:
+      mass: 0.73399999999999999
+      inertia:
+        xx: 0.00099879999999999999
+        xy: -7.9000000000000006e-06
+        yy: 0.0010605
+        yz: 2.8600000000000001e-05
+        zz: 0.00043540000000000001
+        xz: 0.00014119999999999999
+      origin:
+        position:
+          x: 0.010773
+          y: 0.0029489999999999998
+          z: -0.072009000000000004
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/right_shoulder_yaw_link.STL
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  right_wrist_pitch_link:
+    joints:
+      - right_wrist_yaw_joint
+    name: right_wrist_pitch_link
+    parent_joint: right_wrist_pitch_joint
+    inertial:
+      mass: 0.48404955999999999
+      inertia:
+        xx: 0.00016579646273
+        xy: 1.231206746e-05
+        yy: 0.00042954057410000003
+        yz: -8.1417711999999998e-07
+        zz: 0.00042953697654000002
+        xz: 1.231699194e-05
+      origin:
+        position:
+          x: 0.022999898370000001
+          y: 0.00111685314
+          z: -0.0011165809599999999
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/right_wrist_pitch_link.STL
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  right_wrist_roll_link:
+    joints:
+      - right_wrist_pitch_joint
+    name: right_wrist_roll_link
+    parent_joint: right_wrist_roll_joint
+    inertial:
+      mass: 0.085444980000000004
+      inertia:
+        xx: 4.8215440230000001e-05
+        xy: 4.2451102099999998e-06
+        yy: 3.7228990929999999e-05
+        yz: 1.2352500000000001e-09
+        zz: 5.4821065410000003e-05
+        xz: 5.1059899999999997e-09
+      origin:
+        position:
+          x: 0.017139447780000001
+          y: -0.00053759094000000005
+          z: 4.8864000000000001e-07
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/right_wrist_roll_link.STL
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  right_wrist_yaw_link:
+    joints:
+      - right_hand_palm_joint
+    name: right_wrist_yaw_link
+    parent_joint: right_wrist_yaw_joint
+    inertial:
+      mass: 0.084576470000000001
+      inertia:
+        xx: 4.9291288280000003e-05
+        xy: 4.5735493999999998e-07
+        yy: 5.9733381340000002e-05
+        yz: -4.3217198000000002e-07
+        zz: 3.9280838259999998e-05
+        xz: 4.4586759100000003e-06
+      origin:
+        position:
+          x: 0.02200381568
+          y: -0.00049485095999999998
+          z: 0.00053861122999999999
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/right_wrist_yaw_link.STL
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  torso_link:
+    joints:
+      - d435_joint
+      - head_joint
+      - imu_in_torso_joint
+      - left_shoulder_pitch_joint
+      - logo_joint
+      - mid360_joint
+      - right_shoulder_pitch_joint
+    name: torso_link
+    parent_joint: waist_pitch_joint
+    inertial:
+      mass: 6.7800000000000002
+      inertia:
+        xx: 0.059049999999999998
+        xy: 3.3302000000000001e-05
+        yy: 0.047014
+        yz: -2.2399e-05
+        zz: 0.025652000000000001
+        xz: -0.0017715000000000001
+      origin:
+        position:
+          x: 0.00093099999999999997
+          y: 0.00034600000000000001
+          z: 0.15082000000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/torso_link_rev_1_0.STL
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  waist_roll_link:
+    joints:
+      - waist_pitch_joint
+    name: waist_roll_link
+    parent_joint: waist_roll_joint
+    inertial:
+      mass: 0.085999999999999993
+      inertia:
+        xx: 7.0790000000000003e-06
+        xy: 0
+        yy: 6.3389999999999998e-06
+        yz: 0
+        zz: 8.2449999999999998e-06
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 2.3e-05
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/waist_roll_link_rev_1_0.STL
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  waist_yaw_link:
+    joints:
+      - waist_roll_joint
+    name: waist_yaw_link
+    parent_joint: waist_yaw_joint
+    inertial:
+      mass: 0.214
+      inertia:
+        xx: 0.00010673
+        xy: 2.7030000000000002e-06
+        yy: 0.00010422
+        yz: -2.0100000000000001e-07
+        zz: 0.00016249999999999999
+        xz: -7.6310000000000003e-06
+      origin:
+        position:
+          x: 0.0034940000000000001
+          y: 0.000233
+          z: 0.018034000000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/waist_yaw_link_rev_1_0.STL
+      scale:
+        x: 1
+        y: 1
+        z: 1
+joints:
+  left_ankle_roll_joint:
+    type: revolute
+    name: left_ankle_roll_joint
+    parent_link: left_ankle_pitch_link
+    child_link: left_ankle_roll_link
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: -0.017558000000000001
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 1
+      y: 0
+      z: 0
+    limits:
+      lower: -0.26179999999999998
+      upper: 0.26179999999999998
+      velocity: 37
+      effort: 50
+  left_wrist_roll_joint:
+    type: revolute
+    name: left_wrist_roll_joint
+    parent_link: left_elbow_link
+    child_link: left_wrist_roll_link
+    transform:
+      translation:
+        x: 0.10000000000000001
+        y: 0.00188791
+        z: -0.01
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 1
+      y: 0
+      z: 0
+    limits:
+      lower: -1.9722220539999999
+      upper: 1.9722220539999999
+      velocity: 37
+      effort: 25
+  left_hand_index_1_joint:
+    type: revolute
+    name: left_hand_index_1_joint
+    parent_link: left_hand_index_0_link
+    child_link: left_hand_index_1_link
+    transform:
+      translation:
+        x: 0.0458
+        y: 0
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 1
+    limits:
+      lower: -1.7453292499999999
+      upper: 0
+      velocity: 12
+      effort: 1.3999999999999999
+  left_hand_middle_1_joint:
+    type: revolute
+    name: left_hand_middle_1_joint
+    parent_link: left_hand_middle_0_link
+    child_link: left_hand_middle_1_link
+    transform:
+      translation:
+        x: 0.0458
+        y: 0
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 1
+    limits:
+      lower: -1.7453292499999999
+      upper: 0
+      velocity: 12
+      effort: 1.3999999999999999
+  left_hand_index_0_joint:
+    type: revolute
+    name: left_hand_index_0_joint
+    parent_link: left_hand_palm_link
+    child_link: left_hand_index_0_link
+    transform:
+      translation:
+        x: 0.077700000000000005
+        y: 0.0016000000000000001
+        z: 0.028500000000000001
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 1
+    limits:
+      lower: -1.5707963199999999
+      upper: 0
+      velocity: 12
+      effort: 1.3999999999999999
+  left_hand_middle_0_joint:
+    type: revolute
+    name: left_hand_middle_0_joint
+    parent_link: left_hand_palm_link
+    child_link: left_hand_middle_0_link
+    transform:
+      translation:
+        x: 0.077700000000000005
+        y: 0.0016000000000000001
+        z: -0.028500000000000001
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 1
+    limits:
+      lower: -1.5707963199999999
+      upper: 0
+      velocity: 12
+      effort: 1.3999999999999999
+  left_hand_thumb_0_joint:
+    type: revolute
+    name: left_hand_thumb_0_joint
+    parent_link: left_hand_palm_link
+    child_link: left_hand_thumb_0_link
+    transform:
+      translation:
+        x: 0.025499999999999998
+        y: 0
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 1
+      z: 0
+    limits:
+      lower: -1.0471975499999999
+      upper: 1.0471975499999999
+      velocity: 6.8570000000000002
+      effort: 2.4500000000000002
+  left_hand_thumb_1_joint:
+    type: revolute
+    name: left_hand_thumb_1_joint
+    parent_link: left_hand_thumb_0_link
+    child_link: left_hand_thumb_1_link
+    transform:
+      translation:
+        x: -0.0025000000000000001
+        y: -0.019300000000000001
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 1
+    limits:
+      lower: -0.72431162999999998
+      upper: 1.0471975499999999
+      velocity: 12
+      effort: 1.3999999999999999
+  left_hand_thumb_2_joint:
+    type: revolute
+    name: left_hand_thumb_2_joint
+    parent_link: left_hand_thumb_1_link
+    child_link: left_hand_thumb_2_link
+    transform:
+      translation:
+        x: 0
+        y: -0.0458
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 1
+    limits:
+      lower: 0
+      upper: 1.7453292499999999
+      velocity: 12
+      effort: 1.3999999999999999
+  left_hip_roll_joint:
+    type: revolute
+    name: left_hip_roll_joint
+    parent_link: left_hip_pitch_link
+    child_link: left_hip_roll_link
+    transform:
+      translation:
+        x: 0
+        y: 0.051999999999999998
+        z: -0.030464999999999999
+      rotation:
+        w: 0.99617868497449569
+        x: 0
+        y: -0.087338580263732465
+        z: 0
+    axis:
+      x: 1
+      y: 0
+      z: 0
+    limits:
+      lower: -0.52359999999999995
+      upper: 2.9670999999999998
+      velocity: 20
+      effort: 139
+  left_hip_yaw_joint:
+    type: revolute
+    name: left_hip_yaw_joint
+    parent_link: left_hip_roll_link
+    child_link: left_hip_yaw_link
+    transform:
+      translation:
+        x: 0.025000999999999999
+        y: 0
+        z: -0.12411999999999999
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 1
+    limits:
+      lower: -2.7576000000000001
+      upper: 2.7576000000000001
+      velocity: 32
+      effort: 88
+  left_knee_joint:
+    type: revolute
+    name: left_knee_joint
+    parent_link: left_hip_yaw_link
+    child_link: left_knee_link
+    transform:
+      translation:
+        x: -0.078272999999999995
+        y: 0.0021489
+        z: -0.17734
+      rotation:
+        w: 0.99617868497449569
+        x: 0
+        y: 0.087338580263732465
+        z: 0
+    axis:
+      x: 0
+      y: 1
+      z: 0
+    limits:
+      lower: -0.087266999999999997
+      upper: 2.8797999999999999
+      velocity: 20
+      effort: 139
+  left_ankle_pitch_joint:
+    type: revolute
+    name: left_ankle_pitch_joint
+    parent_link: left_knee_link
+    child_link: left_ankle_pitch_link
+    transform:
+      translation:
+        x: 0
+        y: -9.4444999999999994e-05
+        z: -0.30001
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 1
+      z: 0
+    limits:
+      lower: -0.87266999999999995
+      upper: 0.52359999999999995
+      velocity: 37
+      effort: 50
+  left_shoulder_roll_joint:
+    type: revolute
+    name: left_shoulder_roll_joint
+    parent_link: left_shoulder_pitch_link
+    child_link: left_shoulder_roll_link
+    transform:
+      translation:
+        x: 0
+        y: 0.037999999999999999
+        z: -0.013831
+      rotation:
+        w: 0.99026825525484086
+        x: -0.13917177384273469
+        y: 0
+        z: 0
+    axis:
+      x: 1
+      y: 0
+      z: 0
+    limits:
+      lower: -1.5882000000000001
+      upper: 2.2515000000000001
+      velocity: 37
+      effort: 25
+  left_shoulder_yaw_joint:
+    type: revolute
+    name: left_shoulder_yaw_joint
+    parent_link: left_shoulder_roll_link
+    child_link: left_shoulder_yaw_link
+    transform:
+      translation:
+        x: 0
+        y: 0.0062399999999999999
+        z: -0.1032
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 1
+    limits:
+      lower: -2.6179999999999999
+      upper: 2.6179999999999999
+      velocity: 37
+      effort: 25
+  left_elbow_joint:
+    type: revolute
+    name: left_elbow_joint
+    parent_link: left_shoulder_yaw_link
+    child_link: left_elbow_link
+    transform:
+      translation:
+        x: 0.015782999999999998
+        y: 0
+        z: -0.080518000000000006
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 1
+      z: 0
+    limits:
+      lower: -1.0471999999999999
+      upper: 2.0943999999999998
+      velocity: 37
+      effort: 25
+  left_wrist_yaw_joint:
+    type: revolute
+    name: left_wrist_yaw_joint
+    parent_link: left_wrist_pitch_link
+    child_link: left_wrist_yaw_link
+    transform:
+      translation:
+        x: 0.045999999999999999
+        y: 0
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 1
+    limits:
+      lower: -1.6144295580000001
+      upper: 1.6144295580000001
+      velocity: 22
+      effort: 5
+  left_wrist_pitch_joint:
+    type: revolute
+    name: left_wrist_pitch_joint
+    parent_link: left_wrist_roll_link
+    child_link: left_wrist_pitch_link
+    transform:
+      translation:
+        x: 0.037999999999999999
+        y: 0
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 1
+      z: 0
+    limits:
+      lower: -1.6144295580000001
+      upper: 1.6144295580000001
+      velocity: 22
+      effort: 5
+  left_hand_palm_joint:
+    type: fixed
+    name: left_hand_palm_joint
+    parent_link: left_wrist_yaw_link
+    child_link: left_hand_palm_link
+    transform:
+      translation:
+        x: 0.041500000000000002
+        y: 0.0030000000000000001
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  imu_in_pelvis_joint:
+    type: fixed
+    name: imu_in_pelvis_joint
+    parent_link: pelvis
+    child_link: imu_in_pelvis
+    transform:
+      translation:
+        x: 0.045249999999999999
+        y: 0
+        z: -0.083390000000000006
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  left_hip_pitch_joint:
+    type: revolute
+    name: left_hip_pitch_joint
+    parent_link: pelvis
+    child_link: left_hip_pitch_link
+    transform:
+      translation:
+        x: 0
+        y: 0.064451999999999995
+        z: -0.1027
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 1
+      z: 0
+    limits:
+      lower: -2.5306999999999999
+      upper: 2.8797999999999999
+      velocity: 32
+      effort: 88
+  pelvis_contour_joint:
+    type: fixed
+    name: pelvis_contour_joint
+    parent_link: pelvis
+    child_link: pelvis_contour_link
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  right_hip_pitch_joint:
+    type: revolute
+    name: right_hip_pitch_joint
+    parent_link: pelvis
+    child_link: right_hip_pitch_link
+    transform:
+      translation:
+        x: 0
+        y: -0.064451999999999995
+        z: -0.1027
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 1
+      z: 0
+    limits:
+      lower: -2.5306999999999999
+      upper: 2.8797999999999999
+      velocity: 32
+      effort: 88
+  waist_yaw_joint:
+    type: revolute
+    name: waist_yaw_joint
+    parent_link: pelvis
+    child_link: waist_yaw_link
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 1
+    limits:
+      lower: -2.6179999999999999
+      upper: 2.6179999999999999
+      velocity: 32
+      effort: 88
+  right_ankle_roll_joint:
+    type: revolute
+    name: right_ankle_roll_joint
+    parent_link: right_ankle_pitch_link
+    child_link: right_ankle_roll_link
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: -0.017558000000000001
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 1
+      y: 0
+      z: 0
+    limits:
+      lower: -0.26179999999999998
+      upper: 0.26179999999999998
+      velocity: 37
+      effort: 50
+  right_wrist_roll_joint:
+    type: revolute
+    name: right_wrist_roll_joint
+    parent_link: right_elbow_link
+    child_link: right_wrist_roll_link
+    transform:
+      translation:
+        x: 0.10000000000000001
+        y: -0.00188791
+        z: -0.01
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 1
+      y: 0
+      z: 0
+    limits:
+      lower: -1.9722220539999999
+      upper: 1.9722220539999999
+      velocity: 37
+      effort: 25
+  right_hand_index_1_joint:
+    type: revolute
+    name: right_hand_index_1_joint
+    parent_link: right_hand_index_0_link
+    child_link: right_hand_index_1_link
+    transform:
+      translation:
+        x: 0.0458
+        y: 0
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 1
+    limits:
+      lower: 0
+      upper: 1.7453292499999999
+      velocity: 12
+      effort: 1.3999999999999999
+  right_hand_middle_1_joint:
+    type: revolute
+    name: right_hand_middle_1_joint
+    parent_link: right_hand_middle_0_link
+    child_link: right_hand_middle_1_link
+    transform:
+      translation:
+        x: 0.0458
+        y: 0
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 1
+    limits:
+      lower: 0
+      upper: 1.7453292499999999
+      velocity: 12
+      effort: 1.3999999999999999
+  right_hand_index_0_joint:
+    type: revolute
+    name: right_hand_index_0_joint
+    parent_link: right_hand_palm_link
+    child_link: right_hand_index_0_link
+    transform:
+      translation:
+        x: 0.077700000000000005
+        y: -0.0016000000000000001
+        z: 0.028500000000000001
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 1
+    limits:
+      lower: 0
+      upper: 1.5707963199999999
+      velocity: 12
+      effort: 1.3999999999999999
+  right_hand_middle_0_joint:
+    type: revolute
+    name: right_hand_middle_0_joint
+    parent_link: right_hand_palm_link
+    child_link: right_hand_middle_0_link
+    transform:
+      translation:
+        x: 0.077700000000000005
+        y: -0.0016000000000000001
+        z: -0.028500000000000001
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 1
+    limits:
+      lower: 0
+      upper: 1.5707963199999999
+      velocity: 12
+      effort: 1.3999999999999999
+  right_hand_thumb_0_joint:
+    type: revolute
+    name: right_hand_thumb_0_joint
+    parent_link: right_hand_palm_link
+    child_link: right_hand_thumb_0_link
+    transform:
+      translation:
+        x: 0.025499999999999998
+        y: 0
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 1
+      z: 0
+    limits:
+      lower: -1.0471975499999999
+      upper: 1.0471975499999999
+      velocity: 6.8570000000000002
+      effort: 2.4500000000000002
+  right_hand_thumb_1_joint:
+    type: revolute
+    name: right_hand_thumb_1_joint
+    parent_link: right_hand_thumb_0_link
+    child_link: right_hand_thumb_1_link
+    transform:
+      translation:
+        x: -0.0025000000000000001
+        y: 0.019300000000000001
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 1
+    limits:
+      lower: -1.0471975499999999
+      upper: 0.72431162999999998
+      velocity: 12
+      effort: 1.3999999999999999
+  right_hand_thumb_2_joint:
+    type: revolute
+    name: right_hand_thumb_2_joint
+    parent_link: right_hand_thumb_1_link
+    child_link: right_hand_thumb_2_link
+    transform:
+      translation:
+        x: 0
+        y: 0.0458
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 1
+    limits:
+      lower: -1.7453292499999999
+      upper: 0
+      velocity: 12
+      effort: 1.3999999999999999
+  right_hip_roll_joint:
+    type: revolute
+    name: right_hip_roll_joint
+    parent_link: right_hip_pitch_link
+    child_link: right_hip_roll_link
+    transform:
+      translation:
+        x: 0
+        y: -0.051999999999999998
+        z: -0.030464999999999999
+      rotation:
+        w: 0.99617868497449569
+        x: 0
+        y: -0.087338580263732465
+        z: 0
+    axis:
+      x: 1
+      y: 0
+      z: 0
+    limits:
+      lower: -2.9670999999999998
+      upper: 0.52359999999999995
+      velocity: 20
+      effort: 139
+  right_hip_yaw_joint:
+    type: revolute
+    name: right_hip_yaw_joint
+    parent_link: right_hip_roll_link
+    child_link: right_hip_yaw_link
+    transform:
+      translation:
+        x: 0.025000999999999999
+        y: 0
+        z: -0.12411999999999999
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 1
+    limits:
+      lower: -2.7576000000000001
+      upper: 2.7576000000000001
+      velocity: 32
+      effort: 88
+  right_knee_joint:
+    type: revolute
+    name: right_knee_joint
+    parent_link: right_hip_yaw_link
+    child_link: right_knee_link
+    transform:
+      translation:
+        x: -0.078272999999999995
+        y: -0.0021489
+        z: -0.17734
+      rotation:
+        w: 0.99617868497449569
+        x: 0
+        y: 0.087338580263732465
+        z: 0
+    axis:
+      x: 0
+      y: 1
+      z: 0
+    limits:
+      lower: -0.087266999999999997
+      upper: 2.8797999999999999
+      velocity: 20
+      effort: 139
+  right_ankle_pitch_joint:
+    type: revolute
+    name: right_ankle_pitch_joint
+    parent_link: right_knee_link
+    child_link: right_ankle_pitch_link
+    transform:
+      translation:
+        x: 0
+        y: 9.4444999999999994e-05
+        z: -0.30001
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 1
+      z: 0
+    limits:
+      lower: -0.87266999999999995
+      upper: 0.52359999999999995
+      velocity: 37
+      effort: 50
+  right_shoulder_roll_joint:
+    type: revolute
+    name: right_shoulder_roll_joint
+    parent_link: right_shoulder_pitch_link
+    child_link: right_shoulder_roll_link
+    transform:
+      translation:
+        x: 0
+        y: -0.037999999999999999
+        z: -0.013831
+      rotation:
+        w: 0.99026825525484086
+        x: 0.13917177384273469
+        y: 0
+        z: 0
+    axis:
+      x: 1
+      y: 0
+      z: 0
+    limits:
+      lower: -2.2515000000000001
+      upper: 1.5882000000000001
+      velocity: 37
+      effort: 25
+  right_shoulder_yaw_joint:
+    type: revolute
+    name: right_shoulder_yaw_joint
+    parent_link: right_shoulder_roll_link
+    child_link: right_shoulder_yaw_link
+    transform:
+      translation:
+        x: 0
+        y: -0.0062399999999999999
+        z: -0.1032
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 1
+    limits:
+      lower: -2.6179999999999999
+      upper: 2.6179999999999999
+      velocity: 37
+      effort: 25
+  right_elbow_joint:
+    type: revolute
+    name: right_elbow_joint
+    parent_link: right_shoulder_yaw_link
+    child_link: right_elbow_link
+    transform:
+      translation:
+        x: 0.015782999999999998
+        y: 0
+        z: -0.080518000000000006
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 1
+      z: 0
+    limits:
+      lower: -1.0471999999999999
+      upper: 2.0943999999999998
+      velocity: 37
+      effort: 25
+  right_wrist_yaw_joint:
+    type: revolute
+    name: right_wrist_yaw_joint
+    parent_link: right_wrist_pitch_link
+    child_link: right_wrist_yaw_link
+    transform:
+      translation:
+        x: 0.045999999999999999
+        y: 0
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 1
+    limits:
+      lower: -1.6144295580000001
+      upper: 1.6144295580000001
+      velocity: 22
+      effort: 5
+  right_wrist_pitch_joint:
+    type: revolute
+    name: right_wrist_pitch_joint
+    parent_link: right_wrist_roll_link
+    child_link: right_wrist_pitch_link
+    transform:
+      translation:
+        x: 0.037999999999999999
+        y: 0
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 1
+      z: 0
+    limits:
+      lower: -1.6144295580000001
+      upper: 1.6144295580000001
+      velocity: 22
+      effort: 5
+  right_hand_palm_joint:
+    type: fixed
+    name: right_hand_palm_joint
+    parent_link: right_wrist_yaw_link
+    child_link: right_hand_palm_link
+    transform:
+      translation:
+        x: 0.041500000000000002
+        y: -0.0030000000000000001
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  d435_joint:
+    type: fixed
+    name: d435_joint
+    parent_link: torso_link
+    child_link: d435_link
+    transform:
+      translation:
+        x: 0.057623500000000001
+        y: 0.01753
+        z: 0.42986999999999997
+      rotation:
+        w: 0.91495966784982474
+        x: 0
+        y: 0.40354529635239006
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  head_joint:
+    type: fixed
+    name: head_joint
+    parent_link: torso_link
+    child_link: head_link
+    transform:
+      translation:
+        x: 0.0039635
+        y: 0
+        z: -0.043999999999999997
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  imu_in_torso_joint:
+    type: fixed
+    name: imu_in_torso_joint
+    parent_link: torso_link
+    child_link: imu_in_torso
+    transform:
+      translation:
+        x: -0.03959
+        y: -0.0022399999999999998
+        z: 0.14792
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  left_shoulder_pitch_joint:
+    type: revolute
+    name: left_shoulder_pitch_joint
+    parent_link: torso_link
+    child_link: left_shoulder_pitch_link
+    transform:
+      translation:
+        x: 0.0039563000000000003
+        y: 0.10022
+        z: 0.24778
+      rotation:
+        w: 0.99026407437221964
+        x: 0.1392014837428143
+        y: 1.3872204401988459e-05
+        z: -9.8686838424204382e-05
+    axis:
+      x: 0
+      y: 1
+      z: 0
+    limits:
+      lower: -3.0891999999999999
+      upper: 2.6703999999999999
+      velocity: 37
+      effort: 25
+  logo_joint:
+    type: fixed
+    name: logo_joint
+    parent_link: torso_link
+    child_link: logo_link
+    transform:
+      translation:
+        x: 0.0039635
+        y: 0
+        z: -0.043999999999999997
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  mid360_joint:
+    type: fixed
+    name: mid360_joint
+    parent_link: torso_link
+    child_link: mid360_link
+    transform:
+      translation:
+        x: 0.00028350000000000001
+        y: 3.0000000000000001e-05
+        z: 0.41617999999999999
+      rotation:
+        w: 0.99979857849329978
+        x: 0
+        y: 0.020069938783589012
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  right_shoulder_pitch_joint:
+    type: revolute
+    name: right_shoulder_pitch_joint
+    parent_link: torso_link
+    child_link: right_shoulder_pitch_link
+    transform:
+      translation:
+        x: 0.0039563000000000003
+        y: -0.10020999999999999
+        z: 0.24778
+      rotation:
+        w: 0.99026407437221964
+        x: -0.1392014837428143
+        y: 1.3872204401988459e-05
+        z: 9.8686838424204382e-05
+    axis:
+      x: 0
+      y: 1
+      z: 0
+    limits:
+      lower: -3.0891999999999999
+      upper: 2.6703999999999999
+      velocity: 37
+      effort: 25
+  waist_pitch_joint:
+    type: revolute
+    name: waist_pitch_joint
+    parent_link: waist_roll_link
+    child_link: torso_link
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 1
+      z: 0
+    limits:
+      lower: -0.52000000000000002
+      upper: 0.52000000000000002
+      velocity: 37
+      effort: 50
+  waist_roll_joint:
+    type: revolute
+    name: waist_roll_joint
+    parent_link: waist_yaw_link
+    child_link: waist_roll_link
+    transform:
+      translation:
+        x: -0.0039635
+        y: 0
+        z: 0.043999999999999997
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 1
+      y: 0
+      z: 0
+    limits:
+      lower: -0.52000000000000002
+      upper: 0.52000000000000002
+      velocity: 37
+      effort: 50

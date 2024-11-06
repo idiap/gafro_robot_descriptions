@@ -1,0 +1,541 @@
+system:
+  name: iiwa7
+  root_link: iiwa_link_0
+joints:
+  iiwa_joint_1:
+    type: revolute
+    name: iiwa_joint_1
+    parent_link: iiwa_link_0
+    child_link: iiwa_link_1
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0.14749999999999999
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 1
+    limits:
+      lower: -2.9670597283903604
+      upper: 2.9670597283903604
+      velocity: 1.7104226669544429
+      effort: 200
+  iiwa_joint_2:
+    type: revolute
+    name: iiwa_joint_2
+    parent_link: iiwa_link_1
+    child_link: iiwa_link_2
+    transform:
+      translation:
+        x: 0
+        y: -0.010500000000000001
+        z: 0.1925
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 1
+      z: 0
+    limits:
+      lower: -2.0943951023931953
+      upper: 2.0943951023931953
+      velocity: 1.7104226669544429
+      effort: 200
+  iiwa_joint_3:
+    type: revolute
+    name: iiwa_joint_3
+    parent_link: iiwa_link_2
+    child_link: iiwa_link_3
+    transform:
+      translation:
+        x: 0
+        y: 0.010500000000000001
+        z: 0.20749999999999999
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 1
+    limits:
+      lower: -2.9670597283903604
+      upper: 2.9670597283903604
+      velocity: 1.7453292519943295
+      effort: 200
+  iiwa_joint_4:
+    type: revolute
+    name: iiwa_joint_4
+    parent_link: iiwa_link_3
+    child_link: iiwa_link_4
+    transform:
+      translation:
+        x: 0
+        y: 0.010500000000000001
+        z: 0.1925
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: -1
+      z: 0
+    limits:
+      lower: -2.0943951023931953
+      upper: 2.0943951023931953
+      velocity: 2.2689280275926285
+      effort: 200
+  iiwa_joint_5:
+    type: revolute
+    name: iiwa_joint_5
+    parent_link: iiwa_link_4
+    child_link: iiwa_link_5
+    transform:
+      translation:
+        x: 0
+        y: -0.010500000000000001
+        z: 0.20749999999999999
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 1
+    limits:
+      lower: -2.9670597283903604
+      upper: 2.9670597283903604
+      velocity: 2.4434609527920612
+      effort: 200
+  iiwa_joint_6:
+    type: revolute
+    name: iiwa_joint_6
+    parent_link: iiwa_link_5
+    child_link: iiwa_link_6
+    transform:
+      translation:
+        x: 0
+        y: -0.070699999999999999
+        z: 0.1925
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 1
+      z: 0
+    limits:
+      lower: -2.0943951023931953
+      upper: 2.0943951023931953
+      velocity: 3.1415926535897931
+      effort: 200
+  iiwa_joint_7:
+    type: revolute
+    name: iiwa_joint_7
+    parent_link: iiwa_link_6
+    child_link: iiwa_link_7
+    transform:
+      translation:
+        x: 0
+        y: 0.070699999999999999
+        z: 0.090999999999999998
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 1
+    limits:
+      lower: -3.0543261909900763
+      upper: 3.0543261909900763
+      velocity: 3.1415926535897931
+      effort: 200
+  iiwa_joint_ee:
+    type: fixed
+    name: iiwa_joint_ee
+    parent_link: iiwa_link_7
+    child_link: iiwa_link_ee
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0.035000000000000003
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 0
+links:
+  iiwa_link_0:
+    joints:
+      - iiwa_joint_1
+    name: iiwa_link_0
+    inertial:
+      mass: 4.855658
+      inertia:
+        xx: 0.017839000000000001
+        xy: 0
+        yy: 0.022294000000000001
+        yz: 0
+        zz: 0.021333999999999999
+        xz: 0.00078100000000000001
+      origin:
+        position:
+          x: -0.012857
+          y: 0
+          z: 0.069963999999999998
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/link_0.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  iiwa_link_1:
+    joints:
+      - iiwa_joint_2
+    name: iiwa_link_1
+    parent_joint: iiwa_joint_1
+    inertial:
+      mass: 3.3940109999999999
+      inertia:
+        xx: 0.021382999999999999
+        xy: 0
+        yy: 0.020403000000000001
+        yz: 0.003797
+        zz: 0.0075630000000000003
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: -0.034819000000000003
+          z: 0.12329900000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: -0.14749999999999999
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/link_1.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  iiwa_link_2:
+    joints:
+      - iiwa_joint_3
+    name: iiwa_link_2
+    parent_joint: iiwa_joint_2
+    inertial:
+      mass: 4.0319909999999997
+      inertia:
+        xx: 0.031697000000000003
+        xy: 0
+        yy: 0.030079999999999999
+        yz: 0.0058890000000000001
+        zz: 0.0096659999999999992
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0.039793000000000002
+          z: 0.086943999999999994
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0.010500000000000001
+          z: -0.34000000000000002
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/link_2.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  iiwa_link_3:
+    joints:
+      - iiwa_joint_4
+    name: iiwa_link_3
+    parent_joint: iiwa_joint_3
+    inertial:
+      mass: 3.3940109999999999
+      inertia:
+        xx: 0.021382999999999999
+        xy: 0
+        yy: 0.020403000000000001
+        yz: -0.003797
+        zz: 0.0075630000000000003
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0.034819000000000003
+          z: 0.12329900000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: -0.54749999999999999
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/link_3.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  iiwa_link_4:
+    joints:
+      - iiwa_joint_5
+    name: iiwa_link_4
+    parent_joint: iiwa_joint_4
+    inertial:
+      mass: 4.0319890000000003
+      inertia:
+        xx: 0.031695000000000001
+        xy: 0
+        yy: 0.030079000000000002
+        yz: -0.0058890000000000001
+        zz: 0.009665
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: -0.039793000000000002
+          z: 0.086943999999999994
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: -0.010500000000000001
+          z: -0.73999999999999999
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/link_4.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  iiwa_link_5:
+    joints:
+      - iiwa_joint_6
+    name: iiwa_link_5
+    parent_joint: iiwa_joint_5
+    inertial:
+      mass: 1.529239
+      inertia:
+        xx: 0.0084849999999999995
+        xy: 0
+        yy: 0.007136
+        yz: 0.0028059999999999999
+        zz: 0.0038479999999999999
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: -0.029824
+          z: 0.076267000000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: -0.94750000000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/link_5.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  iiwa_link_6:
+    joints:
+      - iiwa_joint_7
+    name: iiwa_link_6
+    parent_joint: iiwa_joint_6
+    inertial:
+      mass: 2.403626
+      inertia:
+        xx: 0.0070670000000000004
+        xy: 0
+        yy: 0.0068040000000000002
+        yz: 0.00031100000000000002
+        zz: 0.0046290000000000003
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0.07102
+          z: 0.0049500000000000004
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0.070699999999999999
+          z: -1.1399999999999999
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/link_6.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  iiwa_link_7:
+    joints:
+      - iiwa_joint_ee
+    name: iiwa_link_7
+    parent_joint: iiwa_joint_7
+    inertial:
+      mass: 0.25947399999999998
+      inertia:
+        xx: 0.00017100000000000001
+        xy: 0
+        yy: 0.00017100000000000001
+        yz: 0
+        zz: 0.000299
+        xz: 0
+      origin:
+        position:
+          x: 3.0000000000000001e-06
+          y: -1.9999999999999999e-06
+          z: 0.013782000000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: -1.2310000000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/link_7.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  iiwa_link_ee:
+    name: iiwa_link_ee
+    parent_joint: iiwa_joint_ee
+    inertial:
+      mass: 0
+      inertia:
+        xx: 0
+        xy: 0
+        yy: 0
+        yz: 0
+        zz: 0
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
