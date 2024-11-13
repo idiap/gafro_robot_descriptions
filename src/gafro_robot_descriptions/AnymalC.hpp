@@ -19,7 +19,7 @@
 
 #pragma once
 
-#include <gafro/robot/System.hpp>
+#include <gafro/robot/Quadruped.hpp>
 //
 #include <gafro_robot_descriptions/serialization/FilePath.hpp>
 #include <gafro_robot_descriptions/serialization/SystemSerialization.hpp>
@@ -30,7 +30,7 @@ namespace gafro
 {
 
     template <class T>
-    class AnymalC : public System<T>
+    class AnymalC : public Quadruped<T, 3>
     {
       public:
         AnymalC();
@@ -45,7 +45,8 @@ namespace gafro
 
     template <class T>
     AnymalC<T>::AnymalC()  //
-      : System<T>(std::move(SystemSerialization(FilePath("robots/anymal_c/anymal_c.yaml")).load().cast<T>()))
+      : Quadruped<T, 3>(std::move(SystemSerialization(FilePath("robots/anymal_c/anymal_c.yaml")).load().cast<T>()),
+                        { "LF_shank_fixed_LF_FOOT", "LH_shank_fixed_LH_FOOT", "RF_shank_fixed_RF_FOOT", "RH_shank_fixed_RH_FOOT" })
     {}
 
     template <class T>
