@@ -70,32 +70,25 @@ write_basic_package_version_file(
 configure_file(cmake/${PROJECT_NAME}-packages.cmake "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}-packages.cmake")
 
 install(TARGETS ${PROJECT_NAME} EXPORT ${PROJECT_NAME}-config-targets
-  LIBRARY DESTINATION lib
-  ARCHIVE DESTINATION lib
-  RUNTIME DESTINATION bin
-  INCLUDES DESTINATION ${${PROJECT_NAME}_PREFIX_INCLUDE}/${PROJECT_NAME}
+    LIBRARY DESTINATION lib/${PROJECT_NAME}/
+    ARCHIVE DESTINATION lib/${PROJECT_NAME}/
+    RUNTIME DESTINATION lib/${PROJECT_NAME}/
+    INCLUDES DESTINATION ${PROJECT_NAME}_PREFIX_INCLUDE
 )
 
 install(
-  FILES 
-    "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}-config.cmake" 
-    "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}-config-version.cmake"
-    "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}-packages.cmake"
-  DESTINATION 
-    ${${PROJECT_NAME}_PREFIX_PACKAGE}
-  COMPONENT 
-    Devel
-)
-
-export(EXPORT ${PROJECT_NAME}-config-targets
-  FILE "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}-config-targets.cmake"
-  NAMESPACE ${PROJECT_NAME}::
+    FILES
+        "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}-config.cmake"
+        "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}-config-version.cmake"
+        "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}-packages.cmake"
+    DESTINATION
+        ${${PROJECT_NAME}_PREFIX_PACKAGE}
 )
 
 install(EXPORT ${PROJECT_NAME}-config-targets
-  FILE ${PROJECT_NAME}-config-targets.cmake
-  NAMESPACE ${PROJECT_NAME}::
-  DESTINATION ${${PROJECT_NAME}_PREFIX_PACKAGE}
+    FILE ${PROJECT_NAME}-config-targets.cmake
+    NAMESPACE gafro_robot_descriptions::
+    DESTINATION ${${PROJECT_NAME}_PREFIX_PACKAGE}
 )
 
 install(
@@ -103,8 +96,6 @@ install(
         "${CMAKE_CURRENT_LIST_DIR}/assets/"
     DESTINATION
         "share/${CMAKE_PROJECT_NAME}/assets/"
-    COMPONENT
-        Devel
 )
 
 export(PACKAGE gafro_robot_descriptions)
