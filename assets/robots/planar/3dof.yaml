@@ -1,0 +1,273 @@
+system:
+  name: planar_manipulator
+  root_link: link0
+joints:
+  joint1:
+    type: revolute
+    name: joint1
+    parent_link: link0
+    child_link: link1
+    transform:
+      translation:
+        x: 0
+        y: 0.5
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: -1
+    limits:
+      lower: -3.14
+      upper: 3.14
+      velocity: 1
+      effort: 10
+  joint2:
+    type: revolute
+    name: joint2
+    parent_link: link1
+    child_link: link2
+    transform:
+      translation:
+        x: 0.5
+        y: 0
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: -1
+    limits:
+      lower: -3.14
+      upper: 3.14
+      velocity: 1
+      effort: 10
+  joint3:
+    type: revolute
+    name: joint3
+    parent_link: link2
+    child_link: link3
+    transform:
+      translation:
+        x: 0.5
+        y: 0
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: -1
+    limits:
+      lower: -3.14
+      upper: 3.14
+      velocity: 1
+      effort: 10
+  joint_ee:
+    type: fixed
+    name: joint_ee
+    parent_link: link3
+    child_link: link_ee
+    transform:
+      translation:
+        x: 0.5
+        y: 0
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 0
+links:
+  link0:
+    joints:
+      - joint1
+    name: link0
+    inertial:
+      mass: 0
+      inertia:
+        xx: 0
+        xy: 0
+        yy: 0
+        yz: 0
+        zz: 0
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0.25
+          z: 0
+        orientation:
+          w: 0.707
+          x: 0
+          y: 0
+          z: 0.707
+      type: box
+      length: 0.5
+      width: 0.10000000000000001
+      height: 0.10000000000000001
+  link1:
+    joints:
+      - joint2
+    name: link1
+    parent_joint: joint1
+    inertial:
+      mass: 0
+      inertia:
+        xx: 0
+        xy: 0
+        yy: 0
+        yz: 0
+        zz: 0
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0.25
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: box
+      length: 0.5
+      width: 0.10000000000000001
+      height: 0.10000000000000001
+  link2:
+    joints:
+      - joint3
+    name: link2
+    parent_joint: joint2
+    inertial:
+      mass: 0
+      inertia:
+        xx: 0
+        xy: 0
+        yy: 0
+        yz: 0
+        zz: 0
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0.25
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: box
+      length: 0.5
+      width: 0.10000000000000001
+      height: 0.10000000000000001
+  link3:
+    joints:
+      - joint_ee
+    name: link3
+    parent_joint: joint3
+    inertial:
+      mass: 0
+      inertia:
+        xx: 0
+        xy: 0
+        yy: 0
+        yz: 0
+        zz: 0
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0.25
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: box
+      length: 0.5
+      width: 0.10000000000000001
+      height: 0.10000000000000001
+  link_ee:
+    name: link_ee
+    parent_joint: joint_ee
+    inertial:
+      mass: 0
+      inertia:
+        xx: 0
+        xy: 0
+        yy: 0
+        yz: 0
+        zz: 0
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
