@@ -1,0 +1,584 @@
+system:
+  name: iiwa14
+  root_link: lbr_floating_link
+joints:
+  lbr_floating_joint:
+    type: fixed
+    name: lbr_floating_joint
+    parent_link: lbr_floating_link
+    child_link: lbr_link_0
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 0
+  lbr_A1:
+    type: revolute
+    name: lbr_A1
+    parent_link: lbr_link_0
+    child_link: lbr_link_1
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0.14749999999999999
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 1
+    limits:
+      lower: -2.9670597283903604
+      upper: 2.9670597283903604
+      velocity: 1.4835298641951802
+      effort: 200
+  lbr_A2:
+    type: revolute
+    name: lbr_A2
+    parent_link: lbr_link_1
+    child_link: lbr_link_2
+    transform:
+      translation:
+        x: 0
+        y: -0.01
+        z: 0.21249999999999999
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 1
+      z: 0
+    limits:
+      lower: -2.0943951023931953
+      upper: 2.0943951023931953
+      velocity: 1.4835298641951802
+      effort: 200
+  lbr_A3:
+    type: revolute
+    name: lbr_A3
+    parent_link: lbr_link_2
+    child_link: lbr_link_3
+    transform:
+      translation:
+        x: 0
+        y: 0.01
+        z: 0.22800000000000001
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 1
+    limits:
+      lower: -2.9670597283903604
+      upper: 2.9670597283903604
+      velocity: 1.7453292519943295
+      effort: 200
+  lbr_A4:
+    type: revolute
+    name: lbr_A4
+    parent_link: lbr_link_3
+    child_link: lbr_link_4
+    transform:
+      translation:
+        x: 0
+        y: 0.010500000000000001
+        z: 0.192
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: -1
+      z: 0
+    limits:
+      lower: -2.0943951023931953
+      upper: 2.0943951023931953
+      velocity: 1.3089969389957472
+      effort: 200
+  lbr_A5:
+    type: revolute
+    name: lbr_A5
+    parent_link: lbr_link_4
+    child_link: lbr_link_5
+    transform:
+      translation:
+        x: 0
+        y: -0.010500000000000001
+        z: 0.20749999999999999
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 1
+    limits:
+      lower: -2.9670597283903604
+      upper: 2.9670597283903604
+      velocity: 2.2689280275926285
+      effort: 200
+  lbr_A6:
+    type: revolute
+    name: lbr_A6
+    parent_link: lbr_link_5
+    child_link: lbr_link_6
+    transform:
+      translation:
+        x: 0
+        y: -0.070699999999999999
+        z: 0.1925
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 1
+      z: 0
+    limits:
+      lower: -2.0943951023931953
+      upper: 2.0943951023931953
+      velocity: 2.3561944901923448
+      effort: 200
+  lbr_A7:
+    type: revolute
+    name: lbr_A7
+    parent_link: lbr_link_6
+    child_link: lbr_link_7
+    transform:
+      translation:
+        x: 0
+        y: 0.070699999999999999
+        z: 0.090999999999999998
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 1
+    limits:
+      lower: -3.0543261909900763
+      upper: 3.0543261909900763
+      velocity: 2.3561944901923448
+      effort: 200
+  lbr_joint_ee:
+    type: fixed
+    name: lbr_joint_ee
+    parent_link: lbr_link_7
+    child_link: lbr_link_ee
+    transform:
+      translation:
+        x: 0
+        y: 0
+        z: 0.035000000000000003
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 0
+links:
+  lbr_floating_link:
+    joints:
+      - lbr_floating_joint
+    name: lbr_floating_link
+    inertial:
+      mass: 0
+      inertia:
+        xx: 0
+        xy: 0
+        yy: 0
+        yz: 0
+        zz: 0
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+  lbr_link_0:
+    joints:
+      - lbr_A1
+    name: lbr_link_0
+    parent_joint: lbr_floating_joint
+    inertial:
+      mass: 7.0503780000000003
+      inertia:
+        xx: 0.031226
+        xy: 0
+        yy: 0.039697000000000003
+        yz: 0
+        zz: 0.043102000000000001
+        xz: 0.00087100000000000003
+      origin:
+        position:
+          x: -0.012822
+          y: 0
+          z: 0.071507000000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/link_0.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  lbr_link_1:
+    joints:
+      - lbr_A2
+    name: lbr_link_1
+    parent_joint: lbr_A1
+    inertial:
+      mass: 5.2895289999999999
+      inertia:
+        xx: 0.042462
+        xy: 0
+        yy: 0.042838000000000001
+        yz: 0.0063410000000000003
+        zz: 0.015869999999999999
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: -0.033794999999999999
+          z: 0.13240399999999999
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: -0.14749999999999999
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/link_1.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  lbr_link_2:
+    joints:
+      - lbr_A3
+    name: lbr_link_2
+    parent_joint: lbr_A2
+    inertial:
+      mass: 5.6888880000000004
+      inertia:
+        xx: 0.055182000000000002
+        xy: -3.3000000000000003e-05
+        yy: 0.053983000000000003
+        yz: 0.010034
+        zz: 0.016522999999999999
+        xz: 5.5999999999999999e-05
+      origin:
+        position:
+          x: 0.000136
+          y: 0.047548
+          z: 0.076322000000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0.01
+          z: -0.35999999999999999
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/link_2.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  lbr_link_3:
+    joints:
+      - lbr_A4
+    name: lbr_link_3
+    parent_joint: lbr_A3
+    inertial:
+      mass: 3.4612449999999999
+      inertia:
+        xx: 0.02172
+        xy: 0
+        yy: 0.020729999999999998
+        yz: -0.0038449999999999999
+        zz: 0.0077010000000000004
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0.034913
+          z: 0.123108
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: -0.58799999999999997
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/link_3.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  lbr_link_4:
+    joints:
+      - lbr_A5
+    name: lbr_link_4
+    parent_joint: lbr_A4
+    inertial:
+      mass: 4.1229950000000004
+      inertia:
+        xx: 0.032410000000000001
+        xy: 0
+        yy: 0.030758000000000001
+        yz: -0.0060219999999999996
+        zz: 0.0098829999999999994
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: -0.039793000000000002
+          z: 0.086943999999999994
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: -0.010500000000000001
+          z: -0.78000000000000003
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/link_4.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  lbr_link_5:
+    joints:
+      - lbr_A6
+    name: lbr_link_5
+    parent_joint: lbr_A5
+    inertial:
+      mass: 1.5637559999999999
+      inertia:
+        xx: 0.0086770000000000007
+        xy: 0
+        yy: 0.0072969999999999997
+        yz: 0.002869
+        zz: 0.0039350000000000001
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: -0.029824
+          z: 0.076267000000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: -0.98750000000000004
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/link_5.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  lbr_link_6:
+    joints:
+      - lbr_A7
+    name: lbr_link_6
+    parent_joint: lbr_A6
+    inertial:
+      mass: 2.457878
+      inertia:
+        xx: 0.0072269999999999999
+        xy: 0
+        yy: 0.0069579999999999998
+        yz: 0.00031799999999999998
+        zz: 0.0047340000000000004
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0.07102
+          z: 0.0049500000000000004
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0.070699999999999999
+          z: -1.1799999999999999
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/link_6.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  lbr_link_7:
+    joints:
+      - lbr_joint_ee
+    name: lbr_link_7
+    parent_joint: lbr_A7
+    inertial:
+      mass: 0.26533099999999998
+      inertia:
+        xx: 0.000175
+        xy: 0
+        yy: 0.000175
+        yz: 0
+        zz: 0.00030600000000000001
+        xz: 0
+      origin:
+        position:
+          x: 3.0000000000000001e-06
+          y: -1.9999999999999999e-06
+          z: 0.013782000000000001
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: -1.2709999999999999
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/link_7.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  lbr_link_ee:
+    name: lbr_link_ee
+    parent_joint: lbr_joint_ee
+    inertial:
+      mass: 0
+      inertia:
+        xx: 0
+        xy: 0
+        yy: 0
+        yz: 0
+        zz: 0
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0

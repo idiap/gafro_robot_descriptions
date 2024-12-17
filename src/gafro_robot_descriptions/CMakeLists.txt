@@ -63,6 +63,7 @@ install(
     UFactoryLite6.hpp
     UnitreeG1.hpp
     KukaIIWA7.hpp
+    KukaIIWA14.hpp
     Planar3DoF.hpp
 		"${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}/${PROJECT_NAME}_package_config.hpp" 
 	DESTINATION 
