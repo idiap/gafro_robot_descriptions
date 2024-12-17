@@ -6,6 +6,7 @@ add_library(${PROJECT_NAME} SHARED
     ${PROJECT_NAME}.cpp
     SystemVisual.cpp
 )
+add_library(${PROJECT_NAME}::${PROJECT_NAME} ALIAS ${PROJECT_NAME})
 
 target_compile_options(${PROJECT_NAME}
 	PUBLIC
