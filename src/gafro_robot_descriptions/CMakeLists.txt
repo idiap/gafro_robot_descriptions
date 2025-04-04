@@ -4,7 +4,7 @@ find_package(gafro REQUIRED)
 
 add_library(${PROJECT_NAME} SHARED
     ${PROJECT_NAME}.cpp
-    SystemVisual.cpp
+    # SystemVisual.cpp
 )
 add_library(${PROJECT_NAME}::${PROJECT_NAME} ALIAS ${PROJECT_NAME})
 
@@ -59,7 +59,7 @@ install(
     AnymalC.hpp
     Atlas.hpp
     LeapHand.hpp
-    SystemVisual.hpp
+    # SystemVisual.hpp
     UFactoryLite6.hpp
     UnitreeG1.hpp
     KukaIIWA7.hpp

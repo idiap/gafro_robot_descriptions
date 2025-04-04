@@ -28,7 +28,7 @@
 namespace gafro
 {
 
-    class Visual;
+    // class Visual;
 
     class SystemSerialization
     {
@@ -41,7 +41,7 @@ namespace gafro
 
         System<double> load();
 
-        std::unordered_map<std::string, std::unique_ptr<Visual>> loadVisuals();
+        // std::unordered_map<std::string, std::unique_ptr<Visual>> loadVisuals();
 
       private:
         System<double> create();
