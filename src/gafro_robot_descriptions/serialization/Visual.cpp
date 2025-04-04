@@ -18,22 +18,23 @@
 */
 
 #include <gafro/algebra.hpp>
+#include <gafro/robot/Link.hxx>
 #include <gafro_robot_descriptions/serialization/Visual.hpp>
 
 namespace gafro
 {
 
-    Visual::Visual(const Type &type, const Motor<double> &transform) : type_(type), transform_(transform) {}
+    // Visual::Visual(const Type &type, const Motor<double> &transform) : type_(type), transform_(transform) {}
 
-    const Visual::Type &Visual::getType() const
-    {
-        return type_;
-    }
+    // const Visual::Type &Visual::getType() const
+    // {
+    //     return type_;
+    // }
 
-    const Motor<double> &Visual::getTransform() const
-    {
-        return transform_;
-    }
+    // const Motor<double> &Visual::getTransform() const
+    // {
+    //     return transform_;
+    // }
 
 }  // namespace gafro
 

@@ -19,7 +19,7 @@
 
 #pragma once
 
-#include <gafro/robot/System.hpp>
+#include <gafro/robot/Humanoid.hpp>
 //
 #include <gafro_robot_descriptions/serialization/FilePath.hpp>
 #include <gafro_robot_descriptions/serialization/SystemSerialization.hpp>
@@ -30,7 +30,7 @@ namespace gafro
 {
 
     template <class T>
-    class UnitreeG1 : public System<T>
+    class UnitreeG1 : public Humanoid<T>
     {
       public:
         UnitreeG1();
@@ -45,12 +45,12 @@ namespace gafro
 
     template <class T>
     UnitreeG1<T>::UnitreeG1()  //
-      : System<T>(std::move(SystemSerialization(FilePath("robots/unitree/g1/g1.yaml")).load().cast<T>()))
+      : Humanoid<T>(std::move(SystemSerialization(FilePath("robots/unitree/g1/g1.yaml")).load().cast<T>()))
     {}
 
     template <class T>
     UnitreeG1<T>::UnitreeG1(const std::filesystem::path &assets_folder)
-      : System<T>(std::move(SystemSerialization(FilePath(assets_folder / "robots/unitree/g1/g1.yaml")).load().cast<T>()))
+      : Humanoid<T>(std::move(SystemSerialization(FilePath(assets_folder / "robots/unitree/g1/g1.yaml")).load().cast<T>()))
     {}
 
     template <class T>

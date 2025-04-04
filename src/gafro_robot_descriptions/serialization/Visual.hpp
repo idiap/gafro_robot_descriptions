@@ -23,45 +23,12 @@
 #include <string>
 //
 #include <gafro/algebra/cga/Motor.hpp>
-
-namespace gafro
-{
-    class Visual
-    {
-      public:
-        enum class Type
-        {
-            SPHERE,
-            MESH,
-            CYLINDER,
-            BOX
-        };
-
-        Visual(const Type &type, const Motor<double> &transform);
-
-        virtual ~Visual() = default;
-
-        virtual std::unique_ptr<Visual> copy() const = 0;
-
-        const Type &getType() const;
-
-        const Motor<double> &getTransform() const;
-
-        template <class Derived>
-        const Derived *cast() const
-        {
-            return static_cast<const Derived *>(this);
-        }
-
-      private:
-        const Type type_;
-
-        Motor<double> transform_;
-    };
-}  // namespace gafro
+#include <gafro/robot/Link.hpp>
 
 namespace gafro::visual
 {
+
+    using Visual = gafro::LinkVisual;
 
     class Sphere : public Visual
     {

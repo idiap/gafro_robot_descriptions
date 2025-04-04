@@ -200,76 +200,121 @@ namespace gafro
                                          getValue<double>(node, { "inertial", "inertia", "yz" }),  //
                                          getValue<double>(node, { "inertial", "inertia", "zz" })));
 
-        system.addLink(std::move(link));
-    }
-
-    std::unordered_map<std::string, std::unique_ptr<Visual>> SystemSerialization::loadVisuals()
-    {
-        std::unordered_map<std::string, std::unique_ptr<Visual>> visuals;
-
-        std::string system_name = getValue<std::string>(root_node_, { "system", "name" });
-
-        for (YAML::const_iterator it = root_node_["links"].begin(); it != root_node_["links"].end(); ++it)
+        if (node["visual"])
         {
-            YAML::Node link_node = it->second;
-            std::string name = getValue<std::string>(link_node, { "name" });
+            std::string type = getValue<std::string>(node, { "visual", "type" });
 
-            if (link_node["visual"])
+            Translator<double> translator(typename Translator<double>::Generator({
+              getValue<double>(node, { "visual", "origin", "position", "x" }),  //
+              getValue<double>(node, { "visual", "origin", "position", "y" }),  //
+              getValue<double>(node, { "visual", "origin", "position", "z" })   //
+            }));
+
+            Rotor<double> rotor =
+              Rotor<double>::fromQuaternion(Eigen::Quaterniond({ getValue<double>(node, { "visual", "origin", "orientation", "w" }),  //
+                                                                 getValue<double>(node, { "visual", "origin", "orientation", "x" }),  //
+                                                                 getValue<double>(node, { "visual", "origin", "orientation", "y" }),  //
+                                                                 getValue<double>(node, { "visual", "origin", "orientation", "z" }) }));
+
+            Motor<double> motor(translator, rotor);
+
+            if (type == "sphere")
             {
-                std::string type = getValue<std::string>(link_node, { "visual", "type" });
-
-                Translator<double> translator(typename Translator<double>::Generator({
-                  getValue<double>(link_node, { "visual", "origin", "position", "x" }),  //
-                  getValue<double>(link_node, { "visual", "origin", "position", "y" }),  //
-                  getValue<double>(link_node, { "visual", "origin", "position", "z" })   //
-                }));
-
-                Rotor<double> rotor =
-                  Rotor<double>::fromQuaternion(Eigen::Quaterniond({ getValue<double>(link_node, { "visual", "origin", "orientation", "w" }),  //
-                                                                     getValue<double>(link_node, { "visual", "origin", "orientation", "x" }),  //
-                                                                     getValue<double>(link_node, { "visual", "origin", "orientation", "y" }),  //
-                                                                     getValue<double>(link_node, { "visual", "origin", "orientation", "z" }) }));
-
-                Motor<double> motor(translator, rotor);
-
-                if (type == "sphere")
-                {
-                    visuals.emplace(
-                      std::make_pair(name, std::make_unique<gafro::visual::Sphere>(getValue<double>(link_node, { "visual", "radius" }), motor)));
-                }
-                else if (type == "mesh")
-                {
-                    std::string file = root_folder.empty() ?                                                                                     //
-                                         FilePath("robots/" + system_name + "/" + getValue<std::string>(link_node, { "visual", "filename" })) :  //
-                                         FilePath((root_folder / getValue<std::string>(link_node, { "visual", "filename" })).string());
-
-                    visuals.emplace(std::make_pair(
-                      name, std::make_unique<gafro::visual::Mesh>(
-                              root_folder.empty() ?                                                                                     //
-                                FilePath("robots/" + system_name + "/" + getValue<std::string>(link_node, { "visual", "filename" })) :  //
-                                FilePath((root_folder / getValue<std::string>(link_node, { "visual", "filename" })).string()),          //
-                              getValue<double>(link_node, { "visual", "scale", "x" }),                                                  //
-                              getValue<double>(link_node, { "visual", "scale", "y" }),                                                  //
-                              getValue<double>(link_node, { "visual", "scale", "z" }), motor)));
-                }
-                else if (type == "cylinder")
-                {
-                    visuals.emplace(
-                      std::make_pair(name, std::make_unique<gafro::visual::Cylinder>(getValue<double>(link_node, { "visual", "length" }),  //
-                                                                                     getValue<double>(link_node, { "visual", "radius" }), motor)));
-                }
-                else if (type == "box")
-                {
-                    visuals.emplace(
-                      std::make_pair(name, std::make_unique<gafro::visual::Box>(getValue<double>(link_node, { "visual", "length" }),  //
-                                                                                getValue<double>(link_node, { "visual", "width" }),   //
-                                                                                getValue<double>(link_node, { "visual", "height" }), motor)));
-                }
+                link->setVisual(std::make_unique<gafro::visual::Sphere>(getValue<double>(node, { "visual", "radius" }), motor));
+            }
+            else if (type == "mesh")
+            {
+                link->setVisual(std::make_unique<gafro::visual::Mesh>(
+                  root_folder.empty() ?                                                                                     //
+                    FilePath("robots/" + system.getName() + "/" + getValue<std::string>(node, { "visual", "filename" })) :  //
+                    FilePath((root_folder / getValue<std::string>(node, { "visual", "filename" })).string()),               //
+                  getValue<double>(node, { "visual", "scale", "x" }),                                                       //
+                  getValue<double>(node, { "visual", "scale", "y" }),                                                       //
+                  getValue<double>(node, { "visual", "scale", "z" }), motor));
+            }
+            else if (type == "cylinder")
+            {
+                link->setVisual(std::make_unique<gafro::visual::Cylinder>(getValue<double>(node, { "visual", "length" }),  //
+                                                                          getValue<double>(node, { "visual", "radius" }), motor));
+            }
+            else if (type == "box")
+            {
+                link->setVisual(std::make_unique<gafro::visual::Box>(getValue<double>(node, { "visual", "length" }),  //
+                                                                     getValue<double>(node, { "visual", "width" }),   //
+                                                                     getValue<double>(node, { "visual", "height" }), motor));
             }
         }
 
-        return visuals;
+        system.addLink(std::move(link));
     }
+
+    // std::unordered_map<std::string, std::unique_ptr<Visual>> SystemSerialization::loadVisuals()
+    // {
+    //     std::unordered_map<std::string, std::unique_ptr<Visual>> visuals;
+
+    //     std::string system_name = getValue<std::string>(root_node_, { "system", "name" });
+
+    //     for (YAML::const_iterator it = root_node_["links"].begin(); it != root_node_["links"].end(); ++it)
+    //     {
+    //         YAML::Node link_node = it->second;
+    //         std::string name = getValue<std::string>(link_node, { "name" });
+
+    //         if (link_node["visual"])
+    //         {
+    //             std::string type = getValue<std::string>(link_node, { "visual", "type" });
+
+    //             Translator<double> translator(typename Translator<double>::Generator({
+    //               getValue<double>(link_node, { "visual", "origin", "position", "x" }),  //
+    //               getValue<double>(link_node, { "visual", "origin", "position", "y" }),  //
+    //               getValue<double>(link_node, { "visual", "origin", "position", "z" })   //
+    //             }));
+
+    //             Rotor<double> rotor =
+    //               Rotor<double>::fromQuaternion(Eigen::Quaterniond({ getValue<double>(link_node, { "visual", "origin", "orientation", "w" }),  //
+    //                                                                  getValue<double>(link_node, { "visual", "origin", "orientation", "x" }),  //
+    //                                                                  getValue<double>(link_node, { "visual", "origin", "orientation", "y" }),  //
+    //                                                                  getValue<double>(link_node, { "visual", "origin", "orientation", "z" }) }));
+
+    //             Motor<double> motor(translator, rotor);
+
+    //             if (type == "sphere")
+    //             {
+    //                 visuals.emplace(
+    //                   std::make_pair(name, std::make_unique<gafro::visual::Sphere>(getValue<double>(link_node, { "visual", "radius" }), motor)));
+    //             }
+    //             else if (type == "mesh")
+    //             {
+    //                 std::string file = root_folder.empty() ?                                                                                     //
+    //                                      FilePath("robots/" + system_name + "/" + getValue<std::string>(link_node, { "visual", "filename" })) :  //
+    //                                      FilePath((root_folder / getValue<std::string>(link_node, { "visual", "filename" })).string());
+
+    //                 visuals.emplace(std::make_pair(
+    //                   name, std::make_unique<gafro::visual::Mesh>(
+    //                           root_folder.empty() ?                                                                                     //
+    //                             FilePath("robots/" + system_name + "/" + getValue<std::string>(link_node, { "visual", "filename" })) :  //
+    //                             FilePath((root_folder / getValue<std::string>(link_node, { "visual", "filename" })).string()),          //
+    //                           getValue<double>(link_node, { "visual", "scale", "x" }),                                                  //
+    //                           getValue<double>(link_node, { "visual", "scale", "y" }),                                                  //
+    //                           getValue<double>(link_node, { "visual", "scale", "z" }), motor)));
+    //             }
+    //             else if (type == "cylinder")
+    //             {
+    //                 visuals.emplace(
+    //                   std::make_pair(name, std::make_unique<gafro::visual::Cylinder>(getValue<double>(link_node, { "visual", "length" }),  //
+    //                                                                                  getValue<double>(link_node, { "visual", "radius" }), motor)));
+    //             }
+    //             else if (type == "box")
+    //             {
+    //                 visuals.emplace(
+    //                   std::make_pair(name, std::make_unique<gafro::visual::Box>(getValue<double>(link_node, { "visual", "length" }),  //
+    //                                                                             getValue<double>(link_node, { "visual", "width" }),   //
+    //                                                                             getValue<double>(link_node, { "visual", "height" }), motor)));
+    //             }
+    //         }
+    //     }
+
+    //     return visuals;
+    // }
 
     void SystemSerialization::addJoint(System<double> &system, const YAML::Node &node)
     {
