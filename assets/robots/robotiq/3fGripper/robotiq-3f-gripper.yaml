@@ -1,0 +1,816 @@
+system:
+  name: robotiq-3f-gripper_articulated
+  root_link: palm
+joints:
+  finger_1_joint_1:
+    type: revolute
+    name: finger_1_joint_1
+    parent_link: finger_1_link_0
+    child_link: finger_1_link_1
+    transform:
+      translation:
+        x: 0.02
+        y: 0
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 1
+    limits:
+      lower: 0
+      upper: 3.1415999999999999
+      velocity: 100
+      effort: 100
+  finger_1_joint_2:
+    type: revolute
+    name: finger_1_joint_2
+    parent_link: finger_1_link_1
+    child_link: finger_1_link_2
+    transform:
+      translation:
+        x: 0.050000000000000003
+        y: -0.028000000000000001
+        z: 0
+      rotation:
+        w: 0.96638997813451322
+        x: 0
+        y: 0
+        z: -0.25708055189215512
+    axis:
+      x: 0
+      y: 0
+      z: 1
+    limits:
+      lower: 0
+      upper: 3.1415999999999999
+      velocity: 100
+      effort: 100
+  finger_1_joint_3:
+    type: revolute
+    name: finger_1_joint_3
+    parent_link: finger_1_link_2
+    child_link: finger_1_link_3
+    transform:
+      translation:
+        x: 0.039
+        y: 0
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 1
+    limits:
+      lower: 0
+      upper: 3.1415999999999999
+      velocity: 100
+      effort: 100
+  finger_2_joint_1:
+    type: revolute
+    name: finger_2_joint_1
+    parent_link: finger_2_link_0
+    child_link: finger_2_link_1
+    transform:
+      translation:
+        x: 0.02
+        y: 0
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 1
+    limits:
+      lower: 0
+      upper: 3.1415999999999999
+      velocity: 100
+      effort: 100
+  finger_2_joint_2:
+    type: revolute
+    name: finger_2_joint_2
+    parent_link: finger_2_link_1
+    child_link: finger_2_link_2
+    transform:
+      translation:
+        x: 0.050000000000000003
+        y: -0.028000000000000001
+        z: 0
+      rotation:
+        w: 0.96638997813451322
+        x: 0
+        y: 0
+        z: -0.25708055189215512
+    axis:
+      x: 0
+      y: 0
+      z: 1
+    limits:
+      lower: 0
+      upper: 3.1415999999999999
+      velocity: 100
+      effort: 100
+  finger_2_joint_3:
+    type: revolute
+    name: finger_2_joint_3
+    parent_link: finger_2_link_2
+    child_link: finger_2_link_3
+    transform:
+      translation:
+        x: 0.039
+        y: 0
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 1
+    limits:
+      lower: 0
+      upper: 3.1415999999999999
+      velocity: 100
+      effort: 100
+  finger_middle_joint_1:
+    type: revolute
+    name: finger_middle_joint_1
+    parent_link: finger_middle_link_0
+    child_link: finger_middle_link_1
+    transform:
+      translation:
+        x: 0.02
+        y: 0
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 1
+    limits:
+      lower: 0
+      upper: 3.1415999999999999
+      velocity: 100
+      effort: 100
+  finger_middle_joint_2:
+    type: revolute
+    name: finger_middle_joint_2
+    parent_link: finger_middle_link_1
+    child_link: finger_middle_link_2
+    transform:
+      translation:
+        x: 0.050000000000000003
+        y: -0.028000000000000001
+        z: 0
+      rotation:
+        w: 0.96638997813451322
+        x: 0
+        y: 0
+        z: -0.25708055189215512
+    axis:
+      x: 0
+      y: 0
+      z: 1
+    limits:
+      lower: 0
+      upper: 3.1415999999999999
+      velocity: 100
+      effort: 100
+  finger_middle_joint_3:
+    type: revolute
+    name: finger_middle_joint_3
+    parent_link: finger_middle_link_2
+    child_link: finger_middle_link_3
+    transform:
+      translation:
+        x: 0.039
+        y: 0
+        z: 0
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+    axis:
+      x: 0
+      y: 0
+      z: 1
+    limits:
+      lower: 0
+      upper: 3.1415999999999999
+      velocity: 100
+      effort: 100
+  palm_finger_1_joint:
+    type: revolute
+    name: palm_finger_1_joint
+    parent_link: palm
+    child_link: finger_1_link_0
+    transform:
+      translation:
+        x: -0.045499999999999999
+        y: 0.021399999999999999
+        z: 0.035999999999999997
+      rotation:
+        w: -2.5983822003524582e-06
+        x: 0.70682518110059755
+        y: 0.70738826916242759
+        z: 2.5963138624100966e-06
+    axis:
+      x: 0
+      y: 1
+      z: 0
+    limits:
+      lower: -0.16
+      upper: 0.25
+      velocity: 100
+      effort: 100
+  palm_finger_2_joint:
+    type: revolute
+    name: palm_finger_2_joint
+    parent_link: palm
+    child_link: finger_2_link_0
+    transform:
+      translation:
+        x: -0.045499999999999999
+        y: 0.021399999999999999
+        z: -0.035999999999999997
+      rotation:
+        w: -2.5983822003524582e-06
+        x: 0.70682518110059755
+        y: 0.70738826916242759
+        z: 2.5963138624100966e-06
+    axis:
+      x: 0
+      y: 1
+      z: 0
+    limits:
+      lower: -0.25
+      upper: 0.16
+      velocity: 100
+      effort: 100
+  palm_finger_middle_joint:
+    type: fixed
+    name: palm_finger_middle_joint
+    parent_link: palm
+    child_link: finger_middle_link_0
+    transform:
+      translation:
+        x: 0.045499999999999999
+        y: 0.021399999999999999
+        z: 0
+      rotation:
+        w: 0.70738826916719977
+        x: 0
+        y: 0
+        z: 0.70682518110536596
+    axis:
+      x: 0
+      y: 0
+      z: 0
+links:
+  finger_1_link_0:
+    joints:
+      - finger_1_joint_1
+    name: finger_1_link_0
+    parent_joint: palm_finger_1_joint
+    inertial:
+      mass: 0.050000000000000003
+      inertia:
+        xx: 0.01
+        xy: -2.0000000000000002e-05
+        yy: 0.00080000000000000004
+        yz: 0
+        zz: 0.001
+        xz: 1.0000000000000001e-05
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0.02
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/link_0.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  finger_1_link_1:
+    joints:
+      - finger_1_joint_2
+    name: finger_1_link_1
+    parent_joint: finger_1_joint_1
+    inertial:
+      mass: 0.14999999999999999
+      inertia:
+        xx: 0.001859
+        xy: -0.00037599999999999998
+        yy: 0.012756
+        yz: 0
+        zz: 0.0023999999999999998
+        xz: 2.8e-05
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0.050000000000000003
+          y: -0.028000000000000001
+          z: 0
+        orientation:
+          w: 0.96638997813451322
+          x: 0
+          y: 0
+          z: -0.25708055189215512
+      type: mesh
+      filename: meshes/link_1.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  finger_1_link_2:
+    joints:
+      - finger_1_joint_3
+    name: finger_1_link_2
+    parent_joint: finger_1_joint_2
+    inertial:
+      mass: 0.14999999999999999
+      inertia:
+        xx: 0.001859
+        xy: -0.00037599999999999998
+        yy: 0.012756
+        yz: 0
+        zz: 0.0023999999999999998
+        xz: 2.8e-05
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0.039
+          y: 0
+          z: 0.0074999999999999997
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/link_2.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  finger_1_link_3:
+    name: finger_1_link_3
+    parent_joint: finger_1_joint_3
+    inertial:
+      mass: 0.050000000000000003
+      inertia:
+        xx: 0.0012390000000000001
+        xy: -0.00025099999999999998
+        yy: 0.00084999999999999995
+        yz: 0
+        zz: 0.001632
+        xz: 1.9000000000000001e-05
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 0.96638997813451322
+          x: 0
+          y: 0
+          z: 0.25708055189215512
+      type: mesh
+      filename: meshes/link_3.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  finger_2_link_0:
+    joints:
+      - finger_2_joint_1
+    name: finger_2_link_0
+    parent_joint: palm_finger_2_joint
+    inertial:
+      mass: 0.050000000000000003
+      inertia:
+        xx: 0.01
+        xy: -2.0000000000000002e-05
+        yy: 0.00080000000000000004
+        yz: 0
+        zz: 0.001
+        xz: 1.0000000000000001e-05
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0.02
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/link_0.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  finger_2_link_1:
+    joints:
+      - finger_2_joint_2
+    name: finger_2_link_1
+    parent_joint: finger_2_joint_1
+    inertial:
+      mass: 0.14999999999999999
+      inertia:
+        xx: 0.001859
+        xy: -0.00037599999999999998
+        yy: 0.012756
+        yz: 0
+        zz: 0.0023999999999999998
+        xz: 2.8e-05
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0.050000000000000003
+          y: -0.028000000000000001
+          z: 0
+        orientation:
+          w: 0.96638997813451322
+          x: 0
+          y: 0
+          z: -0.25708055189215512
+      type: mesh
+      filename: meshes/link_1.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  finger_2_link_2:
+    joints:
+      - finger_2_joint_3
+    name: finger_2_link_2
+    parent_joint: finger_2_joint_2
+    inertial:
+      mass: 0.14999999999999999
+      inertia:
+        xx: 0.001859
+        xy: -0.00037599999999999998
+        yy: 0.012756
+        yz: 0
+        zz: 0.0023999999999999998
+        xz: 2.8e-05
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0.039
+          y: 0
+          z: 0.0074999999999999997
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/link_2.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  finger_2_link_3:
+    name: finger_2_link_3
+    parent_joint: finger_2_joint_3
+    inertial:
+      mass: 0.050000000000000003
+      inertia:
+        xx: 0.0012390000000000001
+        xy: -0.00025099999999999998
+        yy: 0.00084999999999999995
+        yz: 0
+        zz: 0.001632
+        xz: 1.9000000000000001e-05
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 0.96638997813451322
+          x: 0
+          y: 0
+          z: 0.25708055189215512
+      type: mesh
+      filename: meshes/link_3.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  finger_middle_link_0:
+    joints:
+      - finger_middle_joint_1
+    name: finger_middle_link_0
+    parent_joint: palm_finger_middle_joint
+    inertial:
+      mass: 0.050000000000000003
+      inertia:
+        xx: 0.01
+        xy: -2.0000000000000002e-05
+        yy: 0.00080000000000000004
+        yz: 0
+        zz: 0.001
+        xz: 1.0000000000000001e-05
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0.02
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/link_0.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  finger_middle_link_1:
+    joints:
+      - finger_middle_joint_2
+    name: finger_middle_link_1
+    parent_joint: finger_middle_joint_1
+    inertial:
+      mass: 0.14999999999999999
+      inertia:
+        xx: 0.001859
+        xy: -0.00037599999999999998
+        yy: 0.012756
+        yz: 0
+        zz: 0.0023999999999999998
+        xz: 2.8e-05
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0.050000000000000003
+          y: -0.028000000000000001
+          z: 0
+        orientation:
+          w: 0.96638997813451322
+          x: 0
+          y: 0
+          z: -0.25708055189215512
+      type: mesh
+      filename: meshes/link_1.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  finger_middle_link_2:
+    joints:
+      - finger_middle_joint_3
+    name: finger_middle_link_2
+    parent_joint: finger_middle_joint_2
+    inertial:
+      mass: 0.14999999999999999
+      inertia:
+        xx: 0.001859
+        xy: -0.00037599999999999998
+        yy: 0.012756
+        yz: 0
+        zz: 0.0023999999999999998
+        xz: 2.8e-05
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0.039
+          y: 0
+          z: 0.0074999999999999997
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/link_2.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  finger_middle_link_3:
+    name: finger_middle_link_3
+    parent_joint: finger_middle_joint_3
+    inertial:
+      mass: 0.050000000000000003
+      inertia:
+        xx: 0.0012390000000000001
+        xy: -0.00025099999999999998
+        yy: 0.00084999999999999995
+        yz: 0
+        zz: 0.001632
+        xz: 1.9000000000000001e-05
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 0.96638997813451322
+          x: 0
+          y: 0
+          z: 0.25708055189215512
+      type: mesh
+      filename: meshes/link_3.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
+  palm:
+    joints:
+      - palm_finger_1_joint
+      - palm_finger_2_joint
+      - palm_finger_middle_joint
+    name: palm
+    inertial:
+      mass: 0
+      inertia:
+        xx: 0
+        xy: 0
+        yy: 0
+        yz: 0
+        zz: 0
+        xz: 0
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+    visual:
+      origin:
+        position:
+          x: 0
+          y: 0
+          z: 0
+        orientation:
+          w: 1
+          x: 0
+          y: 0
+          z: 0
+      type: mesh
+      filename: meshes/palm.dae
+      scale:
+        x: 1
+        y: 1
+        z: 1
