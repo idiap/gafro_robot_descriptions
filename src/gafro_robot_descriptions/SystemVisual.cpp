@@ -1,3 +1,9 @@
+// SPDX-FileCopyrightText: Idiap Research Institute <contact@idiap.ch>
+//
+// SPDX-FileContributor: Tobias Loew <tobias.loew@idiap.ch
+//
+// SPDX-License-Identifier: MPL-2.0
+
 #include <gafro_robot_descriptions/SystemVisual.hpp>
 #include <gafro_robot_descriptions/serialization/FilePath.hpp>
 #include <gafro_robot_descriptions/serialization/SystemSerialization.hpp>

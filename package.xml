@@ -7,7 +7,7 @@
   <maintainer email="tobias.loew@idiap.ch">Tobias Löw</maintainer>
   <author email="tobias.loew@idiap.ch">Tobias Löw</author>
   
-  <license>GPLv3</license>
+  <license>MPL-2.0</license>
 
   <depend>gafro</depend>
 
