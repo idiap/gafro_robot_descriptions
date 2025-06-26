@@ -38,7 +38,8 @@ namespace gafro
 
     template <class T>
     AnymalC<T>::AnymalC(const std::filesystem::path &assets_folder)
-      : System<T>(std::move(SystemSerialization(FilePath(assets_folder / "robots/anymal_c/anymal_c.yaml")).load().cast<T>()))
+      : Quadruped<T, 3>(std::move(SystemSerialization(FilePath(assets_folder / "robots/anymal_c/anymal_c.yaml")).load().cast<T>()),
+                        { "LF_shank_fixed_LF_FOOT", "LH_shank_fixed_LH_FOOT", "RF_shank_fixed_RF_FOOT", "RH_shank_fixed_RH_FOOT" })
     {}
 
     template <class T>
